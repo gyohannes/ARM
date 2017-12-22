@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Academic year:</strong>
+  <%= @program_quota.academic_year %>
+</p>
+
+<p>
+  <strong>Program:</strong>
+  <%= @program_quota.program %>
+</p>
+
+<p>
+  <strong>University:</strong>
+  <%= @program_quota.university %>
+</p>
+
+<p>
+  <strong>Quota:</strong>
+  <%= @program_quota.quota %>
+</p>
+
+<%= link_to 'Edit', edit_program_quota_path(@program_quota) %> |
+<%= link_to 'Back', program_quotas_path %>

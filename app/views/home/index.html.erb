@@ -1,0 +1,70 @@
+<div class="block-header">
+    <h2><%= AcademicYear.current %> Academic Year</h2>
+</div>
+<% if current_user.admin? %>
+<%= link_to applicants_path do %>
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+<div class="info-box hover-zoom-effect">
+    <div class="icon bg-pink">
+        <i class="material-icons">people</i>
+    </div>
+    <div class="content">
+        <div class="text">Applicants</div>
+        <div class="number"><%= Applicant.count %></div>
+    </div>
+</div>
+</div>
+<% end %>
+<%= link_to programs_path do %>
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+    <div class="info-box bg-pink hover-expand-effect">
+        <div class="icon">
+            <i class="material-icons">playlist_add_check</i>
+        </div>
+        <div class="content">
+            <div class="text">Programs</div>
+            <div class="number"><%= Program.count %></div>
+        </div>
+    </div>
+</div>
+<% end %>
+<%= link_to universities_path do %>
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+    <div class="info-box bg-cyan hover-expand-effect">
+        <div class="icon">
+            <i class="material-icons">school</i>
+        </div>
+        <div class="content">
+            <div class="text">Universities</div>
+            <div class="number"><%= University.count %></div>
+        </div>
+    </div>
+</div>
+<% end %>
+<%= link_to program_quotas_path do %>
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+    <div class="info-box bg-light-green hover-expand-effect">
+        <div class="icon">
+            <i class="material-icons">format_list_numbered</i>
+        </div>
+        <div class="content">
+            <div class="text">Total Quotas</div>
+            <div class="number"><%= ProgramQuota.overall_total %></div>
+        </div>
+    </div>
+</div>
+<% end %>
+<% end %>
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <div class="card">
+          <%= month_calendar events: Event.all do |date, meetings| %>
+            <%= date.day %>
+          
+            <% meetings.each do |meeting| %>
+              <div>
+                <%= meeting.name %>
+              </div>
+            <% end %>
+          <% end %>
+  </div>
+</div>

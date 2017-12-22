@@ -1,0 +1,85 @@
+<% if current_user.admin? %>
+<div class="menu">
+    <ul class="list">
+        <li class="header">MAIN NAVIGATION</li>
+        <li class="active">
+        <%= link_to root_path do %>
+            <i class="material-icons">home</i>
+            <span>Home</span>
+        <% end %>
+        </li>
+
+        <li>
+        <%= link_to root_path do %>
+            <i class="material-icons">person</i>
+            <span>Users</span>
+        <% end %>
+        </li>
+
+        <li>
+        <a href="javascript:void(0);" class="menu-toggle waves-effect waves-block">
+            <i class="material-icons">settings</i>
+            <span>Settings</span>
+        </a>
+        <ul class="ml-menu" style="display: none;">
+            <li>
+                <%= link_to academic_years_path do %>
+                    <i class="material-icons">date_range</i>
+                    <span>Academic Years</span>
+                <% end %>
+            </li>
+            <li>
+                <%= link_to events_path do %>
+                    <i class="material-icons">event_note</i>
+                    <span>Events</span>
+                <% end %>
+            </li>
+            <li>
+                <%= link_to programs_path do %>
+                    <i class="material-icons">library_books</i>
+                    <span>Programs</span>
+                <% end %>
+            </li>
+            <li>
+                <%= link_to universities_path do %>
+                    <i class="material-icons">school</i>
+                    <span>Universities</span>
+                <% end %>
+            </li>
+            <li>
+                <%= link_to program_quotas_path do %>
+                    <i class="material-icons">school</i>
+                    <span>Program Quotas</span>
+                <% end %>
+            </li>
+            <li>
+            <%= link_to root_path do %>
+                <i class="material-icons">build</i>
+                <span>Exams</span>
+            <% end %>
+        </li>
+        </ul>
+    </li>
+    <li>
+    <%= link_to applicants_path do %>
+        <i class="material-icons">people</i>
+        <span>Applications</span>
+    <% end %>
+    </li>
+
+    <li>
+    <%= link_to root_path do %>
+        <i class="material-icons">format_align_justify</i>
+        <span>Reports</span>
+    <% end %>
+    </li>
+
+    <li>
+    <%= link_to root_path do %>
+        <i class="material-icons">list</i>
+        <span>Matching Result</span>
+    <% end %>
+    </li>
+    </ul>
+</div>
+<% end %>

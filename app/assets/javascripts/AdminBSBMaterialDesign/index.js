@@ -1,0 +1,14 @@
+//= require AdminBSBMaterialDesign/jquery/jquery
+//= require AdminBSBMaterialDesign/bootstrap/bootstrap.min
+//= require AdminBSBMaterialDesign/node-waves/waves
+//= require AdminBSBMaterialDesign/jquery-validation/jquery.validate
+//= require AdminBSBMaterialDesign/js/admin
+//= require AdminBSBMaterialDesign/js/pages/examples/sign-in
+//= require AdminBSBMaterialDesign/autosize/autosize
+//= require AdminBSBMaterialDesign/momentjs/moment
+//= require AdminBSBMaterialDesign/bootstrap-material-datetimepicker/bootstrap-material-datetimepicker
+//= require AdminBSBMaterialDesign/jquery-steps/jquery.steps
+//= require AdminBSBMaterialDesign/sweetalert/sweetalert.min
+//= require AdminBSBMaterialDesign/js/pages/forms/form-wizard
+//= require AdminBSBMaterialDesign/js/pages/forms/basic-form-elements
+//= require AdminBSBMaterialDesign/js/demo

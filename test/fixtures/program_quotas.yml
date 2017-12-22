@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  academic_year: one
+  program: one
+  university: one
+  quota: 1
+
+two:
+  academic_year: two
+  program: two
+  university: two
+  quota: 1

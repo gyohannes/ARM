@@ -1,0 +1,39 @@
+<% if current_user.admin? %>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<div class="card">
+    <div class="header">
+        <h2>
+            Program Quotas
+        </h2>
+    </div>
+    <div class="body table-responsive">
+    <table class='table'>
+  <thead>
+    <tr>
+      <th>Academic year</th>
+      <th>Program</th>
+      <th>University</th>
+      <th>Quota</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @program_quotas.each do |program_quota| %>
+      <tr>
+        <td><%= program_quota.academic_year %></td>
+        <td><%= program_quota.program %></td>
+        <td><%= program_quota.university %></td>
+        <td><%= program_quota.quota %></td>
+        <td><%= link_to 'Edit', edit_program_quota_path(program_quota) %></td>
+      </tr>
+    <% end %>
+    </tbody>
+    </table>
+    <div>
+    <div>
+    <div>
+    <br>
+    
+    <%= link_to 'New Program Quota', new_program_quota_path, class: 'btn btn-primary' %>
+    <% end %>

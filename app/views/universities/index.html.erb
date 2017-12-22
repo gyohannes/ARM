@@ -1,0 +1,33 @@
+<% if current_user.admin? %>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<div class="card">
+    <div class="header">
+        <h2>
+            Programs
+        </h2>
+    </div>
+    <div class="body table-responsive">
+    <table class='table'>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @universities.each do |university| %>
+      <tr>
+        <td><%= university.name %></td>
+        <td><%= link_to 'Edit', edit_university_path(university) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<div>
+<div>
+<div>
+<br>
+
+<%= link_to 'New University', new_university_path, class: 'btn btn-primary' %>
+<% end %>
