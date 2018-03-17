@@ -4,14 +4,15 @@
     <span>University Choices</span>
 </h2>
 </div>
-<% @applicant.program_choices.each do |pc| %>
+<% unless @applicant.complete_university_choices.blank? %>
+<% @applicant.complete_program_choices.each do |pc| %>
     <div class='row'>
         <div class='col-md-11 col-md-offset-1'>
             <label><%= pc.choice_order %> - <%= pc.program %></label>
         </div>
     </div>
     
-    <% pc.university_choices.each do |uc| %>
+    <% pc.complete_university_choices.each do |uc| %>
         <div class='row'>
             <div class='col-md-2 col-md-offset-2'>
                 <%= uc.choice_order %>
@@ -21,4 +22,5 @@
             </div>
         </div>
     <% end %>
+<% end %>
 <% end %>

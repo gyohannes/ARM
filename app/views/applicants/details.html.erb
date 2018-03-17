@@ -1,17 +1,130 @@
-<div class="row clearfix">
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-    <div class="card">
-        <div class="header">
-            <h2>Application Details</h2>
-        </div>
-        <div class="body">
-          <%= render partial: 'applicant' %>
-          <%= render partial: 'program_choices' %>
-          <%= render partial: 'university_choices' %>
-        </div>
-        <hr/>
-        <center><%= link_to 'Edit Application', edit_applicant_path(@applicant), class: 'btn btn-primary' %></center>
-        <br/>
+<div class="header">
+  <h2>Application Details</h2>
+</div>
+<div class="body">
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs tab-nav-right" role="tablist">
+    <li role="presentation" class="active"><a href="#personal_details" data-toggle="tab">Personal Details</a></li>
+    <li role="presentation"><a href="#program_choices" data-toggle="tab">Program Choices</a></li>
+    <li role="presentation"><a href="#university_choices" data-toggle="tab">University Choices</a></li>
+    <li role="presentation"><a href="#exam_hub" data-toggle="tab">Exam Hub</a></li>
+    <li role="presentation"><a href="#services" data-toggle="tab">Services</a></li>
+    <li role="presentation"><a href="#attachments" data-toggle="tab">Attachments</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane fade in active" id="personal_details">
+      <%= render partial: 'applicant' %>
     </div>
+    <div role="tabpanel" class="tab-pane fade" id="program_choices">
+      <%= render partial: 'program_choices' %>
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="university_choices">
+      <%= render partial: 'university_choices' %>
+    </div>
+
+    <div role="tabpanel" class="tab-pane fade" id="exam_hub">
+      <div class="header">
+        <h2>
+          <i class="material-icons">map</i>
+          <span>Exam Hub</span>
+        </h2>
+      </div>
+      <div class='row'>
+        <div class='col-md-3 col-md-offset-1'>
+          Selected Exam Hub
+        </div>
+        <div class='col-md-8'>
+          <%= @applicant.applicant_exam_hub %>
+        </div>
+      </div>
+    </div>
+
+    <div role="tabpanel" class="tab-pane fade" id="services">
+      <div class="header">
+        <h2>
+          My Services
+        </h2>
+      </div>
+      <div class="body table-responsive">
+        <label>Have you served at an institution ?
+        <%= @applicant.applicant_service.try(:status) %></label>
+        <% unless @applicant.applicant_service.blank? %>
+        <table class="table table-bordered table-striped table-hover dataTable">
+          <thead>
+          <tr>
+            <th>Institution</th>
+            <th>Region</th>
+            <th>Start time</th>
+            <th>End time</th>
+          </tr>
+          </thead>
+
+          <tbody>
+          <% @applicant.applicant_service.services.each do |service| %>
+              <tr>
+                <td><%= service.institution %></td>
+                <td><%= service.region %></td>
+                <td><%= service.start_date %></td>
+                <td><%= service.end_date %></td>
+              </tr>
+          <% end %>
+          </tbody>
+        </table>
+        <% end %>
+      </div>
+      </div>
+    <div role="tabpanel" class="tab-pane fade" id="attachments">
+      <div class="header">
+        <h2>
+          <i class="material-icons">person</i>
+          <span>File Uploads</span>
+        </h2>
+      </div>
+      <div class='row'>
+        <div class='col-md-3 col-md-offset-1'>
+          Photo
+        </div>
+        <div class='col-md-8'>
+          <%= link_to @applicant.attachment.photo.url(:medium) do %>
+            <%= image_tag @applicant.attachment.photo.url(:thumb) %>
+          <% end %>
+        </div>
+      </div>
+
+      <div class='row'>
+        <div class='col-md-3 col-md-offset-1'>
+          CV
+        </div>
+        <div class='col-md-8'>
+          <%= link_to 'Download CV', @applicant.attachment.cv.url %>
+        </div>
+      </div>
+
+      <div class='row'>
+        <div class='col-md-3 col-md-offset-1'>
+          Motivation Letter
+        </div>
+        <div class='col-md-8'>
+          <%= link_to 'Download Motivation Letter', @applicant.attachment.motivation_letter.url %>
+        </div>
+      </div>
+
+      <div class='row'>
+        <div class='col-md-3 col-md-offset-1'>
+          Sponsorship Letter
+        </div>
+        <div class='col-md-8'>
+          <%= link_to 'Download Sponsorship Letter', @applicant.attachment.sponsorship_letter.url %>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <hr/>
+  <center>
+    <%= link_to 'Edit Application', edit_applicant_path(@applicant), class: 'btn btn-primary'  unless current_user.admin?%>
+  </center>
 </div>
-</div>
+

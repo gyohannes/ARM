@@ -15,9 +15,10 @@ class UniversityChoicesController < ApplicationController
   # GET /university_choices/new
   def new
     @applicant = Applicant.find(params[:applicant])
-    @applicant.program_choices.each do |pc|
-      (1..pc.program.universities.count).each do |order|
-        pc.university_choices.build(choice_order: order)
+    @applicant.complete_program_choices.each do |pc|
+      uc_count = pc.university_choices.count
+      ((uc_count + 1)..pc.program.universities.count).each do |order|
+        UniversityChoice.create(choice_order: order, program_choice_id: pc.id)
       end
     end
   end
@@ -30,32 +31,28 @@ class UniversityChoicesController < ApplicationController
   # POST /university_choices.json
   def create
     @applicant = Applicant.find(params[:applicant])
-    if params.has_key?("university_choice")
-      UniversityChoice.create(university_choice_params(params["university_choice"]))
-    else
-      params["university_choices"].each do |university_choice|
-        if !university_choice["university_id"].blank?
-          UniversityChoice.create(university_choice_params(university_choice))
-        end
-      end
+    uc_params = params["university_choices"]
+    uc_params.each do |university_choice|
+      uc = UniversityChoice.find(uc_params[university_choice]["id"])
+      uc.update(university_choice_params(uc_params[university_choice]))
     end
-    redirect_to details_applicant_path(@applicant)
-    @applicant.update(status: true)
-    flash[:notice] = 'Application submitted successfully' 
+
+    unless @applicant.complete_university_choices.blank?
+      flash[:notice] = 'University choices submitted successfully'
+      if @applicant.applicant_exam_hub.blank?
+        redirect_to new_attachment_path(applicant: @applicant.id)
+      else
+        redirect_to edit_attachment_path(@applicant.attachment)
+      end
+    else
+      render 'new'
+    end
   end
 
   # PATCH/PUT /university_choices/1
   # PATCH/PUT /university_choices/1.json
   def update
-    respond_to do |format|
-      if @university_choice.update(university_choice_params)
-        format.html { redirect_to @university_choice, notice: 'University choice was successfully updated.' }
-        format.json { render :show, status: :ok, location: @university_choice }
-      else
-        format.html { render :edit }
-        format.json { render json: @university_choice.errors, status: :unprocessable_entity }
-      end
-    end
+
   end
 
   # DELETE /university_choices/1

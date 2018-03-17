@@ -28,7 +28,7 @@ class AcademicYearsController < ApplicationController
 
     respond_to do |format|
       if @academic_year.save
-        format.html { redirect_to @academic_year, notice: 'Academic year was successfully created.' }
+        format.html { redirect_to academic_years_path, notice: 'Academic year was successfully created.' }
         format.json { render :show, status: :created, location: @academic_year }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class AcademicYearsController < ApplicationController
   def update
     respond_to do |format|
       if @academic_year.update(academic_year_params)
-        format.html { redirect_to @academic_year, notice: 'Academic year was successfully updated.' }
+        format.html { redirect_to academic_years_path, notice: 'Academic year was successfully updated.' }
         format.json { render :show, status: :ok, location: @academic_year }
       else
         format.html { render :edit }

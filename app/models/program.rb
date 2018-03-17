@@ -8,6 +8,10 @@ class Program < ApplicationRecord
         academic_year,self.id)
     end
 
+    def count_applicants(choice_number)
+      program_choices.where('choice_order = ?',choice_number).size
+    end
+
     def to_s
         name
     end

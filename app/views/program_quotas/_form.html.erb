@@ -1,34 +1,9 @@
 <%= simple_form_for(@program_quota) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-group form-float">
-    <div class="form-line">
-        <label class="form-label">Academic Year</label>
-        <%= f.input_field :academic_year_id, collection: AcademicYear.all, class: "form-control show-tick" %>
-    </div>
-  </div>
-
-  <div class="form-group form-float">
-    <div class="form-line">
-        <label class="form-label">Program</label>
-        <%= f.input_field :program_id, collection: Program.all, class: "form-control show-tick" %>
-    </div>
-  </div>
-
-  <div class="form-group form-float">
-    <div class="form-line">
-        <label class="form-label">University</label>
-        <%= f.input_field :university_id, collection: University.all, class: "form-control show-tick" %>
-    </div>
-  </div>
-
-  <div class="form-group form-float">
-    <div class="form-line">
-        <label class="form-label">Quota</label>
-        <%= f.input_field :quota, class: "form-control show-tick" %>
-    </div>
-    <%= f.full_error :quota %>
-  </div>
+    <%= f.error_notification %>
+    <%= f.association :academic_year %>
+    <%= f.association :program %>
+    <%= f.association :university %>
+    <%= f.input :quota %>
 
   <div class="form-actions">
     <%= f.button :submit %>

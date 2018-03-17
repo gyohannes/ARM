@@ -1,0 +1,47 @@
+<%= simple_form_for(@attachment) do |f| %>
+  <%= f.error_notification %>
+    <%= hidden_field_tag :applicant, @applicant.id %>
+  <div class="form-inputs">
+    <%= f.input :applicant_id, as: :hidden, input_html: {value: @applicant.id} %>
+    <div class="row">
+      <div class="col-sm-4">
+        <%= f.input :photo, as: :file %>
+      </div>
+      <div class="col-sm-4">
+        <%= image_tag @attachment.photo.url(:thumb) rescue nil %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-4">
+        <%= f.input :cv, as: :file %>
+      </div>
+      <div class="col-sm-4">
+        <%= link_to "Attached CV", @attachment.cv.url if @attachment.cv.exists? %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-4">
+        <%= f.input :motivation_letter, as: :file %>
+      </div>
+      <div class="col-sm-4">
+        <%= link_to "Attached Motication Letter", @attachment.motivation_letter.url if @attachment.motivation_letter.exists? %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-4">
+        <%= f.input :sponsorship_letter, as: :file %>
+      </div>
+      <div class="col-sm-4">
+        <%= link_to "Attched Sponsorship Letter", @attachment.sponsorship_letter.url if @attachment.sponsorship_letter.exists? %>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

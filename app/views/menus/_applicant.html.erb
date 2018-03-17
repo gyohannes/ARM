@@ -1,4 +1,4 @@
-<% if !current_user.admin? %>
+<% if user_signed_in? and !current_user.admin? %>
 <div class="menu">
     <ul class="list">
         <li class="header">MAIN NAVIGATION</li>
@@ -24,11 +24,12 @@
         <% end %>
         </li>
         <li>
-            <%= link_to root_path do %>
+            <%= link_to program_quotas_path do %>
                 <i class="material-icons">list</i>
-                <span>My CPD</span>
+                <span>Available Program</span>
             <% end %>
         </li>
+
     </ul>
 </div>
 <% end %>

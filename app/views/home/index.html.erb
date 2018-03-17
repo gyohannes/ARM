@@ -1,70 +1,120 @@
-<div class="block-header">
-    <h2><%= AcademicYear.current %> Academic Year</h2>
-</div>
-<% if current_user.admin? %>
-<%= link_to applicants_path do %>
-<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-<div class="info-box hover-zoom-effect">
-    <div class="icon bg-pink">
-        <i class="material-icons">people</i>
+<% content_for :header do %>
+    <div class="block-header">
+      <h2><%= AcademicYear.current %> Academic Year</h2>
     </div>
-    <div class="content">
-        <div class="text">Applicants</div>
-        <div class="number"><%= Applicant.count %></div>
-    </div>
-</div>
-</div>
-<% end %>
-<%= link_to programs_path do %>
-<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-    <div class="info-box bg-pink hover-expand-effect">
-        <div class="icon">
-            <i class="material-icons">playlist_add_check</i>
-        </div>
-        <div class="content">
-            <div class="text">Programs</div>
-            <div class="number"><%= Program.count %></div>
-        </div>
-    </div>
-</div>
-<% end %>
-<%= link_to universities_path do %>
-<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-    <div class="info-box bg-cyan hover-expand-effect">
-        <div class="icon">
-            <i class="material-icons">school</i>
-        </div>
-        <div class="content">
-            <div class="text">Universities</div>
-            <div class="number"><%= University.count %></div>
-        </div>
-    </div>
-</div>
-<% end %>
-<%= link_to program_quotas_path do %>
-<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-    <div class="info-box bg-light-green hover-expand-effect">
-        <div class="icon">
-            <i class="material-icons">format_list_numbered</i>
-        </div>
-        <div class="content">
-            <div class="text">Total Quotas</div>
-            <div class="number"><%= ProgramQuota.overall_total %></div>
-        </div>
-    </div>
-</div>
-<% end %>
-<% end %>
-  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-  <div class="card">
-          <%= month_calendar events: Event.all do |date, meetings| %>
-            <%= date.day %>
-          
-            <% meetings.each do |meeting| %>
-              <div>
-                <%= meeting.name %>
+
+    <div class="row clearfix">
+      <% if current_user.admin? %>
+          <%= link_to applicants_path do %>
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box hover-zoom-effect">
+                  <div class="icon bg-pink">
+                    <i class="material-icons">people</i>
+                  </div>
+                  <div class="content">
+                    <div class="text">Applicants</div>
+                    <div class="number"><%= Applicant.count %></div>
+                  </div>
+                </div>
               </div>
-            <% end %>
           <% end %>
-  </div>
+          <%= link_to programs_path do %>
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box bg-pink hover-expand-effect">
+                  <div class="icon">
+                    <i class="material-icons">playlist_add_check</i>
+                  </div>
+                  <div class="content">
+                    <div class="text">Programs</div>
+                    <div class="number"><%= Program.count %></div>
+                  </div>
+                </div>
+              </div>
+          <% end %>
+          <%= link_to universities_path do %>
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box bg-cyan hover-expand-effect">
+                  <div class="icon">
+                    <i class="material-icons">school</i>
+                  </div>
+                  <div class="content">
+                    <div class="text">Universities</div>
+                    <div class="number"><%= University.count %></div>
+                  </div>
+                </div>
+              </div>
+          <% end %>
+          <%= link_to program_quotas_path do %>
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box bg-light-green hover-expand-effect">
+                  <div class="icon">
+                    <i class="material-icons">format_list_numbered</i>
+                  </div>
+                  <div class="content">
+                    <div class="text">Total Quotas</div>
+                    <div class="number"><%= ProgramQuota.overall_total %></div>
+                  </div>
+                </div>
+              </div>
+          <% end %>
+      <% end %>
+    </div>
+<% end %>
+
+<% unless current_user.admin? %>
+    <div class="header">
+      <h2>
+        My Application
+      </h2>
+    </div>
+    <div class="body table-responsive">
+      <% if current_user.applicant %>
+      <table class='table'>
+        <thead>
+        <tr>
+          <th>Application Details</th>
+          <th>Academic Year</th>
+          <th>Status</th>
+          <th>Match Result - Program </th>
+          <th>Match Result - University </th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <% unless current_user.applicant.blank? %>
+            <tr>
+              <td><%= link_to 'Application Details', details_applicant_path(current_user.applicant) rescue nil %></td>
+              <td><%= AcademicYear.current %></td>
+              <td><%= current_user.applicant.application_status rescue nil %></td>
+              <td><%= applicant.match_result.program rescue nil %></td>
+              <td><%= applicant.match_result.university rescue nil %></td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+      <% end %>
+      <%= link_to 'Start New Application', new_applicant_path, class: 'btn btn-primary' if current_user.applicant.blank? %>
+    </div>
+<% end %>
+
+<div class="body table-responsive">
+<legend>Applicants program choice statstics</legend>
+<table class='table table-bordered dataTable js-exportable'>
+  <thead>
+  <tr>
+    <th>Program Name</th>
+    <th>1st Choice</th>
+    <th>2nd Choice</th>
+    <th>3rd Choice</th>
+  </tr>
+  </thead>
+  <% Program.all.each do |p| %>
+      <tr>
+        <td><%= p %></td>
+        <td><%= p.count_applicants(1) %></td>
+        <td><%= p.count_applicants(2) %></td>
+        <td><%= p.count_applicants(3) %></td>
+      </tr>
+  <% end %>
+</table><br/><br/>
 </div>

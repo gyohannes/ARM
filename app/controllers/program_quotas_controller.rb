@@ -28,7 +28,7 @@ class ProgramQuotasController < ApplicationController
 
     respond_to do |format|
       if @program_quota.save
-        format.html { redirect_to @program_quota, notice: 'Program quota was successfully created.' }
+        format.html { redirect_to program_quotas_path, notice: 'Program quota was successfully created.' }
         format.json { render :show, status: :created, location: @program_quota }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class ProgramQuotasController < ApplicationController
   def update
     respond_to do |format|
       if @program_quota.update(program_quota_params)
-        format.html { redirect_to @program_quota, notice: 'Program quota was successfully updated.' }
+        format.html { redirect_to program_quotas_path, notice: 'Program quota was successfully updated.' }
         format.json { render :show, status: :ok, location: @program_quota }
       else
         format.html { render :edit }

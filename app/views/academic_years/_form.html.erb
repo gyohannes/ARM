@@ -1,24 +1,11 @@
 <%= simple_form_for(@academic_year) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-group form-float">
-    <div class="form-line">
-      <label class="form-label">Name</label>
-      <%= f.input_field :name, class: "form-control" %>
-    </div>  
-  </div>
-
-  <div class="row">
-    <div class="col-xs-8 p-t-5">
-      <div class="form-group form-float">
-        <div class="form-line">
-          <%= f.check_box :status, id: "status", class: "filled-in chk-col-pink" %>
-          <label for="status">Currently Active</label>
-        </div>
-      </div>  
-    </div>
-  </div>
-
+      <%= f.input :name %>
+    <center>
+      <%= f.check_box :status, id: "status", class: "filled-in chk-col-pink" %>
+      <label for="status">Currently Active</label>
+    </center>
   <div class="form-actions">
     <%= f.button :submit %>
   </div>

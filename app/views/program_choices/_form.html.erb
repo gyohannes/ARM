@@ -2,28 +2,13 @@
                 <%= hidden_field_tag 'applicant', @applicant.id %>
                 <% @program_choices.each do |program_choice| %>
                   <%= simple_fields_for 'program_choices[]', program_choice do |pc| %>
-                    <%= pc.input_field :applicant_id, as: :hidden %>
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <%= pc.input_field :choice_order, as: :hidden %>
-                                        <label>
-                                        <%= pc.object.choice_order == 1 ? '1st Choice' : (pc.object.choice_order == 2 ? '2nd Choice' : '3rd Choice')%>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-9">
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <label class="form-label">Program</label>
-                                        <%= pc.input_field :program_id, collection: Program.all, class: "form-control show-tick" %>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <% end %>
+                        <%= pc.input :id, as: :hidden %>
+                        <%= pc.input :applicant_id, as: :hidden %>
+                        <%= pc.input :choice_order, as: :hidden %>
+                        <% choice  = pc.object.choice_order.ordinalize %>
+                        <%= pc.input :program_id,collection: Program.all, label: "#{choice}" %>
+                        <%= pc.full_error :program_id %>
                     <% end %>
-                    <%= submit_tag 'Save and Continue' %>
-                    <% end %>
+                <% end %>
+                <%= submit_tag 'Save and Continue' %>
+            <% end %>

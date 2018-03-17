@@ -7,5 +7,6 @@
 *= require AdminBSBMaterialDesign/bootstrap-select/bootstrap-select
 *= require AdminBSBMaterialDesign/sweetalert/sweetalert
 *= require AdminBSBMaterialDesign/css/style
+*= require AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap
 *= require AdminBSBMaterialDesign/css/themes/all-themes
 */

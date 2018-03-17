@@ -1,0 +1,9 @@
+label{
+    display: flex;
+}
+.details-label{
+    font-weight: bold;
+}
+.help-block{
+    color: red;
+}

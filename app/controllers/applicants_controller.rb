@@ -31,10 +31,9 @@ class ApplicantsController < ApplicationController
   # POST /applicants.json
   def create
     @applicant = Applicant.new(applicant_params)
-
     respond_to do |format|
       if @applicant.save
-          format.html { redirect_to new_program_choice_path(applicant: @applicant.id), notice: 'Applicant was successfully created.' }
+          format.html { redirect_to new_applicant_service_path(applicant: @applicant.id), notice: 'Applicant was successfully created.' }
       else
         format.html { render :new }
         format.json { render json: @applicant.errors, status: :unprocessable_entity }
@@ -47,7 +46,11 @@ class ApplicantsController < ApplicationController
   def update
     respond_to do |format|
       if @applicant.update(applicant_params)
-        format.html { redirect_to @applicant, notice: 'Applicant was successfully updated.' }
+        if @applicant.applicant_service.blank?
+          format.html { redirect_to new_applicant_service_path(applicant: @applicant.id), notice: 'Applicant was successfully updated.' }
+        else
+          format.html { redirect_to edit_applicant_service_path(@applicant.applicant_service), notice: 'Applicant was successfully updated.' }
+        end
         format.json { render :show, status: :ok, location: @applicant }
       else
         format.html { render :edit }
@@ -76,8 +79,16 @@ class ApplicantsController < ApplicationController
       
     end
 
+  def submit
+    @applicant = Applicant.find(params[:applicant])
+    @applicant.status = true
+    @applicant.save
+  end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def applicant_params
-      params.require(:applicant).permit(:user_id,:first_name, :father_name, :grand_father_name, :gender, :date_of_birth, program_choice_attributes: [:id, :applicant_id, :program_id, :choice_order, :_destroy])
+      params.require(:applicant).permit(:title, :place_of_birth, :marital_status, :region_id, :city, :pobox, :phone,
+                                        :user_id,:first_name, :father_name, :grand_father_name, :gender, :date_of_birth,
+                                        program_choice_attributes: [:id, :applicant_id, :program_id, :choice_order, :_destroy])
     end
 end

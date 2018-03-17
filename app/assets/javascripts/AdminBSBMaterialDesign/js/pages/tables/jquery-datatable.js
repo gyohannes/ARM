@@ -5,6 +5,8 @@ $(function () {
 
     //Exportable table
     $('.js-exportable').DataTable({
+        retrieve: true,
+        destroy: true,
         dom: 'Bfrtip',
         responsive: true,
         buttons: [

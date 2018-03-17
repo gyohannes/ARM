@@ -1,5 +1,8 @@
 ﻿/* Navbar ====================================== */
 @import url(materialize.css);
+.collection_radio_buttons{
+    display: table-row;
+}
 .navbar {
   font-family: "Roboto", sans-serif;
   -webkit-border-radius: 0;
@@ -5045,15 +5048,13 @@ section.content {
 .form-group {
   width: 100%;
   margin-bottom: 25px; }
-  .form-group .form-control {
-    width: 100%;
-    border: none;
-    box-shadow: none;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    border-radius: 0;
-    padding-left: 0; }
+.form-group .form-control {
+  width: 100%;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+}
   .form-group .help-info {
     float: right;
     font-size: 12px;
@@ -7722,7 +7723,7 @@ fieldset[disabled] .form-control {
 .login-page {
   background-color: #00BCD4;
   padding-left: 0;
-  max-width: 360px;
+  max-width: 600px;
   margin: 5% auto;
   overflow-x: hidden; }
   .login-page .login-box .msg {

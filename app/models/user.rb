@@ -5,5 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_one :applicant
+
+  def admin_status
+    admin? ? 'Yes' : '' 
+  end
   
 end

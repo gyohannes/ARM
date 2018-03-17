@@ -1,33 +1,17 @@
 
             <%= form_tag university_choices_path do %>
                 <%= hidden_field_tag 'applicant', @applicant.id %>
-                <% @applicant.program_choices.each do |program_choice| %>
-                  <%= program_choice.choice_order == 1 ? '1st Choice' : (program_choice.choice_order == 2 ? '2nd Choice' : '3rd Choice') %> - <%= program_choice.program.name %><br/><br/>
+                <% @applicant.complete_program_choices.each do |program_choice| %>
+                  <%= program_choice.choice_order.ordinalize %> - <%= program_choice.program.name %><br/><br/>
                   <% program_choice.university_choices.each do |university_choice| %>
                   <%= simple_fields_for 'university_choices[]', university_choice do |uc| %>
-                    <%= uc.input_field :program_choice_id, as: :hidden %>
-                        <div class="row">
-                            <div class="col-sm-2 col-sm-offset-1">
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <%= uc.input_field :choice_order, as: :hidden %>
-                                        <label>
-                                        <%= uc.object.choice_order %>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-9">
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <label class="form-label">University</label>
-                                        <%= uc.input_field :university_id, collection: program_choice.program.universities, class: "form-control show-tick" %>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                            <%= uc.input :id, as: :hidden %>
+                            <%= uc.input :program_choice_id, as: :hidden %>
+                            <%= uc.input :choice_order, as: :hidden %>
+                            <% choice_order = uc.object.choice_order.ordinalize %>
+                            <%= uc.input :university_id, label: "#{choice_order}", collection: program_choice.program.universities, class: "form-control show-tick" %>
                         <% end %>
                     <% end %>
                     <% end %>
-                    <%= submit_tag 'Submit Application' %>
+                    <%= submit_tag 'Save and Continue' %>
                     <% end %>

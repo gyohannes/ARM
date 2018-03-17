@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171221172538) do
+ActiveRecord::Schema.define(version: 20180317155314) do
 
   create_table "academic_years", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
@@ -19,26 +19,84 @@ ActiveRecord::Schema.define(version: 20171221172538) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "applicant_exam_hubs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "applicant_id"
+    t.bigint "exam_hub_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["applicant_id"], name: "index_applicant_exam_hubs_on_applicant_id"
+    t.index ["exam_hub_id"], name: "index_applicant_exam_hubs_on_exam_hub_id"
+  end
+
+  create_table "applicant_services", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "applicant_id"
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["applicant_id"], name: "index_applicant_services_on_applicant_id"
+  end
+
   create_table "applicants", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "user_id"
     t.string "first_name"
     t.string "father_name"
     t.string "grand_father_name"
     t.string "gender"
     t.date "date_of_birth"
+    t.string "place_of_birth"
+    t.string "marital_status"
+    t.bigint "region_id"
+    t.string "city"
+    t.string "pobox"
+    t.string "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
     t.boolean "status"
+    t.string "title"
+    t.index ["region_id"], name: "index_applicants_on_region_id"
+    t.index ["user_id"], name: "index_applicants_on_user_id"
+  end
+
+  create_table "attachments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "applicant_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "photo_file_name"
+    t.string "photo_content_type"
+    t.integer "photo_file_size"
+    t.datetime "photo_updated_at"
+    t.string "cv_file_name"
+    t.string "cv_content_type"
+    t.integer "cv_file_size"
+    t.datetime "cv_updated_at"
+    t.string "motivation_letter_file_name"
+    t.string "motivation_letter_content_type"
+    t.integer "motivation_letter_file_size"
+    t.datetime "motivation_letter_updated_at"
+    t.string "sponsorship_letter_file_name"
+    t.string "sponsorship_letter_content_type"
+    t.integer "sponsorship_letter_file_size"
+    t.datetime "sponsorship_letter_updated_at"
+    t.index ["applicant_id"], name: "index_attachments_on_applicant_id"
   end
 
   create_table "events", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.bigint "academic_year_id"
     t.string "name"
-    t.datetime "start_time"
-    t.datetime "end_time"
+    t.date "start_time"
+    t.date "end_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["academic_year_id"], name: "index_events_on_academic_year_id"
+  end
+
+  create_table "exam_hubs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.bigint "region_id"
+    t.string "city"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["region_id"], name: "index_exam_hubs_on_region_id"
   end
 
   create_table "match_results", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -80,6 +138,24 @@ ActiveRecord::Schema.define(version: 20171221172538) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "regions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "services", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "applicant_service_id"
+    t.string "institution"
+    t.bigint "region_id"
+    t.date "start_date"
+    t.date "end_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["applicant_service_id"], name: "index_services_on_applicant_service_id"
+    t.index ["region_id"], name: "index_services_on_region_id"
+  end
+
   create_table "universities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -114,7 +190,14 @@ ActiveRecord::Schema.define(version: 20171221172538) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "applicant_exam_hubs", "applicants"
+  add_foreign_key "applicant_exam_hubs", "exam_hubs"
+  add_foreign_key "applicant_services", "applicants"
+  add_foreign_key "applicants", "regions"
+  add_foreign_key "applicants", "users"
+  add_foreign_key "attachments", "applicants"
   add_foreign_key "events", "academic_years"
+  add_foreign_key "exam_hubs", "regions"
   add_foreign_key "match_results", "applicants"
   add_foreign_key "match_results", "programs"
   add_foreign_key "match_results", "universities"
@@ -123,6 +206,8 @@ ActiveRecord::Schema.define(version: 20171221172538) do
   add_foreign_key "program_quotas", "academic_years"
   add_foreign_key "program_quotas", "programs"
   add_foreign_key "program_quotas", "universities"
+  add_foreign_key "services", "applicant_services"
+  add_foreign_key "services", "regions"
   add_foreign_key "university_choices", "program_choices"
   add_foreign_key "university_choices", "universities"
 end

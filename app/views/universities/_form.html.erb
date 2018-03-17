@@ -1,14 +1,7 @@
 <%= simple_form_for(@university) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-group form-float">
-  <div class="form-line">
-      <label class="form-label">Name</label>
-      <%= f.input_field :name, class: "form-control show-tick" %>
-  </div>
-  <%= f.full_error :name %>
-</div>
-
+    <%= f.input :name %>
   <div class="form-actions">
     <%= f.button :submit %>
   </div>

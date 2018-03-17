@@ -1,38 +1,19 @@
-            <%= simple_form_for @applicant  do |f| %>
-                <%= f.input_field :user_id, as: :hidden,value: current_user.id %>
-                        <div class="form-group form-float">
-                            <div class="form-line">
-                            <label class="form-label">First Name</label>
-                            <%= f.input_field :first_name, class: "form-control" %>
-                            </div>
-                        </div>
-
-                        <div class="form-group form-float">
-                            <div class="form-line">
-                                <label class="form-label">Father Name</label>
-                                <%= f.input_field :father_name, class: "form-control" %>
-                            </div>
-                        </div>
-
-                        <div class="form-group form-float">
-                            <div class="form-line">
-                                <label class="form-label">Grand Father Name</label>
-                                <%= f.input_field :grand_father_name, class: "form-control" %>
-                            </div>
-                        </div>
-                        <div class="form-group form-float">
-                            <div class="form-line">
-                                <label class="form-label">Gender</label>
-                                <%= f.input_field :gender, collection: ['Male', 'Female'], class: "form-control show-tick" %>
-                            </div>
-                        </div>
-                        <div class="form-group form-float">
-                        <div class="form-group">
-                            <div class="form-line">
-                                <label class="form-label">Date of Birth</label>
-                                <%= f.input_field :date_of_birth, as: :string, class: "datepicker form-control" %>
-                            </div>
-                            </div>
-                        </div>
-                    <%= f.button :submit, 'Save and Continue' %>
-                    <% end %>
+<%= simple_form_for @applicant do |f| %>
+    <%= f.error_notification %>
+    <%= f.input :title, collection: ['Dr', 'Mr', 'Ms'] %>
+    <%= f.input :user_id, as: :hidden,input_html: { value: current_user.id } %>
+    <%= f.input :first_name %>
+    <%= f.input :father_name %>
+    <%= f.input :grand_father_name %>
+    <%= f.input :gender, collection: ['Male', 'Female'] %>
+    <%= f.input :date_of_birth, as: :string, input_html: {class: "datepicker"} %>
+    <%= f.input :place_of_birth %>
+    <%= f.input :marital_status, collection: ['Single', 'Married', 'Divorced'] %>
+      <legend>Current Address</legend>
+      <%= f.association :region %>
+      <%= f.input :city %>
+      <%= f.input :pobox %>
+      <%= f.input :phone %>
+    <hr/>
+    <%= f.button :submit, 'Save and Continue' %>
+<% end %>

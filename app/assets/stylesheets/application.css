@@ -1,16 +1,23 @@
 /* 
 *= require AdminBSBMaterialDesign/index
-*= require simple_calendar
+*= require fullcalendar
+*= require new_style
  */
 
- @font-face {
+@font-face {
     font-family: 'Material Icons';
     font-style: normal;
     font-weight: 400;
     src: url(../assets/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
-  }
-  
-  .material-icons {
+}
+
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('../assets/glyphicons-halflings-regular.woff') format('woff'),
+    url('../assets/glyphicons-halflings-regular.ttf') format('truetype');
+}
+
+.material-icons {
     font-family: 'Material Icons';
     font-weight: normal;
     font-style: normal;
@@ -24,4 +31,4 @@
     direction: ltr;
     -moz-font-feature-settings: 'liga';
     -moz-osx-font-smoothing: grayscale;
-  }
+}

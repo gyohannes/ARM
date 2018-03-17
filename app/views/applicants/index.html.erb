@@ -1,21 +1,20 @@
 <% if current_user.admin? %>
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-<div class="card">
     <div class="header">
         <h2>
             Applicants
         </h2>
     </div>
-    <div class="body table-responsive">
-    <table class='table'>
+      <div class=" body table-responsive">
+      <table class="table table-bordered table-striped table-hover dataTable js-exportable">
     <thead>
       <tr>
         <th>#</th>
-        <th>First name</th>
-        <th>Father name</th>
-        <th>Grand father name</th>
+        <th>Name</th>
         <th>Gender</th>
-        <th>Date of birth</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Details</th>
+
       </tr>
     </thead>
 
@@ -24,30 +23,26 @@
       <% @applicants.each do |applicant| %>
         <tr>
           <td><%= counter %></td>
-          <td><%= applicant.first_name %></td>
-          <td><%= applicant.father_name %></td>
-          <td><%= applicant.grand_father_name %></td>
+          <td><%= applicant.full_name %></td>
           <td><%= applicant.gender %></td>
-          <td><%= applicant.date_of_birth %></td>
+          <td><%= applicant.user.email %></td>
+          <td><%= applicant.phone %></td>
+          <td><%= link_to 'Details', details_applicant_path(applicant) %></td>
         </tr>
         <% counter += 1 %>
       <% end %>
     </tbody>
   </table>
-    </div>
-</div>
-</div>
-<% else %>
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-  <div class="card">
-      <div class="header">
-          <h2>
-              Application
-          </h2>
       </div>
-      <div class="body table-responsive">
+<% else %>
+    <div class="header">
+      <h2>
+        Application
+      </h2>
+    </div>
+    <div class="body table-responsive">
       <table class='table'>
-      <thead>
+        <thead>
         <tr>
           <th>Application Details</th>
           <th>Academic Year</th>
@@ -55,22 +50,21 @@
           <th>Match Result - Program </th>
           <th>Match Result - University </th>
         </tr>
-      </thead>
-      
-      <tbody>
+        </thead>
+
+        <tbody>
         <% unless current_user.applicant.blank? %>
-          <tr>
-            <td><%= link_to 'Application Details', details_applicant_path(current_user.applicant) rescue nil %></td>
-            <td><%= AcademicYear.current %></td>
-            <td><%= current_user.applicant.application_status rescue nil %></td>
-            <td><%= applicant.match_result.program rescue nil %></td>
-            <td><%= applicant.match_result.university rescue nil %></td>
-          </tr>
-          <% end %>
-      </tbody>
-    </table>
-     <%= link_to 'New Application', new_applicant_path, class: 'btn btn-primary' if current_user.applicant.blank? %>
+            <tr>
+              <td><%= link_to 'Application Details', details_applicant_path(current_user.applicant) rescue nil %></td>
+              <td><%= AcademicYear.current %></td>
+              <td><%= current_user.applicant.application_status rescue nil %></td>
+              <td><%= applicant.match_result.program rescue nil %></td>
+              <td><%= applicant.match_result.university rescue nil %></td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+      <%= link_to 'New Application', new_applicant_path, class: 'btn btn-primary' if current_user.applicant.blank? %>
     </div>
-  </div>
-  </div>
+
 <% end %>
