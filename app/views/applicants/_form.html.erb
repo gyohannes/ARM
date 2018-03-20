@@ -1,6 +1,6 @@
 <%= simple_form_for @applicant do |f| %>
     <%= f.error_notification %>
-    <%= f.input :title, collection: ['Dr', 'Mr', 'Ms'] %>
+    <%= f.input :title, label: 'Title', collection: ['Dr', 'Mr', 'Ms'] %>
     <%= f.input :user_id, as: :hidden,input_html: { value: current_user.id } %>
     <%= f.input :first_name %>
     <%= f.input :father_name %>

@@ -9,7 +9,6 @@
     <li role="presentation"><a href="#university_choices" data-toggle="tab">University Choices</a></li>
     <li role="presentation"><a href="#exam_hub" data-toggle="tab">Exam Hub</a></li>
     <li role="presentation"><a href="#services" data-toggle="tab">Services</a></li>
-    <li role="presentation"><a href="#attachments" data-toggle="tab">Attachments</a></li>
   </ul>
 
   <!-- Tab panes -->
@@ -75,56 +74,14 @@
         <% end %>
       </div>
       </div>
-    <div role="tabpanel" class="tab-pane fade" id="attachments">
-      <div class="header">
-        <h2>
-          <i class="material-icons">person</i>
-          <span>File Uploads</span>
-        </h2>
-      </div>
-      <div class='row'>
-        <div class='col-md-3 col-md-offset-1'>
-          Photo
-        </div>
-        <div class='col-md-8'>
-          <%= link_to @applicant.attachment.photo.url(:medium) do %>
-            <%= image_tag @applicant.attachment.photo.url(:thumb) %>
-          <% end %>
-        </div>
-      </div>
-
-      <div class='row'>
-        <div class='col-md-3 col-md-offset-1'>
-          CV
-        </div>
-        <div class='col-md-8'>
-          <%= link_to 'Download CV', @applicant.attachment.cv.url %>
-        </div>
-      </div>
-
-      <div class='row'>
-        <div class='col-md-3 col-md-offset-1'>
-          Motivation Letter
-        </div>
-        <div class='col-md-8'>
-          <%= link_to 'Download Motivation Letter', @applicant.attachment.motivation_letter.url %>
-        </div>
-      </div>
-
-      <div class='row'>
-        <div class='col-md-3 col-md-offset-1'>
-          Sponsorship Letter
-        </div>
-        <div class='col-md-8'>
-          <%= link_to 'Download Sponsorship Letter', @applicant.attachment.sponsorship_letter.url %>
-        </div>
-      </div>
-
-    </div>
   </div>
   <hr/>
   <center>
-    <%= link_to 'Edit Application', edit_applicant_path(@applicant), class: 'btn btn-primary'  unless current_user.admin?%>
+    <% unless @application_calendar.blank? %>
+        <% if @application_calendar.try(:start_time) <= Date.today and @application_calendar.try(:end_time) >= Date.today %>
+        <%= link_to 'Edit Application', edit_applicant_path(@applicant), class: 'btn btn-primary'  unless current_user.admin?%>
+      <% end %>
+    <% end %>
   </center>
 </div>
 

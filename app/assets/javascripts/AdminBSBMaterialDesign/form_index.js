@@ -5,4 +5,3 @@
 //= require applicant_services
 //= require AdminBSBMaterialDesign/js/pages/forms/basic-form-elements
 //= require AdminBSBMaterialDesign/js/admin
-//= require AdminBSBMaterialDesign/js/demo

@@ -5,7 +5,6 @@ Rails.application.routes.draw do
     end
   end
   resources :applicant_exam_hubs
-  resources :attachments
   resources :exam_hubs
   resources :regions
   resources :match_results

@@ -40,9 +40,9 @@ class UniversityChoicesController < ApplicationController
     unless @applicant.complete_university_choices.blank?
       flash[:notice] = 'University choices submitted successfully'
       if @applicant.applicant_exam_hub.blank?
-        redirect_to new_attachment_path(applicant: @applicant.id)
+        redirect_to new_applicant_exam_hub_path(applicant: @applicant.id)
       else
-        redirect_to edit_attachment_path(@applicant.attachment)
+        redirect_to edit_applicant_exam_hub_path(@applicant.attachment)
       end
     else
       render 'new'
