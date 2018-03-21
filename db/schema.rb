@@ -10,13 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180317155314) do
+ActiveRecord::Schema.define(version: 20180321133631) do
 
   create_table "academic_years", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.boolean "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "applicant_declarations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "applicant_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["applicant_id"], name: "index_applicant_declarations_on_applicant_id"
   end
 
   create_table "applicant_exam_hubs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -33,6 +40,7 @@ ActiveRecord::Schema.define(version: 20180317155314) do
     t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "sponsor"
     t.index ["applicant_id"], name: "index_applicant_services_on_applicant_id"
   end
 
@@ -57,27 +65,20 @@ ActiveRecord::Schema.define(version: 20180317155314) do
     t.index ["user_id"], name: "index_applicants_on_user_id"
   end
 
-  create_table "attachments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.bigint "applicant_id"
+  create_table "declaration_details", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "applicant_declaration_id"
+    t.bigint "declaration_id"
+    t.boolean "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "photo_file_name"
-    t.string "photo_content_type"
-    t.integer "photo_file_size"
-    t.datetime "photo_updated_at"
-    t.string "cv_file_name"
-    t.string "cv_content_type"
-    t.integer "cv_file_size"
-    t.datetime "cv_updated_at"
-    t.string "motivation_letter_file_name"
-    t.string "motivation_letter_content_type"
-    t.integer "motivation_letter_file_size"
-    t.datetime "motivation_letter_updated_at"
-    t.string "sponsorship_letter_file_name"
-    t.string "sponsorship_letter_content_type"
-    t.integer "sponsorship_letter_file_size"
-    t.datetime "sponsorship_letter_updated_at"
-    t.index ["applicant_id"], name: "index_attachments_on_applicant_id"
+    t.index ["applicant_declaration_id"], name: "index_declaration_details_on_applicant_declaration_id"
+    t.index ["declaration_id"], name: "index_declaration_details_on_declaration_id"
+  end
+
+  create_table "declarations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "events", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -190,12 +191,14 @@ ActiveRecord::Schema.define(version: 20180317155314) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "applicant_declarations", "applicants"
   add_foreign_key "applicant_exam_hubs", "applicants"
   add_foreign_key "applicant_exam_hubs", "exam_hubs"
   add_foreign_key "applicant_services", "applicants"
   add_foreign_key "applicants", "regions"
   add_foreign_key "applicants", "users"
-  add_foreign_key "attachments", "applicants"
+  add_foreign_key "declaration_details", "applicant_declarations"
+  add_foreign_key "declaration_details", "declarations"
   add_foreign_key "events", "academic_years"
   add_foreign_key "exam_hubs", "regions"
   add_foreign_key "match_results", "applicants"

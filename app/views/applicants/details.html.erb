@@ -9,6 +9,7 @@
     <li role="presentation"><a href="#university_choices" data-toggle="tab">University Choices</a></li>
     <li role="presentation"><a href="#exam_hub" data-toggle="tab">Exam Hub</a></li>
     <li role="presentation"><a href="#services" data-toggle="tab">Services</a></li>
+    <li role="presentation"><a href="#declarations" data-toggle="tab">Declarations</a></li>
   </ul>
 
   <!-- Tab panes -->
@@ -47,8 +48,24 @@
         </h2>
       </div>
       <div class="body table-responsive">
-        <label>Have you served at an institution ?
-        <%= @applicant.applicant_service.try(:status) %></label>
+        <div class='row'>
+          <div class='col-md-3 col-md-offset-1'>
+            Served at an institution ?
+          </div>
+          <div class='col-md-8'>
+            <%= @applicant.applicant_service.try(:status) %>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class='col-md-3 col-md-offset-1'>
+            sponsor
+          </div>
+          <div class='col-md-8'>
+            <%= @applicant.applicant_service.try(:sponsor) %>
+          </div>
+        </div>
+
         <% unless @applicant.applicant_service.blank? %>
         <table class="table table-bordered table-striped table-hover dataTable">
           <thead>
@@ -74,6 +91,19 @@
         <% end %>
       </div>
       </div>
+
+    <div role="tabpanel" class="tab-pane fade" id="declarations">
+      <% @applicant.declaration_details.each do |ad| %>
+        <div class='row'>
+          <div class='col-sm-10'>
+            <%= ad.declaration %>
+          </div>
+          <div class='col-sm-2'>
+            <%= ad.declaration_status %>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
   <hr/>
   <center>

@@ -42,7 +42,7 @@ class UniversityChoicesController < ApplicationController
       if @applicant.applicant_exam_hub.blank?
         redirect_to new_applicant_exam_hub_path(applicant: @applicant.id)
       else
-        redirect_to edit_applicant_exam_hub_path(@applicant.attachment)
+        redirect_to edit_applicant_exam_hub_path(@applicant.applicant_exam_hub)
       end
     else
       render 'new'

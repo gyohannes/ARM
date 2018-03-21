@@ -81,7 +81,7 @@ class ApplicantServicesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def applicant_service_params
-      params.require(:applicant_service).permit(:applicant_id, :status,
+      params.require(:applicant_service).permit(:applicant_id, :sponsor, :status,
                                                 services_attributes: [:id, :institution, :region_id, :start_date, :end_date, :_destroy])
     end
 end

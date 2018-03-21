@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :applicant_declarations
+  resources :declarations
   resources :applicant_services do
     collection do
       get 'load_services'

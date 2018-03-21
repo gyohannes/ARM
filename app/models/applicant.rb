@@ -5,6 +5,8 @@ class Applicant < ApplicationRecord
     has_one :match_result
     has_one :applicant_exam_hub, dependent: :destroy
     has_one :applicant_service,  dependent: :destroy
+    has_one :applicant_declaration
+    has_many :declaration_details, through: :applicant_declaration
 
     validates :first_name, :father_name, :grand_father_name, presence: true
 
