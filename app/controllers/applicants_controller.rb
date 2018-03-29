@@ -4,7 +4,7 @@ class ApplicantsController < ApplicationController
   # GET /applicants
   # GET /applicants.json
   def index
-    @applicants = Applicant.all
+    @applicants = AcademicYear.current.applicants
   end
 
   # GET /applicants/1

@@ -1,6 +1,7 @@
 class AcademicYear < ApplicationRecord
 
     has_many :events
+    has_many :applicants
     
 
     def self.current
