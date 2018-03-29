@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :application_instructions
   resources :applicant_declarations
   resources :declarations
   resources :applicant_services do
@@ -18,9 +19,11 @@ Rails.application.routes.draw do
   resources :universities
   resources :programs
   resources :applicants do
+    collection do
+      get 'instructions'
+    end
     member do
       get 'details'
-      get 'submit'
     end
   end
   devise_for :users, controllers: {

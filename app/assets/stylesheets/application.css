@@ -2,6 +2,8 @@
 *= require AdminBSBMaterialDesign/index
 *= require fullcalendar
 *= require new_style
+*= require bootstrap-wysihtml5
+*= require animate
  */
 
 @font-face {

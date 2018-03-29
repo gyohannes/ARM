@@ -3,6 +3,8 @@ $(function () {
         events: '/events.json'
     });
 
+    $('.wysihtml5').wysihtml5({'toolbar': {'blockquote': false, 'html': true}})
+
     skinChanger();
     activateNotificationAndTasksScroll();
 

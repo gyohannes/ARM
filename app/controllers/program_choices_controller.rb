@@ -39,9 +39,11 @@ class ProgramChoicesController < ApplicationController
       end
 
       unless @applicant.complete_program_choices.blank?
+        flash[:notice] = 'Program choices successfuly saved'
         redirect_to new_university_choice_path(applicant: @applicant.id )
       else
         @program_choices = @applicant.program_choices
+        flash[:alert] = 'Please select at least one program to proceed'
         render 'new'
       end
   end

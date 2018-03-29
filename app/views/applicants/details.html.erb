@@ -1,5 +1,12 @@
 <div class="header">
-  <h2>Application Details</h2>
+  <h2>Application Details <center>
+    <% unless @application_calendar.blank? %>
+        <% if @application_calendar.try(:start_time) <= Date.today and @application_calendar.try(:end_time) >= Date.today %>
+            <%= link_to 'Edit Application', edit_applicant_path(@applicant), class: 'btn btn-primary'  unless current_user.admin?%>
+        <% end %>
+    <% end %>
+    <%= link_to 'Download Application as PDF', details_applicant_path(@applicant, format: :pdf), class: 'btn btn-primary' if @applicant.status? %>
+  </center></h2>
 </div>
 <div class="body">
   <!-- Nav tabs -->
@@ -27,7 +34,7 @@
     <div role="tabpanel" class="tab-pane fade" id="exam_hub">
       <div class="header">
         <h2>
-          <i class="material-icons">map</i>
+          <i class="material-icons">location_on</i>
           <span>Exam Hub</span>
         </h2>
       </div>
@@ -44,7 +51,8 @@
     <div role="tabpanel" class="tab-pane fade" id="services">
       <div class="header">
         <h2>
-          My Services
+          <i class="material-icons">work</i>
+          <span>Services</span>
         </h2>
       </div>
       <div class="body table-responsive">
@@ -93,6 +101,12 @@
       </div>
 
     <div role="tabpanel" class="tab-pane fade" id="declarations">
+      <div class="header">
+      <h2>
+        <i class="material-icons">question_answer</i>
+        <span>Declarations</span>
+      </h2>
+      </div><br/>
       <% @applicant.declaration_details.each do |ad| %>
         <div class='row'>
           <div class='col-sm-10'>
@@ -105,13 +119,5 @@
       <% end %>
     </div>
   </div>
-  <hr/>
-  <center>
-    <% unless @application_calendar.blank? %>
-        <% if @application_calendar.try(:start_time) <= Date.today and @application_calendar.try(:end_time) >= Date.today %>
-        <%= link_to 'Edit Application', edit_applicant_path(@applicant), class: 'btn btn-primary'  unless current_user.admin?%>
-      <% end %>
-    <% end %>
-  </center>
 </div>
 

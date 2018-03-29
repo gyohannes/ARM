@@ -96,7 +96,7 @@
           <% if current_user.applicant.blank? %>
               <% unless @application_calendar.blank? %>
                   <% if @application_calendar.try(:start_time) <= Date.today and @application_calendar.try(:end_time) >= Date.today %>
-                      <%= link_to 'Start New Application', new_applicant_path, class: 'btn btn-primary' if current_user.applicant.blank? %>
+                      <%= link_to 'Start New Application', instructions_applicants_path, class: 'btn btn-primary' if current_user.applicant.blank? %>
                   <% else %>
                       <i class="material-icons">info</i>
                       <i>Application is not Available. Please check calendar</i>
@@ -146,9 +146,9 @@
   <thead>
   <tr>
     <th>Program Name</th>
-    <th>1st Choice</th>
-    <th>2nd Choice</th>
-    <th>3rd Choice</th>
+    <th>1st</th>
+    <th>2nd</th>
+    <th>3rd</th>
   </tr>
   </thead>
   <% Program.all.each do |p| %>
@@ -160,4 +160,28 @@
       </tr>
   <% end %>
 </table><br/><br/>
+
+  <legend>Applicants university choice statstics</legend>
+  <table border="1" width="100%">
+    <% Program.all.each do |p| %>
+        <tr>
+          <th rowspan="<%= p.universities.count * 2 + 1 %>">
+            <%= p %>
+          </th>
+        </tr>
+        <% p.universities.each do |u| %>
+          <tr>
+            <td rowspan="2"><%= u %></td>
+              <% (p.choice_orders(u.id)).each do |order| %>
+                  <td><%= order.ordinalize %></td>
+              <% end %>
+            </tr>
+            <tr>
+              <% (p.choice_orders(u.id)).each do |order| %>
+                  <td><%= p.applicant_per_university(u.id, order) %></td>
+            <% end %>
+            </tr>
+        <% end %>
+        <% end %>
+  </table>
 </div>

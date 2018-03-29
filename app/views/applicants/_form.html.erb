@@ -1,5 +1,6 @@
 <%= simple_form_for @applicant do |f| %>
     <%= f.error_notification %>
+    <%= f.input :academic_year_id, as: :hidden, input_html: {value: AcademicYear.current.try(:id)} %>
     <%= f.input :title, label: 'Title', collection: ['Dr', 'Mr', 'Ms'] %>
     <%= f.input :user_id, as: :hidden,input_html: { value: current_user.id } %>
     <%= f.input :first_name %>

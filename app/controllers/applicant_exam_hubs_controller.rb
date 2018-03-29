@@ -30,7 +30,7 @@ class ApplicantExamHubsController < ApplicationController
     @applicant  = @applicant_exam_hub.applicant
     respond_to do |format|
       if @applicant_exam_hub.save
-        format.html { redirect_to new_applicant_declaration_path(applicant: @applicant.id), notice: 'Applicant exam hub was successfully created.' }
+        format.html { redirect_to new_applicant_declaration_path(applicant: @applicant.id), notice: 'Exam hub was successfully created.' }
         format.json { render :show, status: :created, location: @applicant_exam_hub }
       else
         format.html { render :new }
@@ -46,9 +46,9 @@ class ApplicantExamHubsController < ApplicationController
     respond_to do |format|
       if @applicant_exam_hub.update(applicant_exam_hub_params)
         if @applicant.applicant_declaration.blank?
-          format.html { redirect_to new_applicant_declaration_path(applicant: @applicant.id), notice: 'Applicant exam hub was successfully updated.' }
+          format.html { redirect_to new_applicant_declaration_path(applicant: @applicant.id), notice: 'Exam hub was successfully updated.' }
         else
-          format.html { redirect_to edit_applicant_declaration_path(@applicant.applicant_declaration), notice: 'Applicant exam hub was successfully updated.' }
+          format.html { redirect_to edit_applicant_declaration_path(@applicant.applicant_declaration), notice: 'Exam hub was successfully updated.' }
         end
         format.json { render :show, status: :ok, location: @applicant_exam_hub }
       else

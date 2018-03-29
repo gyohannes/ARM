@@ -29,9 +29,16 @@ class ApplicantServicesController < ApplicationController
     @applicant_service = ApplicantService.new(applicant_service_params)
     @served = @applicant_service.status
     @applicant = @applicant_service.applicant
+
+    if @applicant_service.status == 'No'
+      params[:applicant_service].delete(:services_attributes)
+      @applicant_service.services.destroy_all
+    end
+
     respond_to do |format|
       if @applicant_service.status == 'Yes' and @applicant_service.services.blank?
-        format.html { render :new, notice: "You selected yes. Please please add service/s to proceed" }
+        flash[:notice] = "You selected yes. Please add service/s to proceed"
+        render :new
       else
         if @applicant_service.save
           format.html { redirect_to new_program_choice_path(applicant: @applicant.id), notice: 'Applicant service was successfully created.' }
@@ -48,17 +55,23 @@ class ApplicantServicesController < ApplicationController
   # PATCH/PUT /applicant_services/1.json
   def update
     @applicant = @applicant_service.applicant
+    if params[:applicant_service][:status] == 'No'
+      params[:applicant_service].delete(:services_attributes)
+      @applicant_service.services.destroy_all
+    end
+
     respond_to do |format|
-      if @applicant_service.status == 'Yes' and @applicant_service.services.blank?
-        fformat.html { render :edit, notice: "You selected yes. Please please add service/s to proceed" }
-      else
       if @applicant_service.update(applicant_service_params)
+        if @applicant_service.status == 'Yes' and @applicant_service.services.blank?
+          flash[:alert] =  "You selected yes. Please add service/s to proceed"
+          format.html { render :edit }
+          else
         format.html { redirect_to new_program_choice_path(applicant: @applicant.id), notice: 'Applicant service was successfully updated.' }
         format.json { render :show, status: :ok, location: @applicant_service }
+        end
       else
         format.html { render :edit }
         format.json { render json: @applicant_service.errors, status: :unprocessable_entity }
-      end
       end
     end
   end

@@ -38,13 +38,14 @@ class UniversityChoicesController < ApplicationController
     end
 
     unless @applicant.complete_university_choices.blank?
-      flash[:notice] = 'University choices submitted successfully'
+      flash[:notice] = 'University choices saved successfully'
       if @applicant.applicant_exam_hub.blank?
         redirect_to new_applicant_exam_hub_path(applicant: @applicant.id)
       else
         redirect_to edit_applicant_exam_hub_path(@applicant.applicant_exam_hub)
       end
     else
+      flash[:alert] = 'Please select at least one university to proceed'
       render 'new'
     end
   end

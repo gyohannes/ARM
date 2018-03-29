@@ -5,12 +5,14 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'jquery-rails'
-
 gem 'devise'
 gem 'simple_form'
 gem "nested_form"
 gem "paperclip", "~> 5.2.1"
+gem 'wicked_pdf', '~> 1.1'
+gem 'wkhtmltopdf_binary', '~> 0.12.3.1'
+gem 'bootstrap-wysihtml5-rails'
+gem 'bootstrap-growl-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use mysql as the database for Active Record

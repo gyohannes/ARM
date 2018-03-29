@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180321133631) do
+ActiveRecord::Schema.define(version: 20180329065912) do
 
   create_table "academic_years", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
@@ -61,8 +61,16 @@ ActiveRecord::Schema.define(version: 20180321133631) do
     t.datetime "updated_at", null: false
     t.boolean "status"
     t.string "title"
+    t.bigint "academic_year_id"
+    t.index ["academic_year_id"], name: "index_applicants_on_academic_year_id"
     t.index ["region_id"], name: "index_applicants_on_region_id"
     t.index ["user_id"], name: "index_applicants_on_user_id"
+  end
+
+  create_table "application_instructions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "declaration_details", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -97,6 +105,7 @@ ActiveRecord::Schema.define(version: 20180321133631) do
     t.string "city"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "ceiling"
     t.index ["region_id"], name: "index_exam_hubs_on_region_id"
   end
 
@@ -195,6 +204,7 @@ ActiveRecord::Schema.define(version: 20180321133631) do
   add_foreign_key "applicant_exam_hubs", "applicants"
   add_foreign_key "applicant_exam_hubs", "exam_hubs"
   add_foreign_key "applicant_services", "applicants"
+  add_foreign_key "applicants", "academic_years"
   add_foreign_key "applicants", "regions"
   add_foreign_key "applicants", "users"
   add_foreign_key "declaration_details", "applicant_declarations"
