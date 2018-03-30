@@ -50,3 +50,5 @@ test:
 production:
   <<: *default
   database: matching
+  username: root
+  password: rootpass
