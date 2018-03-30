@@ -4,7 +4,7 @@ class ApplicantsController < ApplicationController
   # GET /applicants
   # GET /applicants.json
   def index
-    @applicants = AcademicYear.current.applicants || []
+    @applicants = AcademicYear.current.applicants rescue nil
   end
 
   # GET /applicants/1

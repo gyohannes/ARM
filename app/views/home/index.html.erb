@@ -13,7 +13,7 @@
                   </div>
                   <div class="content">
                     <div class="text">Applicants</div>
-                    <div class="number"><%= Applicant.count %></div>
+                    <div class="number"><%= AcademicYear.current.blank? ? 0 : AcademicYear.current.applicants.count  %></div>
                   </div>
                 </div>
               </div>

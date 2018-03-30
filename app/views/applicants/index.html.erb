@@ -21,17 +21,19 @@
 
     <tbody>
       <% counter = 1 %>
-      <% @applicants.each do |applicant| %>
-        <tr>
-          <td><%= counter %></td>
-          <td><%= applicant.full_name %></td>
-          <td><%= applicant.gender %></td>
-          <td><%= applicant.user.email %></td>
-          <td><%= applicant.phone %></td>
-          <td><%= applicant.application_status %></td>
-          <td><%= link_to 'Details', details_applicant_path(applicant) %></td>
-        </tr>
-        <% counter += 1 %>
+      <% unless @applicants.blank? %>
+        <% @applicants.each do |applicant| %>
+          <tr>
+            <td><%= counter %></td>
+            <td><%= applicant.full_name %></td>
+            <td><%= applicant.gender %></td>
+            <td><%= applicant.user.email %></td>
+            <td><%= applicant.phone %></td>
+            <td><%= applicant.application_status %></td>
+            <td><%= link_to 'Details', details_applicant_path(applicant) %></td>
+          </tr>
+          <% counter += 1 %>
+        <% end %>
       <% end %>
     </tbody>
   </table>
