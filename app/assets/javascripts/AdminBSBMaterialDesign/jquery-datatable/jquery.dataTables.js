@@ -2,7 +2,7 @@
  * ©2008-2015 SpryMedia Ltd - datatables.net/license
  */
 
-/**
+/**z
  * @summary     DataTables
  * @description Paginate, search and order HTML tables
  * @version     1.10.12

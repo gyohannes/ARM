@@ -5,6 +5,21 @@ $(function () {
 
     $('.wysihtml5').wysihtml5({'toolbar': {'blockquote': false, 'html': true}})
 
+    $('.js-basic-example').DataTable({
+        responsive: true
+    });
+
+    //Exportable table
+    $('.js-exportable').DataTable({
+        retrieve: true,
+        destroy: true,
+        dom: 'Bfrtip',
+        responsive: true,
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+    });
+
     skinChanger();
     activateNotificationAndTasksScroll();
 

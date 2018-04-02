@@ -10,8 +10,5 @@
 //= require AdminBSBMaterialDesign/bootstrap-material-datetimepicker/bootstrap-material-datetimepicker
 //= require AdminBSBMaterialDesign/sweetalert/sweetalert.min
 //= require AdminBSBMaterialDesign/js/pages/forms/basic-form-elements
-//= require AdminBSBMaterialDesign/jquery-datatable/jquery.dataTables
-//= require AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap
-//= require_directory ..//AdminBSBMaterialDesign/jquery-datatable/extensions/export
-//= require AdminBSBMaterialDesign/js/pages/tables/jquery-datatable
+//= require AdminBSBMaterialDesign/jquery-datatable/index
 //= require AdminBSBMaterialDesign/js/demo

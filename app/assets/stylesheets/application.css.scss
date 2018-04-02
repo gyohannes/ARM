@@ -3,20 +3,19 @@
 *= require fullcalendar
 *= require new_style
 *= require bootstrap-wysihtml5
-*= require animate
  */
 
 @font-face {
     font-family: 'Material Icons';
     font-style: normal;
     font-weight: 400;
-    src: url(../assets/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+    src: font-url('2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2') format('woff2');
 }
 
 @font-face {
     font-family: 'Glyphicons Halflings';
-    src: url('../assets/glyphicons-halflings-regular.woff') format('woff'),
-    url('../assets/glyphicons-halflings-regular.ttf') format('truetype');
+    src: font-url('glyphicons-halflings-regular.woff') format('woff'),
+    font-url('glyphicons-halflings-regular.ttf') format('truetype');
 }
 
 .material-icons {
