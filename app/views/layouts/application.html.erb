@@ -107,16 +107,7 @@
     <section class="content">
       <div class="container-fluid">
         <div class="row clearfix"  style="min-height: 500px;">
-          <% flash.each do |key, value| %>
-              <div class="alert alert-<%= key %>">
-                <a href="#" data-dismiss="alert" class="close">×</a>
-                <ul>
-                  <li>
-                    <%= value %>
-                  </li>
-                </ul>
-              </div>
-          <% end %>
+          <%= render partial: 'shared/flash_messages' %>
           <%= yield :header %>
             <div class="card">
               <%= yield %>
