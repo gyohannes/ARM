@@ -8,3 +8,4 @@
 
 admin_user = User.create(email: 'admin@nrmp.com', password: 'admin123', admin: true)
 admin_user.save
+admin_user.confirm
