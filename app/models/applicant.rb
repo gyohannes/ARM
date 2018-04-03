@@ -8,7 +8,8 @@ class Applicant < ApplicationRecord
     has_one :applicant_declaration
     has_many :declaration_details, through: :applicant_declaration
 
-    validates :title, :gender, :first_name, :father_name, :grand_father_name, presence: true
+    validates :title, :gender, :first_name, :father_name, :grand_father_name,
+              :date_of_birth, :marital_status, :phone, :city, presence: true
 
     accepts_nested_attributes_for :program_choices, allow_destroy: true, reject_if: :all_blank
 
