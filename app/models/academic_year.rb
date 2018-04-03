@@ -2,6 +2,8 @@ class AcademicYear < ApplicationRecord
 
     has_many :events
     has_many :applicants
+
+    validates :name, presence: true
     
 
     def self.current

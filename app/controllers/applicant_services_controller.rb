@@ -1,4 +1,6 @@
 class ApplicantServicesController < ApplicationController
+  before_action :authenticate_user!
+  load_and_authorize_resource
   before_action :set_applicant_service, only: [:show, :edit, :update, :destroy]
 
   # GET /applicant_services
@@ -66,7 +68,7 @@ class ApplicantServicesController < ApplicationController
           flash[:alert] =  "You selected yes. Please add service/s to proceed"
           format.html { render :edit }
           else
-        format.html { redirect_to new_program_choice_path(applicant: @applicant.id), notice: 'Applicant service was successfully updated.' }
+        format.html { redirect_to new_program_choice_path, notice: 'Applicant service was successfully updated.' }
         format.json { render :show, status: :ok, location: @applicant_service }
         end
       else

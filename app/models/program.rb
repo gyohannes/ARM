@@ -3,6 +3,8 @@ class Program < ApplicationRecord
     has_many :program_quotas
     has_many :university_choices, through: :program_choices
 
+    validates :name, presence: true
+
     def universities(academic_year=AcademicYear.current.try(:id))
         University.joins(:program_quotas).where('academic_year_id = ? and program_id = ?', 
         academic_year,self.id)
@@ -13,7 +15,7 @@ class Program < ApplicationRecord
     end
 
     def choice_orders(university)
-      university_choices.where('university_id = ?', university).pluck('university_choices.choice_order').uniq
+      university_choices.where('university_id = ?', university).order('university_choices.choice_order').pluck('university_choices.choice_order').uniq
     end
 
     def applicant_per_university(university,choice_number)

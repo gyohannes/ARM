@@ -29,7 +29,7 @@ class Applicant < ApplicationRecord
     end
 
     def full_name
-      [first_name, father_name, grand_father_name].join(' ')
+      [title, first_name, father_name, grand_father_name].join(' ')
     end
 
 end

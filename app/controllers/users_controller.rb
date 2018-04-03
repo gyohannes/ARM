@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!
+  load_and_authorize_resource
   layout 'application'
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:show, :edit, :update, :destroy,:confirm]
 
   # GET /users
   # GET /users.json
@@ -8,6 +10,13 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+  def confirm
+    respond_to do |format|
+      if @user.confirm
+        format.html { redirect_to users_path, notice: 'User was successfully confirmed.' }
+      end
+    end
+  end
   # GET /users/1
   # GET /users/1.json
   def show
@@ -29,7 +38,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to admin_users_path, notice: 'User was successfully created.' }
+        format.html { redirect_to users_path, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
@@ -47,7 +56,7 @@ class UsersController < ApplicationController
     end
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to admin_users_path, notice: 'User was successfully updated.' }
+        format.html { redirect_to users_path, notice: 'User was successfully updated.' }
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit }

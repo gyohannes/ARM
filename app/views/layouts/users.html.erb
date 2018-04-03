@@ -6,9 +6,9 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <title>Sign In | NRMP</title>
     <!-- Favicon-->
-    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+    <%= favicon_link_tag 'favicon.ico' %>
 
-    <!-- Google Fonts -->
+  <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -35,8 +35,7 @@
 <!-- #END# Page Loader -->
     <div class="login-box">
         <div class="logo">
-            <a href="javascript:void(0);">MOH<b> NRMP</b></a>
-            <small>MOH - National Residency Matching Program</small>
+            <a href="javascript:void(0);"><%= image_tag('logo.png')%></a>
         </div>
         <div class="card">
             <div class="body">

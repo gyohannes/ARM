@@ -33,7 +33,11 @@ Rails.application.routes.draw do
   }
 
   scope "/admin" do
-    resources :users
+    resources :users do
+      member do
+        get 'confirm'
+      end
+    end
   end
 
   get 'home/index'

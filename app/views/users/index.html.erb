@@ -10,6 +10,7 @@
     <tr>
       <th>Email</th>
       <th>Admin</th>
+      <th>Confirmation</th>
       <th></th>
     </tr>
   </thead>
@@ -19,6 +20,7 @@
       <tr>
         <td><%= user.email %></td>
         <td><%= user.admin_status %></td>
+        <td><%= link_to 'Confirm', confirm_user_path(user), class: 'btn btn-primary' unless user.confirmed? %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
       </tr>
       <% end %>

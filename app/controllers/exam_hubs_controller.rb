@@ -1,4 +1,6 @@
 class ExamHubsController < ApplicationController
+  before_action :authenticate_user!
+  load_and_authorize_resource
   before_action :set_exam_hub, only: [:show, :edit, :update, :destroy]
 
   # GET /exam_hubs

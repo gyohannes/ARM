@@ -1,4 +1,6 @@
 class ApplicantDeclarationsController < ApplicationController
+  before_action :authenticate_user!
+  load_and_authorize_resource
   before_action :set_applicant_declaration, only: [:show, :edit, :update, :destroy]
 
   # GET /applicant_declarations
@@ -15,7 +17,7 @@ class ApplicantDeclarationsController < ApplicationController
   # GET /applicant_declarations/new
   def new
     @applicant_declaration = ApplicantDeclaration.new
-    @applicant = Applicant.find(params[:applicant])
+    @applicant = current_user.applicant
     Declaration.all.each do |d|
       ad = @applicant_declaration.declaration_details.joins(:applicant_declaration).
           where('declaration_id = ? and applicant_id = ?', d.id, @applicant.id)

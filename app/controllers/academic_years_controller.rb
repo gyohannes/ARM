@@ -1,4 +1,6 @@
 class AcademicYearsController < ApplicationController
+  before_action :authenticate_user!
+  load_and_authorize_resource
   before_action :set_academic_year, only: [:show, :edit, :update, :destroy]
 
   # GET /academic_years

@@ -1,4 +1,6 @@
 class UniversityChoicesController < ApplicationController
+  before_action :authenticate_user!
+  authorize_resource
   before_action :set_university_choice, only: [:show, :edit, :update, :destroy]
 
   # GET /university_choices
@@ -14,7 +16,7 @@ class UniversityChoicesController < ApplicationController
 
   # GET /university_choices/new
   def new
-    @applicant = Applicant.find(params[:applicant])
+    @applicant = current_user.applicant
     @applicant.complete_program_choices.each do |pc|
       uc_count = pc.university_choices.count
       ((uc_count + 1)..pc.program.universities.count).each do |order|
@@ -40,7 +42,7 @@ class UniversityChoicesController < ApplicationController
     unless @applicant.complete_university_choices.blank?
       flash[:notice] = 'University choices saved successfully'
       if @applicant.applicant_exam_hub.blank?
-        redirect_to new_applicant_exam_hub_path(applicant: @applicant.id)
+        redirect_to new_applicant_exam_hub_path
       else
         redirect_to edit_applicant_exam_hub_path(@applicant.applicant_exam_hub)
       end

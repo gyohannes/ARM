@@ -1,4 +1,6 @@
 class ApplicationInstructionsController < ApplicationController
+  before_action :authenticate_user!
+  load_and_authorize_resource
   before_action :set_application_instruction, only: [:show, :edit, :update, :destroy]
 
   # GET /application_instructions

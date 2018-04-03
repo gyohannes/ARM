@@ -162,7 +162,8 @@
 </table><br/><br/>
 
   <legend>Applicants university choice statstics</legend>
-  <table border="1" width="100%">
+  <table class='table table-bordered table-condensed table-striped'>
+    <tbody>
     <% Program.all.each do |p| %>
         <tr>
           <th rowspan="<%= p.universities.count * 2 + 1 %>">
@@ -183,5 +184,6 @@
             </tr>
         <% end %>
         <% end %>
+    </tbody>
   </table>
 </div>

@@ -1,6 +1,7 @@
 class ProgramChoicesController < ApplicationController
+  before_action :authenticate_user!
+  authorize_resource
   before_action :set_program_choice, only: [:show, :edit, :update, :destroy]
-
   # GET /program_choices
   # GET /program_choices.json
   def index
@@ -14,7 +15,7 @@ class ProgramChoicesController < ApplicationController
 
   # GET /program_choices/new
   def new
-    @applicant = Applicant.find(params[:applicant])
+    @applicant = current_user.applicant
     @program_choices = @applicant.program_choices
     pr_count  = @program_choices.count
     if pr_count < 3
@@ -40,7 +41,7 @@ class ProgramChoicesController < ApplicationController
 
       unless @applicant.complete_program_choices.blank?
         flash[:notice] = 'Program choices successfuly saved'
-        redirect_to new_university_choice_path(applicant: @applicant.id )
+        redirect_to new_university_choice_path
       else
         @program_choices = @applicant.program_choices
         flash[:alert] = 'Please select at least one program to proceed'

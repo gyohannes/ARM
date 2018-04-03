@@ -13,7 +13,7 @@ $(function () {
     $('.js-exportable').DataTable({
         retrieve: true,
         destroy: true,
-        dom: 'Bfrtip',
+        dom: 'lrBfrtip',
         responsive: true,
         buttons: [
             'copy', 'csv', 'excel', 'pdf', 'print'

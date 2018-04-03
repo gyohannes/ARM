@@ -9,7 +9,7 @@ class DeclarationDetail < ApplicationRecord
   end
 
   def declaration_status
-    status == true ? 'Yes' : 'No'
+    status == true ? 'Agree' : 'Disagree'
   end
 
 end

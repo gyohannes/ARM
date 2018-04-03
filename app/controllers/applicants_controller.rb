@@ -1,4 +1,6 @@
 class ApplicantsController < ApplicationController
+  before_action :authenticate_user!
+  load_and_authorize_resource
   before_action :set_applicant, only: [:show, :edit, :update, :destroy,:details]
 
   # GET /applicants
