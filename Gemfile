@@ -6,6 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 gem 'devise'
+gem 'cancancan', '~> 2.0'
 gem 'simple_form'
 gem "nested_form"
 gem "paperclip", "~> 5.2.1"
