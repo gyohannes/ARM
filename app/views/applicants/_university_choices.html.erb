@@ -4,23 +4,19 @@
     <span>University Choices</span>
 </h2>
 </div>
+<table class="table">
 <% unless @applicant.complete_university_choices.blank? %>
 <% @applicant.complete_program_choices.each do |pc| %>
-    <div class='row'>
-        <div class='col-md-11 col-md-offset-1'>
-            <label><%= pc.choice_order %> - <%= pc.program %></label>
-        </div>
-    </div>
+    <tr>
+        <th colspan="2"><%= pc.choice_order.ordinalize %> - <%= pc.program %></th>
+    </tr>
     
     <% pc.complete_university_choices.each do |uc| %>
-        <div class='row'>
-            <div class='col-md-2 col-md-offset-2'>
-                <%= uc.choice_order %>
-            </div>
-            <div class='col-md-7'>
-                <%= uc.university %>
-            </div>
-        </div>
+        <tr>
+            <td><%= uc.choice_order %></td>
+            <td><%= uc.university %></td>
+        </tr>
     <% end %>
 <% end %>
 <% end %>
+</table>

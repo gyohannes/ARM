@@ -4,108 +4,62 @@
     <span>Personal Information</span>
 </h2>
 </div>
-<div class='row'>
-  <div class='col-md-3 col-md-offset-1'>
-    Title
-  </div>
-  <div class='col-md-8'>
-    <%= @applicant.title %>
-  </div>
-</div>
-<div class='row'>
-    <div class='col-md-3 col-md-offset-1'>
-        First Name
-    </div>
-    <div class='col-md-8'>
-        <%= @applicant.first_name %>
-    </div>
-</div>
+<table class="table table-responsive">
+  <tr>
+    <th>Title</th>
+    <td><%= @applicant.title %></td>
+  </tr>
+  <tr>
+    <th>First Name</th>
+    <td><%= @applicant.first_name %></td>
+  </tr>
 
-<div class='row'>
-    <div class='col-md-3 col-md-offset-1'>
-        Father Name
-    </div>
-    <div class='col-md-8'>
-        <%= @applicant.father_name %>
-    </div>
-</div>
+  <tr>
+    <th>Father Name</th>
+    <td><%= @applicant.father_name %></td>
+  </tr>
+  <tr>
+    <th>Grand Father Name</th>
+    <td><%= @applicant.grand_father_name %></td>
+  </tr>
+  <tr>
+    <th>Gender</th>
+    <td><%= @applicant.gender %></td>
+  </tr>
+  <tr>
+    <th>Place of Birth</th>
+    <td><%= @applicant.place_of_birth %></td>
+  </tr>
+  <tr>
+    <th>Marital Status</th>
+    <td><%= @applicant.marital_status %></td>
+  </tr>
+  <tr>
+    <th>First Name</th>
+    <td><%= @applicant.first_name %></td>
+  </tr>
+</table>
 
-<div class='row'>
-    <div class='col-md-3 col-md-offset-1'>
-        Grand Father Name
-    </div>
-    <div class='col-md-8'>
-        <%= @applicant.grand_father_name %>
-    </div>
-</div>
-
-<div class='row'>
-    <div class='col-md-3 col-md-offset-1'>
-        Gender
-    </div>
-    <div class='col-md-8'>
-        <%= @applicant.gender %>
-    </div>
-</div>
-<div class='row'>
-  <div class='col-md-3 col-md-offset-1'>
-    Place of Birth
-  </div>
-  <div class='col-md-8'>
-    <%= @applicant.place_of_birth %>
-  </div>
-</div>
-
-<div class='row'>
-  <div class='col-md-3 col-md-offset-1'>
-    Marital Status
-  </div>
-  <div class='col-md-8'>
-    <%= @applicant.marital_status %>
-  </div>
-</div>
-<legend>Current Address</legend>
-<div class='row'>
-  <div class='col-md-3 col-md-offset-1'>
-    Region
-  </div>
-  <div class='col-md-8'>
-    <%= @applicant.region %>
-  </div>
-</div>
-
-<div class='row'>
-  <div class='col-md-3 col-md-offset-1'>
-    City
-  </div>
-  <div class='col-md-8'>
-    <%= @applicant.city %>
-  </div>
-</div>
-
-<div class='row'>
-  <div class='col-md-3 col-md-offset-1'>
-    P.O.Box
-  </div>
-  <div class='col-md-8'>
-    <%= @applicant.pobox %>
-  </div>
-</div>
-
-<div class='row'>
-  <div class='col-md-3 col-md-offset-1'>
-    Phone
-  </div>
-  <div class='col-md-8'>
-    <%= @applicant.phone %>
-  </div>
-</div>
-
-<div class='row'>
-  <div class='col-md-3 col-md-offset-1'>
-    Email
-  </div>
-  <div class='col-md-8'>
-    <%= @applicant.user.email %>
-  </div>
-</div>
+<h5>Current Address</h5>
+<table class="table table-responsive">
+  <tr>
+    <th>Region</th>
+    <td><%= @applicant.region %></td>
+  </tr>
+  <tr>
+    <th>City</th>
+    <td><%= @applicant.city %></td>
+  </tr>
+  <tr>
+    <th>P.O.Box</th>
+    <td><%= @applicant.pobox %></td>
+  </tr>
+  <tr>
+    <th>Phone</th>
+    <td><%= @applicant.phone %></td>
+  </tr>
+  <tr>
+    <th>Email</th>
+    <td><%= @applicant.user.email %></td>
+  </tr>
+</table>

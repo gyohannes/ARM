@@ -39,11 +39,11 @@
         </h2>
       </div>
       <div class='row'>
-        <div class='col-md-3 col-md-offset-1'>
+        <div class='col-sm-6'>
           Selected Exam Hub
         </div>
-        <div class='col-md-8'>
-          <%= @applicant.applicant_exam_hub %>
+        <div class='col-sm-6'>
+          <b><%= @applicant.applicant_exam_hub %></b>
         </div>
       </div>
     </div>
@@ -57,25 +57,26 @@
       </div>
       <div class="body table-responsive">
         <div class='row'>
-          <div class='col-md-3 col-md-offset-1'>
+          <div class='col-sm-6'>
             Served at an institution ?
           </div>
-          <div class='col-md-8'>
-            <%= @applicant.applicant_service.try(:status) %>
+          <div class='col-sm-6'>
+            <b><%= @applicant.applicant_service.try(:status) %></b>
           </div>
         </div>
 
         <div class='row'>
-          <div class='col-md-3 col-md-offset-1'>
+          <div class='col-sm-6'>
             sponsor
           </div>
-          <div class='col-md-8'>
-            <%= @applicant.applicant_service.try(:sponsor) %>
+          <div class='col-sm-6'>
+            <b><%= @applicant.applicant_service.try(:sponsor) %></b>
           </div>
         </div>
 
         <% unless @applicant.applicant_service.blank? %>
-        <table class="table table-bordered table-striped table-hover dataTable">
+            <% unless @applicant.applicant_service.services.blank? %>
+              <table class="table table-responsive">
           <thead>
           <tr>
             <th>Institution</th>
@@ -96,6 +97,7 @@
           <% end %>
           </tbody>
         </table>
+            <% end %>
         <% end %>
       </div>
       </div>
@@ -107,16 +109,14 @@
         <span>Declarations</span>
       </h2>
       </div><br/>
-      <% @applicant.declaration_details.each do |ad| %>
-        <div class='row'>
-          <div class='col-sm-10'>
-            <%= ad.declaration %>
-          </div>
-          <div class='col-sm-2'>
-            <%= ad.declaration_status %>
-          </div>
-        </div>
-      <% end %>
+      <table class="table table-responsive">
+        <% @applicant.declaration_details.each do |ad| %>
+            <tr>
+              <td><%= ad.declaration %></td>
+              <th><%= ad.declaration_status %></th>
+            </tr>
+        <% end %>
+      </table>
     </div>
   </div>
 </div>
