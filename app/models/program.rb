@@ -18,6 +18,15 @@ class Program < ApplicationRecord
       university_choices.where('university_id = ?', university).order('university_choices.choice_order').pluck('university_choices.choice_order').uniq
     end
 
+    def all_choice_orders
+      universities.map{|u| choice_orders(u.id)}.flatten.uniq
+    end
+
+    def self.all_choice_orders
+      Program.all.map{|p| p.all_choice_orders }.flatten.uniq.sort
+    end
+
+
     def applicant_per_university(university,choice_number)
       university_choices.where('university_id = ? and university_choices.choice_order = ?', university, choice_number).size
     end

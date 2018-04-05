@@ -1,3 +1,4 @@
+
 <% content_for :header do %>
     <div class="block-header">
       <h2><%= AcademicYear.current %> Academic Year</h2>
@@ -60,40 +61,40 @@
       <% end %>
     </div>
 <% end %>
-<% unless current_user.admin? %>
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="header">
-          <h2>
-            <i class="material-icons">person</i>
-            <span>My Application</span>
-          </h2>
-        </div>
-        <div class="body table-responsive">
-          <% if current_user.applicant %>
-              <table class='table'>
-                <thead>
-                <tr>
-                  <th>Application Details</th>
-                  <th>Status</th>
-                  <th>Matched Program </th>
-                  <th>Matched University </th>
-                </tr>
-                </thead>
 
-                <tbody>
-                <% unless current_user.applicant.blank? %>
+<% content_for :header do %>
+<div class="row clearfix">
+<% unless current_user.admin? %>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <div class="card">
+            <div class="body table-responsive">
+                <h4><i class="material-icons">person</i>
+                <span>My Application</span>
+                <hr/></h4>
+              <% if current_user.applicant %>
+                  <table class='table'>
+                    <thead>
                     <tr>
-                      <td><%= link_to 'Application Details', details_applicant_path(current_user.applicant) rescue nil %></td>
-                      <td><%= current_user.applicant.application_status rescue nil %></td>
-                      <td><%= applicant.match_result.program rescue nil %></td>
-                      <td><%= applicant.match_result.university rescue nil %></td>
+                      <th>Application Details</th>
+                      <th>Status</th>
+                      <th>Matched Program </th>
+                      <th>Matched University </th>
                     </tr>
-                <% end %>
-                </tbody>
-              </table>
-          <% end %>
-          <% if current_user.applicant.blank? %>
+                    </thead>
+
+                    <tbody>
+                    <% unless current_user.applicant.blank? %>
+                        <tr>
+                          <td><%= link_to 'Application Details', details_applicant_path(current_user.applicant) rescue nil %></td>
+                          <td><%= current_user.applicant.application_status rescue nil %></td>
+                          <td><%= applicant.match_result.program rescue nil %></td>
+                          <td><%= applicant.match_result.university rescue nil %></td>
+                        </tr>
+                    <% end %>
+                    </tbody>
+                  </table>
+              <% end %>
+              <% if current_user.applicant.blank? %>
               <% unless @application_calendar.blank? %>
                   <% if @application_calendar.try(:start_time) <= Date.today and @application_calendar.try(:end_time) >= Date.today %>
                       <%= link_to 'Start New Application', instructions_applicants_path, class: 'btn btn-primary' if current_user.applicant.blank? %>
@@ -106,18 +107,15 @@
                   <i>Application is not Available. Please check calendar</i>
               <% end %>
           <% end %>
-        </div>
+            </div>
+          </div>
       </div>
-      <div class="col-sm-6">
-        <div class="header">
-          <h2>
-            <i class="material-icons">event_note</i>
-            <span>Calendar</span>
-
-          </h2>
-        </div>
-        <div class="body table-responsive">
-          <table class="table table-bordered table-striped table-hover dataTable">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <div class="card">
+            <div class="body table-responsive">
+                <h4><i class="material-icons">event_note</i>
+                <span>Calendar</span><hr/></h4>
+              <table class="table table-bordered table-striped table-hover dataTable">
             <thead>
             <tr>
               <th>Event</th>
@@ -136,13 +134,19 @@
             <% end %>
             </tbody>
           </table>
-        </div>
+            </div>
+          </div>
       </div>
-    </div>
   <% end %>
+      </div>
+  <% end %>
+
+
+<% content_for :header do %>
+<div class="card">
 <div class="body table-responsive">
-<legend>Applicants program choice statstics</legend>
-<table class='table table-bordered dataTable js-exportable'>
+  <legend>Applicants program choice statstics</legend>
+<table class='table table-striped table-bordered dataTable js-exportable'>
   <thead>
   <tr>
     <th>Program Name</th>
@@ -160,30 +164,39 @@
       </tr>
   <% end %>
 </table><br/><br/>
+</div>
+</div>
+<% end %>
 
-  <legend>Applicants university choice statstics</legend>
-  <table class='table table-bordered table-condensed table-striped'>
-    <tbody>
-    <% Program.all.each do |p| %>
-        <tr>
-          <th rowspan="<%= p.universities.count * 2 + 1 %>">
-            <%= p %>
-          </th>
-        </tr>
-        <% p.universities.each do |u| %>
-          <tr>
-            <td rowspan="2"><%= u %></td>
-              <% (p.choice_orders(u.id)).each do |order| %>
-                  <td><%= order.ordinalize %></td>
+<% content_for :header do %>
+
+    <div class="card">
+      <div class="body table-responsive">
+        <legend>Applicants university choice statstics</legend>
+        <table class='table table-striped table-bordered dataTable grouping-table'>
+          <thead>
+            <tr>
+              <th>Program</th>
+              <th>University</th>
+              <% Program.all_choice_orders.each do |co| %>
+                  <th><%= co.ordinalize %></th>
               <% end %>
             </tr>
-            <tr>
-              <% (p.choice_orders(u.id)).each do |order| %>
-                  <td><%= p.applicant_per_university(u.id, order) %></td>
+          </thead>
+          <tbody>
+            <% Program.all.each do |p| %>
+                <% p.universities.each do |u| %>
+                    <tr>
+                      <th><b style="color: green"><%= p %></b></th>
+                      <td><%= u %></td>
+                      <% Program.all_choice_orders.each do |co| %>
+                          <td><%= p.applicant_per_university(u.id, co) %></td>
+                      <% end %>
+                    </tr>
+                <% end %>
             <% end %>
-            </tr>
-        <% end %>
-        <% end %>
-    </tbody>
-  </table>
-</div>
+          </tbody>
+        </table>
+      </div>
+    </div>
+<% end %>
