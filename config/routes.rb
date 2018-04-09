@@ -24,6 +24,7 @@ Rails.application.routes.draw do
     end
     member do
       get 'details'
+      get 'submit'
     end
   end
   devise_for :users, controllers: {

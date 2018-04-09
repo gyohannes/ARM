@@ -24,6 +24,11 @@ class ApplicantsController < ApplicationController
     end
   end
 
+  def submit
+    @applicant.update(status: true)
+    redirect_to details_applicant_path(@applicant)
+  end
+
   def instructions
 
   end

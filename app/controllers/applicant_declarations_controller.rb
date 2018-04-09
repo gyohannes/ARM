@@ -46,7 +46,6 @@ class ApplicantDeclarationsController < ApplicationController
     @applicant = @applicant_declaration.applicant
     respond_to do |format|
       if @applicant_declaration.save
-        @applicant.update(status: true)
         format.html { redirect_to details_applicant_path(@applicant), notice: 'Congratulations!!! you have successfully submitted your application' }
         format.json { render :show, status: :created, location: @applicant_declaration }
       else
@@ -71,8 +70,7 @@ class ApplicantDeclarationsController < ApplicationController
     @applicant = @applicant_declaration.applicant
     respond_to do |format|
       if @applicant_declaration.update(applicant_declaration_params)
-        @applicant.update(status: true)
-        format.html { redirect_to details_applicant_path(@applicant), notice: 'Congratulations!!! you have successfully submitted your application' }
+        format.html { redirect_to details_applicant_path(@applicant), notice: 'You have successfully finished your application. Make sure everything is right before you submit.' }
         format.json { render :show, status: :ok, location: @applicant_declaration }
       else
         format.html { render :edit }
