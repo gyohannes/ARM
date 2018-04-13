@@ -9,5 +9,9 @@ class User < ApplicationRecord
   def admin_status
     admin? ? 'Yes' : '' 
   end
+
+  def current_application
+    return Applicant.where('user_id = ? and academic_year_id = ?',self.id,AcademicYear.current.try(:id)).first
+  end
   
 end

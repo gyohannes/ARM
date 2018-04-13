@@ -71,7 +71,7 @@
                 <h4><i class="material-icons">person</i>
                 <span>My Application</span>
                 <hr/></h4>
-              <% if current_user.applicant %>
+              <% if current_user.current_application %>
                   <table class='table'>
                     <thead>
                     <tr>
@@ -83,10 +83,10 @@
                     </thead>
 
                     <tbody>
-                    <% unless current_user.applicant.blank? %>
+                    <% unless current_user.current_application.blank? %>
                         <tr>
-                          <td><%= link_to 'Application Details', details_applicant_path(current_user.applicant) rescue nil %></td>
-                          <td><%= current_user.applicant.application_status rescue nil %></td>
+                          <td><%= link_to 'Application Details', details_applicant_path(current_user.current_application) rescue nil %></td>
+                          <td><%= current_user.current_application.application_status rescue nil %></td>
                           <td><%= applicant.match_result.program rescue nil %></td>
                           <td><%= applicant.match_result.university rescue nil %></td>
                         </tr>
@@ -94,10 +94,10 @@
                     </tbody>
                   </table>
               <% end %>
-              <% if current_user.applicant.blank? %>
+              <% if current_user.current_application.blank? %>
               <% unless @application_calendar.blank? %>
                   <% if @application_calendar.try(:start_time) <= Date.today and @application_calendar.try(:end_time) >= Date.today %>
-                      <%= link_to 'Start New Application', instructions_applicants_path, class: 'btn btn-primary' if current_user.applicant.blank? %>
+                      <%= link_to 'Start New Application', instructions_applicants_path, class: 'btn btn-primary' if current_user.current_application.blank? %>
                   <% else %>
                       <i class="material-icons">info</i>
                       <i>Application is not Available. Please check calendar</i>

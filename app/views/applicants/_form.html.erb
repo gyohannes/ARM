@@ -1,7 +1,8 @@
 <%= simple_form_for @applicant do |f| %>
     <%= f.error_notification %>
+    <%= f.full_error :user_id %>
     <%= f.input :academic_year_id, as: :hidden, input_html: {value: AcademicYear.current.try(:id)} %>
-    <%= f.input :title, label: 'Title', collection: ['Dr', 'Mr', 'Ms'] %>
+    <%= f.input :title, label: 'Title', collection: ['Dr'] %>
     <%= f.input :user_id, as: :hidden,input_html: { value: current_user.id } %>
     <%= f.input :first_name %>
     <%= f.input :father_name %>
@@ -16,5 +17,5 @@
       <%= f.input :pobox %>
       <%= f.input :phone %>
     <hr/>
-    <%= f.button :submit, 'Save and Continue' %>
+    <%= f.button :submit, 'Save and Continue', disable_with: 'Processing...' %>
 <% end %>

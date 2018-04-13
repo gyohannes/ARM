@@ -11,7 +11,8 @@ class Applicant < ApplicationRecord
     validates :title, :gender, :first_name, :father_name, :grand_father_name,
               :date_of_birth, :marital_status, :phone, :city, presence: true
 
-    accepts_nested_attributes_for :program_choices, allow_destroy: true, reject_if: :all_blank
+    validates :user_id, uniqueness: {scope: :academic_year_id,
+                                     message: 'already started application. Please go to Home --> Application Details and edit your application'}
 
     def complete_program_choices
       program_choices.where('program_id is not null')
