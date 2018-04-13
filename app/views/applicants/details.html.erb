@@ -7,7 +7,7 @@
     <% end %>
 
     <% unless @application_calendar.blank? %>
-        <% if @application_calendar.try(:start_time) <= Date.today and @application_calendar.try(:end_time) >= Date.today and !@applicant.status? %>
+        <% if @application_calendar.try(:start_time) <= Date.today and @application_calendar.try(:end_time) >= Date.today and !@applicant.status? and !@applicant.applicant_declaration.blank? %>
             <%= link_to 'Submit Application', submit_applicant_path(@applicant), class: 'btn btn-primary',data: { confirm: 'Are you sure you have finished your application? You can not edit your application once you submitted.' }  unless current_user.admin?%>
         <% end %>
     <% end %>
