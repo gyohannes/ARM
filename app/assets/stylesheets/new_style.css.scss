@@ -1,7 +1,31 @@
+.countdown{
+  background-image: -moz-linear-gradient(45deg, #361752, #B31B67);
+}
+.countdown p{
+  margin-bottom:40px;
+}
+.countdown-timer{
+  font-family: 'Source Sans Pro, sans-serif';
+  color: white;
+  letter-spacing: normal;
+}
+.days, .hours, .minutes, .seconds{
+  border-radius: 5px;
+  padding: 25px 10px;
+  font-size: 200%;
+  background: black;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+}
+
+.countdown-timer label{
+  margin-top: 30px;
+  display: block;
+}
+
 .card{
   min-height: auto;
 }
-.login-page{
+.users{
     background-image: image-url('doc-background.png');
   background-repeat: no-repeat;
 }

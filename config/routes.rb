@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :timers, path: 'countdown' do
+    collection do
+      get 'load_deadline'
+    end
+  end
   resources :application_instructions
   resources :applicant_declarations
   resources :declarations
