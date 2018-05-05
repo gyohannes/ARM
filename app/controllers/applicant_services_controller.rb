@@ -39,8 +39,8 @@ class ApplicantServicesController < ApplicationController
 
     respond_to do |format|
       if @applicant_service.status == 'Yes' and @applicant_service.services.blank?
-        flash[:notice] = "You selected yes. Please add service/s to proceed"
-        render :new
+        flash[:alert] = "You selected yes. Please add service/s to proceed"
+        format.html { render :new }
       else
         if @applicant_service.save
           format.html { redirect_to new_program_choice_path(applicant: @applicant.id), notice: 'Applicant service was successfully created.' }
