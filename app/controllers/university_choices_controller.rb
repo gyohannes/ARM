@@ -76,6 +76,6 @@ class UniversityChoicesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def university_choice_params(my_params)
-      my_params.permit(:program_choice_id, :choice_order, :university_id)
+      my_params.permit(:id, :program_choice_id, :choice_order, :university_id)
     end
 end
