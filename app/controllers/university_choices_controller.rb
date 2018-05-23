@@ -36,7 +36,12 @@ class UniversityChoicesController < ApplicationController
     uc_params = params["university_choices"]
     uc_params.each do |university_choice|
       uc = UniversityChoice.find(uc_params[university_choice]["id"])
+      uc.update(university_id: nil)
+    end
+    uc_params.each do |university_choice|
+      uc = UniversityChoice.find(uc_params[university_choice]["id"])
       uc.update(university_choice_params(uc_params[university_choice]))
+      logger.info("--------------------#{uc.errors.inspect}")
     end
 
     unless @applicant.complete_university_choices.blank?

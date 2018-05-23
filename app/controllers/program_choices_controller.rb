@@ -35,6 +35,10 @@ class ProgramChoicesController < ApplicationController
       @applicant = Applicant.find(params[:applicant])
       pc_params = params["program_choices"]
       pc_params.each do |program_choice|
+        pc = ProgramChoice.find(pc_params[program_choice]["id"])
+        pc.update(program_id: nil)
+      end
+      pc_params.each do |program_choice|
           pc = ProgramChoice.find(pc_params[program_choice]["id"])
           pc.update(program_choice_params(pc_params[program_choice]))
       end
