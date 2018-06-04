@@ -16,12 +16,18 @@
         <th>Status</th>
         <th>Sponsor</th>
         <th>Exam Hub</th>
-        <th>1st program choice</th>
+        <th>1st program</th>
+        <% (1..12).each do |t| %>
+            <th><%= t.ordinalize %> university</th>
+        <% end %>
         <th>2nd program choice</th>
+        <% (1..12).each do |t| %>
+            <th><%= t.ordinalize %> university</th>
+        <% end %>
         <th>3rd program choice</th>
-        <th>1st Program university Choices</th>
-        <th>2nd Program university Choices</th>
-        <th>3rd Program university Choices</th>
+        <% (1..12).each do |t| %>
+            <th><%= t.ordinalize %> university</th>
+        <% end %>
         <th></th>
 
       </tr>
@@ -41,11 +47,17 @@
             <td><%= applicant.applicant_service.sponsor rescue nil %></td>
             <td><%= applicant.applicant_exam_hub rescue nil %></td>
             <td><%= p1 = applicant.program_choice(1) %></td>
+            <% (1..12).each do |t| %>
+                <td><%= p1.university_choice(t) rescue nil %></td>
+            <% end %>
             <td><%= p2 = applicant.program_choice(2) %></td>
+            <% (1..12).each do |t| %>
+                <td><%= p2.university_choice(t) rescue nil %></td>
+            <% end %>
             <td><%= p3 = applicant.program_choice(3) %></td>
-            <td><%= p1.choices.to_sentence unless p1.blank? %></td>
-            <td><%= p2.choices.to_sentence unless p2.blank? %></td>
-            <td><%= p3.choices.to_sentence unless p3.blank? %></td>
+            <% (1..12).each do |t| %>
+                <td><%= p3.university_choice(t) rescue nil %></td>
+            <% end %>
             <td><%= link_to 'Details', details_applicant_path(applicant) %></td>
           </tr>
           <% counter += 1 %>
