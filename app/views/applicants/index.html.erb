@@ -14,6 +14,14 @@
         <th>Email</th>
         <th>Phone</th>
         <th>Status</th>
+        <th>Sponsor</th>
+        <th>Exam Hub</th>
+        <th>1st program choice</th>
+        <th>2nd program choice</th>
+        <th>3rd program choice</th>
+        <th>1st Program university Choices</th>
+        <th>2nd Program university Choices</th>
+        <th>3rd Program university Choices</th>
         <th></th>
 
       </tr>
@@ -30,6 +38,14 @@
             <td><%= applicant.user.email %></td>
             <td><%= applicant.phone %></td>
             <td><%= applicant.application_status %></td>
+            <td><%= applicant.applicant_service.sponsor rescue nil %></td>
+            <td><%= applicant.applicant_exam_hub rescue nil %></td>
+            <td><%= p1 = applicant.program_choice(1) %></td>
+            <td><%= p2 = applicant.program_choice(2) %></td>
+            <td><%= p3 = applicant.program_choice(3) %></td>
+            <td><%= p1.choices.to_sentence unless p1.blank? %></td>
+            <td><%= p2.choices.to_sentence unless p2.blank? %></td>
+            <td><%= p3.choices.to_sentence unless p3.blank? %></td>
             <td><%= link_to 'Details', details_applicant_path(applicant) %></td>
           </tr>
           <% counter += 1 %>

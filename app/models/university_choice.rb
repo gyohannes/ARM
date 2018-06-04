@@ -8,4 +8,8 @@ class UniversityChoice < ApplicationRecord
     !university.blank?
   end
 
+  def to_s
+    university
+  end
+
 end

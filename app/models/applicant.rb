@@ -34,4 +34,8 @@ class Applicant < ApplicationRecord
       [title, first_name, father_name, grand_father_name].join(' ')
     end
 
+    def program_choice(order)
+      program_choices.where('choice_order = ?', order).first
+    end
+
 end

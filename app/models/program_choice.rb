@@ -20,4 +20,12 @@ class ProgramChoice < ApplicationRecord
     end
   end
 
+  def choices
+    complete_university_choices.joins(:university).order('choice_order').pluck('universities.name')
+  end
+
+  def to_s
+    program
+  end
+
 end

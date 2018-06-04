@@ -1,0 +1,32 @@
+<% content_for :header do %>
+
+    <div class="card">
+      <div class="body table-responsive">
+        <legend>Applicants university choice statstics</legend>
+        <table class='table table-striped table-bordered dataTable grouping-table'>
+          <thead>
+          <tr>
+            <th>Program</th>
+            <th>University</th>
+            <% Program.all_choice_orders.each do |co| %>
+                <th><%= co.ordinalize %></th>
+            <% end %>
+          </tr>
+          </thead>
+          <tbody>
+          <% Program.all.each do |p| %>
+              <% p.universities.each do |u| %>
+                  <tr>
+                    <th><b style="color: green"><%= p %></b></th>
+                    <td><%= u %></td>
+                    <% Program.all_choice_orders.each do |co| %>
+                        <td><%= p.applicant_per_university(u.id, co) %></td>
+                    <% end %>
+                  </tr>
+              <% end %>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+<% end %>
