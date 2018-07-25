@@ -78,7 +78,6 @@
                 <span>Application Instructions</span>
             <% end %>
           </li>
-
         </ul>
     </li>
     <li>
@@ -87,6 +86,32 @@
         <span>Applications</span>
     <% end %>
     </li>
+
+      <a href="javascript:void(0);" class="menu-toggle waves-effect waves-block">
+        <i class="material-icons">settings</i>
+        <span>Exam</span>
+      </a>
+      <ul class="ml-menu" style="display: none;">
+        <li>
+          <%= link_to settings_path do %>
+              <i class="material-icons">layers</i>
+              <span>Exam Settings</span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to exams_path do %>
+              <i class="material-icons">place</i>
+              <span>Exam Results</span>
+          <% end %>
+        </li>
+      </ul>
+
+      <%= link_to placements_path do %>
+          <i class="material-icons">people</i>
+          <span>Matching Result</span>
+      <% end %>
+      </li>
+
     </ul>
 </div>
 <% end %>

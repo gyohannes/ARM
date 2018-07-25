@@ -1,4 +1,20 @@
 Rails.application.routes.draw do
+  resources :placements do
+    collection do
+      get 'match'
+      get 'publish'
+    end
+  end
+  resources :settings
+  resources :exams do
+    collection do
+      get 'import_exam'
+      post 'import_exam'
+      get 'import_interview'
+      post 'import_interview'
+      get 'exam_detail'
+    end
+  end
   resources :timers, path: 'countdown' do
     collection do
       get 'load_deadline'

@@ -1,0 +1,48 @@
+<div class="header">
+  <h2>
+    Applicant Results
+  </h2>
+</div>
+<div class="body table-responsive">
+  <table class="table table-bordered table-striped table-hover dataTable js-exportable">
+  <thead>
+    <tr>
+      <th>Applicant</th>
+      <th>ID Number</th>
+      <th>Email</th>
+      <th>Exam Hub</th>
+      <th>Part one exam</th>
+      <th>Part two exam</th>
+      <th>Exam total</th>
+      <th>Exam out of</th>
+      <th>Interview result</th>
+      <th>Interview out of</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @applicants.each do |app| %>
+      <tr>
+        <td><%= app %></td>
+	<td><%= app.id %></td>
+        <td><%= app.user.email %></td>
+        <td><%= app.applicant_exam_hub %></td>
+        <td><%= app.exam.part_one rescue nil %></td>
+        <td><%= app.exam.part_two rescue nil %></td>
+        <td><%= app.exam.exam_result rescue nil %></td>
+        <td><%= app.exam.exam_out_of rescue nil %></td>
+        <td><%= app.exam.interview_result rescue nil %></td>
+        <td><%= app.exam.interview_out_of rescue nil %></td>
+        <td><%= app.exam.total rescue nil %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<hr/>
+
+<%= link_to 'New Exam', new_exam_path, class: 'btn btn-primary' %>
+  <%= link_to 'Import Exam Results', import_exam_exams_path, class: 'btn btn-primary' %>
+  <%= link_to 'Import Interview Results', import_interview_exams_path, class: 'btn btn-primary' %>
+</div>

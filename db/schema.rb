@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180329065912) do
+ActiveRecord::Schema.define(version: 20180720083200) do
 
   create_table "academic_years", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
@@ -84,7 +84,7 @@ ActiveRecord::Schema.define(version: 20180329065912) do
   end
 
   create_table "declarations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "name"
+    t.text "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -109,6 +109,18 @@ ActiveRecord::Schema.define(version: 20180329065912) do
     t.index ["region_id"], name: "index_exam_hubs_on_region_id"
   end
 
+  create_table "exams", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "applicant_id"
+    t.float "exam_result", limit: 24
+    t.float "exam_out_of", limit: 24
+    t.float "interview_result", limit: 24
+    t.float "interview_out_of", limit: 24
+    t.float "total", limit: 24
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["applicant_id"], name: "index_exams_on_applicant_id"
+  end
+
   create_table "match_results", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.bigint "applicant_id"
     t.bigint "program_id"
@@ -118,6 +130,18 @@ ActiveRecord::Schema.define(version: 20180329065912) do
     t.index ["applicant_id"], name: "index_match_results_on_applicant_id"
     t.index ["program_id"], name: "index_match_results_on_program_id"
     t.index ["university_id"], name: "index_match_results_on_university_id"
+  end
+
+  create_table "placements", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "applicant_id"
+    t.bigint "program_id"
+    t.bigint "university_id"
+    t.boolean "published"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["applicant_id"], name: "index_placements_on_applicant_id"
+    t.index ["program_id"], name: "index_placements_on_program_id"
+    t.index ["university_id"], name: "index_placements_on_university_id"
   end
 
   create_table "program_choices", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -166,6 +190,21 @@ ActiveRecord::Schema.define(version: 20180329065912) do
     t.index ["region_id"], name: "index_services_on_region_id"
   end
 
+  create_table "settings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.float "exam_weight", limit: 24
+    t.float "interview_weight", limit: 24
+    t.float "additional_marks_for_female", limit: 24
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "timers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "event"
+    t.datetime "end_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "universities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -193,6 +232,10 @@ ActiveRecord::Schema.define(version: 20180329065912) do
     t.datetime "last_sign_in_at"
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
+    t.string "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string "unconfirmed_email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "admin"
@@ -211,9 +254,13 @@ ActiveRecord::Schema.define(version: 20180329065912) do
   add_foreign_key "declaration_details", "declarations"
   add_foreign_key "events", "academic_years"
   add_foreign_key "exam_hubs", "regions"
+  add_foreign_key "exams", "applicants"
   add_foreign_key "match_results", "applicants"
   add_foreign_key "match_results", "programs"
   add_foreign_key "match_results", "universities"
+  add_foreign_key "placements", "applicants"
+  add_foreign_key "placements", "programs"
+  add_foreign_key "placements", "universities"
   add_foreign_key "program_choices", "applicants"
   add_foreign_key "program_choices", "programs"
   add_foreign_key "program_quotas", "academic_years"

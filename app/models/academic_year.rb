@@ -2,6 +2,7 @@ class AcademicYear < ApplicationRecord
 
     has_many :events
     has_many :applicants
+    has_many :program_quotas
 
     validates :name, presence: true
     

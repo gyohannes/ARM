@@ -87,8 +87,8 @@
                         <tr>
                           <td><%= link_to 'Application Details', details_applicant_path(current_user.current_application) rescue nil %></td>
                           <td><%= current_user.current_application.application_status rescue nil %></td>
-                          <td><%= applicant.match_result.program rescue nil %></td>
-                          <td><%= applicant.match_result.university rescue nil %></td>
+                          <td><%= current_user.current_application.published_placemet.program rescue nil %></td>
+                          <td><%= current_user.current_application.published_placemet.university rescue nil %></td>
                         </tr>
                     <% end %>
                     </tbody>
