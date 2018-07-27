@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       get 'match'
       get 'publish'
       get 'clear'
+      get 'statistics'
     end
   end
   resources :settings

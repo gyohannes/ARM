@@ -6,7 +6,8 @@ class ProgramQuotasController < ApplicationController
   # GET /program_quotas
   # GET /program_quotas.json
   def index
-    @program_quotas = ProgramQuota.all
+    @academic_year = AcademicYear.current
+    @program_quotas = @academic_year.program_quotas
   end
 
   # GET /program_quotas/1

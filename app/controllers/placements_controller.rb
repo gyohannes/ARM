@@ -34,6 +34,11 @@ class PlacementsController < ApplicationController
     @placements.update(published: true)
     redirect_to placements_path
   end
+
+  def statistics
+    @academic_year = AcademicYear.current
+    @program_quotas = @academic_year.program_quotas
+  end
   # GET /placements/1
   # GET /placements/1.json
   def show
