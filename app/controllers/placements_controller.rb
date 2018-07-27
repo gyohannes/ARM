@@ -23,6 +23,12 @@ class PlacementsController < ApplicationController
     redirect_to placements_path
   end
 
+  def clear
+    @placements = Placement.joins(:applicant).where('academic_year_id = ?',AcademicYear.current.try(:id))
+    @placements.destroy_all
+    redirect_to placements_path
+  end
+
   def publish
     @placements = Placement.joins(:applicant).where('academic_year_id = ?',AcademicYear.current.try(:id))
     @placements.update(published: true)

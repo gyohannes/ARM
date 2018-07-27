@@ -8,6 +8,7 @@
   <thead>
     <tr>
       <th>Applicant</th>
+      <th>Gender</th>
       <th>Program</th>
       <th>University</th>
       <th>Published</th>
@@ -18,6 +19,7 @@
     <% @placements.each do |placement| %>
       <tr>
         <td><%= placement.applicant %></td>
+        <td><%= placement.applicant.gender %></td>
         <td><%= placement.program %></td>
         <td><%= placement.university %></td>
         <td><%= placement.published_status %></td>
@@ -29,6 +31,7 @@
 <hr/>
 
   <%= link_to 'Match Applicants', match_placements_path, class: 'btn btn-primary' if @placements.blank? %>
+  <%= link_to 'Clear Placement', clear_placements_path, class: 'btn btn-primary' unless @unpublished.blank? %>
   <%= link_to 'Publish Matching Result', publish_placements_path, class: 'btn btn-primary' unless @unpublished.blank? %>
 
 </div>

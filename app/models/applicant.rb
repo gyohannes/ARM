@@ -86,7 +86,7 @@ class Applicant < ApplicationRecord
 
     def self.final_match(applicant,pc,uc)
       match_result = false
-      if pc.program.remaining_quota(uc.try(:university_id))
+      if pc.program.remaining_quota(uc.try(:university_id)) > 0
         Placement.create(applicant_id: applicant.id, program_id: pc.program_id, university_id: uc.university_id)
         match_result = true
       end

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     collection do
       get 'match'
       get 'publish'
+      get 'clear'
     end
   end
   resources :settings

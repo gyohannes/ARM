@@ -32,7 +32,7 @@ class Program < ApplicationRecord
     end
 
     def total_quota(university, academic_year=AcademicYear.current)
-        academic_year.program_quotas.where('university_id = ?',university).first.try(:quota) || 0
+        academic_year.program_quotas.where('program_id = ? and university_id = ?',self.id,university).first.try(:quota) || 0
     end
 
     def to_s
