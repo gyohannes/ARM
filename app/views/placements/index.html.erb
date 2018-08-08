@@ -47,6 +47,7 @@
       <thead>
       <tr>
         <th>Applicant</th>
+        <th>Email</th>
         <th>Gender</th>
         <th>Mark</th>
       </tr>
@@ -56,6 +57,7 @@
       <% @unmatched_applicants.each do |applicant| %>
           <tr>
             <td><%= applicant %></td>
+            <td><%= applicant.user.email %></td>
             <td><%= applicant.gender %></td>
             <td><%= applicant.exam.total rescue nil %></td>
           </tr>

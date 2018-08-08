@@ -6,7 +6,7 @@ class Setting < ApplicationRecord
 
   def update_total
     academic_year = AcademicYear.current
-    applicants = academic_year.applicants.complete
+    applicants = academic_year.applicants
     applicants.each do |a|
       a.exam.save unless a.exam.blank?
     end
