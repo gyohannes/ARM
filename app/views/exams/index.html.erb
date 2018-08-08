@@ -7,9 +7,10 @@
   <table class="table table-bordered table-striped table-hover dataTable js-exportable">
   <thead>
     <tr>
+      <th>ID number</th>
       <th>First name</th>
       <th>Surname</th>
-      <th>ID number</th>
+      <th>Gender</th>
       <th>Email address</th>
       <th>Exam Hub</th>
       <th>Exam total</th>
@@ -22,9 +23,10 @@
   <tbody>
     <% @applicants.each do |app| %>
       <tr>
+        <td><%= app.id %></td>
         <td><%= app.first_name %></td>
         <td><%= app.father_name %></td>
-	      <td><%= app.id %></td>
+        <td><%= app.gender %></td>
         <td><%= app.user.email %></td>
         <td><%= app.applicant_exam_hub %></td>
         <td><%= app.exam.exam_result rescue nil %></td>

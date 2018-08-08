@@ -67,7 +67,7 @@ class Applicant < ApplicationRecord
     end
 
     def self.unplaced_applicants
-      Applicant.joins([:program_choices=>:university_choices],:exam).includes(:placement).where(placements: {id: nil}).
+      Applicant.joins([:program_choices=>:university_choices],:exam).where('total is not NULL').includes(:placement).where(placements: {id: nil}).
           order('exams.total DESC')
     end
 

@@ -63,6 +63,7 @@ class Exam < ApplicationRecord
   end
 
   def total_mark
+    setting = Setting.first
     ((exam_result/exam_out_of) * setting.exam_weight) +
         ((interview_result/interview_out_of) * setting.interview_weight)
   end

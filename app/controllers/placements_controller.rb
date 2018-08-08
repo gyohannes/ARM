@@ -16,6 +16,7 @@ class PlacementsController < ApplicationController
   def index
     @placements = Placement.joins(:applicant).where('academic_year_id = ?',AcademicYear.current.try(:id))
     @unpublished = @placements.where('published is null')
+    @unmatched_applicants = Applicant.includes(:placement).where(placements: {id: nil}).where('academic_year_id = ?',AcademicYear.current.try(:id))
   end
 
   def match
