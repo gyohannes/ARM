@@ -62,19 +62,22 @@ class Exam < ApplicationRecord
     end
   end
 
+  def total_mark
+    ((exam_result/exam_out_of) * setting.exam_weight) +
+        ((interview_result/interview_out_of) * setting.interview_weight)
+  end
+
   def set_total
     setting = Setting.first
     unless setting.blank?
-      self[:total] = (((exam_result/exam_out_of) * setting.exam_weight) +
-          ((interview_result/interview_out_of) * setting.interview_weight) +
-          added_mark).round(2)
+      self[:total] = (total_mark + added_mark).round(2)
     end
   end
 
   def added_mark
     setting = Setting.first
     unless setting.blank?
-      return applicant.gender == 'Female' ? setting.additional_marks_for_female : 0
+      return applicant.gender == 'Female' ? (setting.additional_marks_for_female.to_f/100)* total_mark : 0
     else
       return 0
     end
