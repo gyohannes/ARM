@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  event: one
+  name: MyString
+  title: MyString
+  telephone_number: MyString
+  email: MyString
+  organization_name: MyString
+  organization_type: one
+  directorate: one
+  responsibility: MyString
+  place_of_work: MyString
+  group: one
+  field_visit: MyString
+  stay_at: MyString
+  participant_type: one
+  checked_in: false
+
+two:
+  event: two
+  name: MyString
+  title: MyString
+  telephone_number: MyString
+  email: MyString
+  organization_name: MyString
+  organization_type: two
+  directorate: two
+  responsibility: MyString
+  place_of_work: MyString
+  group: two
+  field_visit: MyString
+  stay_at: MyString
+  participant_type: two
+  checked_in: false

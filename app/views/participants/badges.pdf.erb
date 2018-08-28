@@ -1,0 +1,93 @@
+<style>
+  .id_card{
+    font-size: 12px;
+    width: 275px;
+    border: 1px solid silver;
+    border-radius: 6px;
+    float: left;
+    margin: 5px;
+    page-break-inside: avoid;
+  }
+
+  .id_card_header{
+    margin-bottom: 8px;
+    color: white;
+    text-align: center;
+    background: darkslategray;
+    border-bottom: 5px solid #345aff;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+
+  .amharic_name, .english_name{
+    margin-bottom: 2px;
+  }
+
+  .id_card_body{
+    background-image: url('<%= Rails.root.join('app', 'assets','images','') %>');
+    list-style: none;
+    padding: 2px;
+    padding-left: 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .circle-text {
+    float: right;
+    border: 1px solid silver;
+    border-radius: 50%;
+    font-size: large;
+    padding: 2px;
+  }
+
+  .participant_type{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 5px solid #345aff;
+  }
+</style>
+      <% @participants.each do |p| %>
+        <div class="id_card">
+          <div class="id_card_header">
+
+            <div class="amharic_name">
+              <%= @current_event.amharic_name %><br/>
+              ከ<%= @current_event.from_amharic_month_day << ' - ' << @current_event.to_amharic_month_day << ' ' << 'ቀን' << @current_event.amharic_year%> ዓ.ም
+              <%= @current_event.amharic_location %>
+            </div>
+
+            <div class="english_name">
+              <%= @current_event.name %><br/>
+              <%= @current_event.start_date.strftime('%b %d') << ' - ' << @current_event.end_date.strftime('%b %d') << ',' << @current_event.end_date.strftime('%Y')%>
+              <%= @current_event.location %>
+            </div>
+
+            <%= @current_event.amharic_motto %><br/>
+            <%= @current_event.motto %><br/>
+          </div>
+
+          <div class="id_card_body">
+              <li>
+                <span class="label">Name:</span> &nbsp;&nbsp;<b><%= p.name %></b>
+              </li>
+              <li>
+                <span class="label">Orgn:</span> &nbsp;&nbsp;<b><%= p.organization_name %></b>
+              </li>
+              <li>
+                <label>Position:</label> &nbsp;&nbsp;<b><%= p.responsibility %></b>
+              </li>
+              <li>
+                <label>Desc. Group:</label> &nbsp;&nbsp;<b><%= p.group %></b>
+              </li>
+              <li>
+                <label>Field Visit:</label> &nbsp;&nbsp;<b><%= p.field_visit %></b>
+              </li>
+              <li>
+                <label>Hotel:</label> &nbsp;&nbsp;<b><%= p.stay_at %></b>
+              </li>
+            <div class="circle-text"><%= p.serial_no %></div>
+              <div class="participant_type"><%= p.participant_type %></div>
+          </div>
+        </div>
+      <% end %>

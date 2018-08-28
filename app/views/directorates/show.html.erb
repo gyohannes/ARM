@@ -1,0 +1,12 @@
+<p>
+  <strong>Name:</strong>
+  <%= @directorate.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @directorate.description %>
+</p>
+
+<%= link_to 'Edit', edit_directorate_path(@directorate) %> |
+<%= link_to 'Back', directorates_path %>

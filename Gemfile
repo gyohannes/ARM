@@ -15,8 +15,9 @@ gem 'wkhtmltopdf_binary', '~> 0.12.3.1'
 gem 'bootstrap-wysihtml5-rails'
 gem 'bootstrap-growl-rails'
 gem 'ethiopic_date', '0.0.18'
+gem 'image_processing', '~> 1.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.4'
+gem 'rails', '~> 5.2.1'
 # Use mysql as the database for Active Record
 gem 'mysql2', '>= 0.3.18', '< 0.5'
 # Use Puma as the app server

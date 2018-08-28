@@ -1,0 +1,12 @@
+<p>
+  <strong>Name:</strong>
+  <%= @participant_type.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @participant_type.description %>
+</p>
+
+<%= link_to 'Edit', edit_participant_type_path(@participant_type) %> |
+<%= link_to 'Back', participant_types_path %>

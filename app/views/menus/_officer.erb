@@ -1,0 +1,15 @@
+<% if user_signed_in? and !current_user.admin? %>
+    <div class="menu">
+      <ul class="list">
+        <li class="header">MAIN MENU</li>
+
+        <li>
+          <%= link_to participants_path do %>
+              <i class="material-icons">group</i>
+              <span>Participants</span>
+          <% end %>
+        </li>
+
+      </ul>
+    </div>
+<% end %>

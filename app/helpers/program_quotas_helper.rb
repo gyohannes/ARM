@@ -1,2 +1,0 @@
-module ProgramQuotasHelper
-end

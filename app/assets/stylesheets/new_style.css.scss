@@ -1,5 +1,16 @@
+@media print  {
+  .no-print{
+    display: none;
+  }
+  .id_card{
+    float: left;
+  }
+}
 .transparent_label{
   color: transparent;
+}
+.invalid-feedback{
+  color: red;
 }
 form > label{
   font-size: 12px;
@@ -33,7 +44,7 @@ form > label{
   min-height: auto;
 }
 .users{
-    background-image: image-url('doc-background.png');
+    background-image: image-url('');
   background-repeat: no-repeat;
 }
 .applicant_exam_hub label{

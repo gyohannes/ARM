@@ -1,10 +1,29 @@
-<%= simple_form_for(@event) do |f| %>
-    <%= f.error_notification %>
-    <%= f.association :academic_year %>
-    <%= f.input :name %>
-    <%= f.input :start_time, as: :string, input_html: { class: "datepicker" } %>
-    <%= f.input :end_time, as: :string, input_html: { class: "datepicker" } %>
+<%= simple_form_for(@event, wrapper_mappings: {file: :horizontal_file}) do |f| %>
+  <%= f.error_notification %>
 
+  <div class="form-inputs">
+    <div class="row">
+      <div class="col-sm-6">
+    <%= f.input :year %>
+    <%= f.input :name %>
+    <%= f.input :amharic_name %>
+    <%= f.input :motto %>
+    <%= f.input :amharic_motto %>
+      </div>
+      <div class="col-sm-6" style="border-left: 1px solid silver">
+    <%= f.input :start_date, as: :string, input_html: {class: 'datepicker'} %>
+    <%= f.input :end_date, as: :string, input_html: {class: 'datepicker'} %>
+    <%= f.input :location %>
+    <%= f.input :amharic_location %>
+    <%= f.input :logo, as: :file %>
+    <center>
+      <%= f.check_box :status, id: "status", class: "filled-in chk-col-pink" %>
+      <label for="status">Currently Active</label>
+    </center>
+      </div>
+    </div>
+  </div>
+  <hr/>
   <div class="form-actions">
     <%= f.button :submit %>
   </div>

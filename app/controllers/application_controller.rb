@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   respond_to :html, :js, :json, :pdf
-  before_action :set_application_calendar, :set_no_cache
+  before_action :set_no_cache, :set_event
 
   rescue_from CanCan::AccessDenied do |exception|
     respond_to do |format|
@@ -17,9 +17,8 @@ class ApplicationController < ActionController::Base
     response.headers["Expires"] = "Fri, 01 Jan 1990 00:00:00 GMT"
   end
 
-  def set_application_calendar
-    ay = AcademicYear.current
-    @application_calendar = ay.events.where('name = ?', 'Application').first rescue nil
+  def set_event
+    @current_event = Event.current
   end
 
 end

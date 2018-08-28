@@ -9,13 +9,7 @@ class Ability
          can :manage, :all
        else
          can :read, :all
-         can :manage, Applicant, user_id: user.id rescue nil
-         can :manage, ApplicantDeclaration, applicant_id: user.applicant.id rescue nil
-         can :manage, ApplicantExamHub, applicant_id: user.applicant.id rescue nil
-         can :manage, ApplicantService, applicant_id: user.applicant.id rescue nil
-         can :manage, ProgramChoice, applicant_id: user.applicant.id rescue nil
-         can :manage, UniversityChoice, group: { program_id: user.applicant.program_choice_ids } rescue nil
-         can :exam_detail, Exam
+         can :manage, Participant
        end
     #
     # The first argument to `can` is the action you are giving the user

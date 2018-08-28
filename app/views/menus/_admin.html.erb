@@ -16,106 +16,54 @@
         <% end %>
         </li>
 
-        <li>
+      <li>
         <a href="javascript:void(0);" class="menu-toggle waves-effect waves-block">
-            <i class="material-icons">settings</i>
-            <span>Settings</span>
+          <i class="material-icons">settings</i>
+          <span>Settings</span>
         </a>
         <ul class="ml-menu" style="display: none;">
           <li>
-            <%= link_to regions_path do %>
-                <i class="material-icons">layers</i>
-                <span>Regions</span>
-            <% end %>
-          </li>
-          <li>
-            <%= link_to exam_hubs_path do %>
-                <i class="material-icons">place</i>
-                <span>Exam Hubs</span>
-            <% end %>
-          </li>
-            <li>
-                <%= link_to academic_years_path do %>
-                    <i class="material-icons">date_range</i>
-                    <span>Academic Years</span>
-                <% end %>
-            </li>
-            <li>
-                <%= link_to events_path do %>
-                    <i class="material-icons">event_note</i>
-                    <span>Events</span>
-                <% end %>
-            </li>
-            <li>
-                <%= link_to programs_path do %>
-                    <i class="material-icons">library_books</i>
-                    <span>Programs</span>
-                <% end %>
-            </li>
-            <li>
-                <%= link_to universities_path do %>
-                    <i class="material-icons">school</i>
-                    <span>Universities</span>
-                <% end %>
-            </li>
-            <li>
-                <%= link_to program_quotas_path do %>
-                    <i class="material-icons">school</i>
-                    <span>Program Quotas</span>
-                <% end %>
-            </li>
-
-          <li>
-            <%= link_to declarations_path do %>
-                <i class="material-icons">school</i>
-                <span>Declarations</span>
+            <%= link_to events_path do %>
+                <i class="material-icons">event_note</i>
+                <span>Events</span>
             <% end %>
           </li>
 
           <li>
-            <%= link_to application_instructions_path do %>
-                <i class="material-icons">text_format</i>
-                <span>Application Instructions</span>
+            <%= link_to organization_types_path do %>
+                <i class="material-icons">category</i>
+                <span>Organization Types</span>
+            <% end %>
+          </li>
+
+          <li>
+            <%= link_to directorates_path do %>
+                <i class="material-icons">group</i>
+                <span>FMOH Directorates</span>
+            <% end %>
+          </li>
+
+          <li>
+            <%= link_to groups_path do %>
+                <i class="material-icons">group</i>
+                <span>Groups</span>
+            <% end %>
+          </li>
+
+          <li>
+            <%= link_to participant_types_path do %>
+                <i class="material-icons">group</i>
+                <span>Participant Types</span>
             <% end %>
           </li>
         </ul>
-    </li>
-    <li>
-    <%= link_to applicants_path do %>
-        <i class="material-icons">people</i>
-        <span>Applications</span>
-    <% end %>
-    </li>
-
-      <a href="javascript:void(0);" class="menu-toggle waves-effect waves-block">
-        <i class="material-icons">settings</i>
-        <span>Exam</span>
-      </a>
-      <ul class="ml-menu" style="display: none;">
-        <li>
-          <%= link_to settings_path do %>
-              <i class="material-icons">layers</i>
-              <span>Exam Settings</span>
-          <% end %>
-        </li>
-        <li>
-          <%= link_to exams_path do %>
-              <i class="material-icons">place</i>
-              <span>Exam Results</span>
-          <% end %>
-        </li>
-      </ul>
-
-      <%= link_to placements_path do %>
-          <i class="material-icons">people</i>
-          <span>Matching Result</span>
-      <% end %>
       </li>
 
-      <%= link_to statistics_placements_path do %>
-          <i class="material-icons">pie_chart</i>
-          <span>Matching Statistics</span>
-      <% end %>
+      <li>
+        <%= link_to participants_path do %>
+            <i class="material-icons">group</i>
+            <span>Participants</span>
+        <% end %>
       </li>
 
     </ul>

@@ -1,0 +1,5 @@
+<% unless @directorates.blank? %>
+<%= simple_fields_for :participant,@participant do |f|  %>
+        <%= f.input :directorate_id, collection: @directorates, class: "form-control show-tick" %>
+<% end %>
+<% end %>
