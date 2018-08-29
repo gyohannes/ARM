@@ -2,8 +2,10 @@ class Participant < ApplicationRecord
   belongs_to :event
   belongs_to :organization_type
   belongs_to :directorate, optional: true
-  belongs_to :group
-  belongs_to :participant_type
+  belongs_to :group, optional: true
+  belongs_to :participant_type, optional: true
+
+  validates :name, :organization_name, presence: true
 
   def to_s
     name

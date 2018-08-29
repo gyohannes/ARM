@@ -15,8 +15,15 @@ $(function () {
         destroy: true,
         dom: 'lrBfrtip',
         responsive: true,
+        lengthMenu: [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]],
         buttons: [
             'copy', 'csv', 'excel', 'pdf', 'print'
+        ],
+        columnDefs: [
+            {
+                targets: [0],
+                orderable: false,
+            }
         ]
     });
 

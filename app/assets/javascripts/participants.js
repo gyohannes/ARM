@@ -12,4 +12,14 @@ $(function () {
             }
         });
     });
+
+    $('#check_all').on("change", function(){
+        var checked = $(this).prop("checked");
+        var check_boxes = $('input[type="checkbox"]');
+        if (checked==true){
+            check_boxes.prop("checked", true);
+        }else {
+            check_boxes.prop("checked", false);
+        }
+    });
 });

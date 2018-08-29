@@ -49,7 +49,7 @@ class ParticipantsController < ApplicationController
   # POST /participants.json
   def create
     @participant = Participant.new(participant_params)
-    if @participant.organization_type.name == 'FMOH'
+    if @participant.organization_type and @participant.organization_type.name == 'FMOH'
       @directorates = Directorate.all
     end
     respond_to do |format|
