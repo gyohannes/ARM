@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
   end
 
   def set_event
-    @current_event = Event.current
+    @current_event = Event.current rescue nil
   end
 
 end
