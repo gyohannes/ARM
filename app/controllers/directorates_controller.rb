@@ -30,7 +30,7 @@ class DirectoratesController < ApplicationController
 
     respond_to do |format|
       if @directorate.save
-        format.html { redirect_to @directorate, notice: 'Directorate was successfully created.' }
+        format.html { redirect_to directorates_path, notice: 'Directorate was successfully created.' }
         format.json { render :show, status: :created, location: @directorate }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class DirectoratesController < ApplicationController
   def update
     respond_to do |format|
       if @directorate.update(directorate_params)
-        format.html { redirect_to @directorate, notice: 'Directorate was successfully updated.' }
+        format.html { redirect_to directorates_path, notice: 'Directorate was successfully updated.' }
         format.json { render :show, status: :ok, location: @directorate }
       else
         format.html { render :edit }

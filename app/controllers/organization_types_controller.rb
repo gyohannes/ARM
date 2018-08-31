@@ -30,7 +30,7 @@ class OrganizationTypesController < ApplicationController
 
     respond_to do |format|
       if @organization_type.save
-        format.html { redirect_to @organization_type, notice: 'Organization type was successfully created.' }
+        format.html { redirect_to organization_types_path, notice: 'Organization type was successfully created.' }
         format.json { render :show, status: :created, location: @organization_type }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class OrganizationTypesController < ApplicationController
   def update
     respond_to do |format|
       if @organization_type.update(organization_type_params)
-        format.html { redirect_to @organization_type, notice: 'Organization type was successfully updated.' }
+        format.html { redirect_to organization_types_path, notice: 'Organization type was successfully updated.' }
         format.json { render :show, status: :ok, location: @organization_type }
       else
         format.html { render :edit }

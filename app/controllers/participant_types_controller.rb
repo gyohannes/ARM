@@ -30,7 +30,7 @@ class ParticipantTypesController < ApplicationController
 
     respond_to do |format|
       if @participant_type.save
-        format.html { redirect_to @participant_type, notice: 'Participant type was successfully created.' }
+        format.html { redirect_to participant_types_path, notice: 'Participant type was successfully created.' }
         format.json { render :show, status: :created, location: @participant_type }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class ParticipantTypesController < ApplicationController
   def update
     respond_to do |format|
       if @participant_type.update(participant_type_params)
-        format.html { redirect_to @participant_type, notice: 'Participant type was successfully updated.' }
+        format.html { redirect_to participant_types_path, notice: 'Participant type was successfully updated.' }
         format.json { render :show, status: :ok, location: @participant_type }
       else
         format.html { render :edit }

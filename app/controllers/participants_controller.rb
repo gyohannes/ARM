@@ -20,8 +20,8 @@ class ParticipantsController < ApplicationController
   end
 
   def badges
-    participant_ids = params[:participants].delete_if{|e| e=='0'}
-    @participants = participant_ids.blank? ? @current_event.participants : Participant.find(participant_ids)
+    participant_ids = params[:participants].delete_if{|e| e=='0'} rescue nil
+    @participants = participant_ids.blank? ? @current_event.try(:participants) || [] : Participant.find(participant_ids)
     respond_to do |format|
       format.html
       format.pdf do
@@ -54,7 +54,7 @@ class ParticipantsController < ApplicationController
     end
     respond_to do |format|
       if @participant.save
-        format.html { redirect_to @participant, notice: 'Participant was successfully created.' }
+        format.html { redirect_to participants_path, notice: 'Participant was successfully created.' }
         format.json { render :show, status: :created, location: @participant }
       else
         format.html { render :new }
