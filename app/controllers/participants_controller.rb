@@ -5,7 +5,7 @@ class ParticipantsController < ApplicationController
   # GET /participants
   # GET /participants.json
   def index
-    @participants = @current_event.participants || []
+    @participants = @current_event.participants rescue nil || []
   end
 
   def load_directorates
