@@ -25,7 +25,6 @@
 
 <p>
   <strong>Logo:</strong>
-  <%= image_path Rails.root.join(ActiveStorage::Blob.service.send(:path_for, @event.logo.key)) %>
   <%= image_tag @event.logo, height: 100 rescue nil %>
 </p>
 
