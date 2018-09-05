@@ -12,7 +12,7 @@ class Participant < ApplicationRecord
   end
 
   def serial_no
-    serial_no = id.to_s
+    serial_no = (Participant.all.index(self) + 1 ).to_s
     while serial_no.length < 3
       serial_no =  '0' << serial_no
     end
