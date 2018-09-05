@@ -61,7 +61,7 @@
 
             <div class="english_name">
               <%= @current_event.name %><br/>
-              <%= @current_event.start_date.strftime('%b %d') << ' - ' << @current_event.end_date.strftime('%b %d') << ',' << @current_event.end_date.strftime('%Y')%>
+              <%= @current_event.start_date.strftime('%b %d') << ' - ' << @current_event.end_date.strftime('%b %d') << ', ' << @current_event.end_date.strftime('%Y')%>
               <%= @current_event.location %>
             </div>
 
