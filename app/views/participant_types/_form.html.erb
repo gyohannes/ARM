@@ -4,6 +4,8 @@
   <div class="form-inputs">
     <%= f.input :name %>
     <%= f.input :description %>
+    <%= f.input :badge_color,as: :minicolors, input_html: {class: 'colorpicker', data: {
+        minicolors: {theme: :bootstrap, position: :left}}} %>
   </div>
 
   <div class="form-actions">

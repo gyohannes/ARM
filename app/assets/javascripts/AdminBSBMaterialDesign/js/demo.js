@@ -9,6 +9,8 @@ $(function () {
         responsive: true
     });
 
+    $('.colorpicker').minicolors({theme: 'bootstrap'});
+
     //Exportable table
     $('.js-exportable').DataTable({
         retrieve: true,

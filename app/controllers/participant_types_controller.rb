@@ -71,6 +71,6 @@ class ParticipantTypesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def participant_type_params
-      params.require(:participant_type).permit(:name, :description)
+      params.require(:participant_type).permit(:name, :description, :badge_color)
     end
 end
