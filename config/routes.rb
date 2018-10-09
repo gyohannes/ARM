@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     collection do
       get 'badges'
       get 'load_directorates'
+      post 'import_participants'
     end
   end
 

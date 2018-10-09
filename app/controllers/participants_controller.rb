@@ -8,6 +8,14 @@ class ParticipantsController < ApplicationController
     @participants = @current_event.participants rescue nil || []
   end
 
+  def import_participants
+    if request.post?
+      @participants = Participant.import_participants(params[:participants_csv_file])
+      flash[:notice] = @participants.blank? ? 'No Participant imported' : 'Participants imported. Check the imported list below'
+      render 'index'
+    end
+  end
+
   def load_directorates
     organization_type = OrganizationType.find(params[:organization_type])
     @directorates = organization_type.name == 'FMOH' ? Directorate.all : []
