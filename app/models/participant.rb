@@ -5,8 +5,6 @@ class Participant < ApplicationRecord
   belongs_to :group, optional: true
   belongs_to :participant_type, optional: true
 
-  validates :name, :organization_name, presence: true
-
   def to_s
     name
   end
@@ -33,11 +31,8 @@ class Participant < ApplicationRecord
                  responsibility: responsibility, place_of_work: place_of_work, telephone_number: telephone_number,
                  email: email, participant_type_id: participant_type.try(:id), stay_at: stay_at,
                  group_id: group.try(:id), field_visit: field_visit, checked_in: checked_in}
-      participant = Participant.find_by(attrbts)
-      if participant.blank?
-        particpant = Participant.create(attrbts)
-        participants << particpant
-      end
+      particpant = Participant.create(attrbts)
+      participants << particpant
     end
     return participants
   end
