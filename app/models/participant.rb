@@ -1,6 +1,6 @@
 class Participant < ApplicationRecord
   belongs_to :event
-  belongs_to :organization_type
+  belongs_to :organization_type,optional: true
   belongs_to :directorate, optional: true
   belongs_to :group, optional: true
   belongs_to :participant_type, optional: true
@@ -32,7 +32,7 @@ class Participant < ApplicationRecord
                  email: email, participant_type_id: participant_type.try(:id), stay_at: stay_at,
                  group_id: group.try(:id), field_visit: field_visit, checked_in: checked_in}
       particpant = Participant.create(attrbts)
-      participants << particpant
+      participants << particpant unless particpant.blank?
     end
     return participants
   end
