@@ -15,15 +15,15 @@ class Participant < ApplicationRecord
     CSV.foreach(file.path, :headers=>true) do |row|
       name = row[0]
       organization_name = row[1]
-      organization_type = OrganizationType.find_or_create_by(name: row[2])
-      directorate = Directorate.find_or_create_by(name: row[3])
+      organization_type = row[2].blank? ? nil : OrganizationType.find_or_create_by(name: row[2])
+      directorate = row[3].blank? ? nil : Directorate.find_or_create_by(name: row[3])
       responsibility = row[4]
       place_of_work = row[5]
       telephone_number = row[6]
       email = row[7]
-      participant_type = ParticipantType.find_or_create_by(name: row[8])
+      participant_type = row[8].blank? ? nil : ParticipantType.find_or_create_by(name: row[8])
       stay_at = row[9]
-      group = Group.find_or_create_by(name: row[10])
+      group = row[10].blank? ? nil : Group.find_or_create_by(name: row[10])
       field_visit = row[11]
       checked_in = row[12].blank? ? '' : (row[12].downcase == 'yes' ? true : false)
       attrbts = {event_id: event.try(:id), name: name, organization_name: organization_name,
