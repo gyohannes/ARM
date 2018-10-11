@@ -12,7 +12,7 @@ class Participant < ApplicationRecord
   def self.import_participants(file)
     participants = []
     event = Event.current
-    CSV.foreach(file.path, :headers=>true) do |row|
+    CSV.foreach(file.path, :headers=>true, encoding: 'iso-8859-1:utf-8') do |row|
       name = row[0]
       organization_name = row[1]
       organization_type = row[2].blank? ? nil : OrganizationType.find_or_create_by(name: row[2])
