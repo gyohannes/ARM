@@ -49,7 +49,7 @@
 </style>
       <% @participants.each do |p| %>
         <div class="id_card">
-          <div class="id_card_header" style="background: <%= p.participant_type.badge_color %>">
+          <div class="id_card_header" style="background: <%= p.participant_type.try(:badge_color) %>">
 
             <div class="amharic_name">
               <%= @current_event.amharic_name %><br/>
@@ -87,7 +87,7 @@
                 <label>Hotel:</label> &nbsp;&nbsp;<b><%= p.stay_at %></b>
               </li>
             <div class="circle-text"><%= p.serial_no %></div>
-              <div class="participant_type" style="border-bottom: 5px solid <%= p.participant_type.badge_color %>"><%= p.participant_type %></div>
+              <div class="participant_type" style="border-bottom: 5px solid <%= p.participant_type.try(:badge_color) %>"><%= p.participant_type %></div>
           </div>
         </div>
       <% end %>
