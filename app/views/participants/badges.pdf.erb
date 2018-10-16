@@ -2,6 +2,7 @@
   .id_card{
     font-size: 13px;
     width: 275px;
+    height: 400px;
     border: 1px solid silver;
     border-radius: 6px;
     float: left;
@@ -10,9 +11,19 @@
     page-break-inside: avoid;
   }
 
+  .header_and_body{
+    height: 90%;
+  }
+
+  .footer{
+    height: 10%;
+    vertical-align: bottom;
+  }
+
   .id_card_header{
     margin-bottom: 8px;
     color: white;
+    background: brown;
     text-align: center;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
@@ -41,33 +52,33 @@
 
   .participant_type{
     text-align: center;
-    margin-top: 25px;
     font-size: 18px;
     font-weight: bold;
-    border-bottom: 5px solid #345aff;
+    border-bottom: 5px solid brown;
   }
 </style>
       <% @participants.each do |p| %>
         <div class="id_card">
-          <div class="id_card_header" style="background: <%= p.participant_type.try(:badge_color) || 'brown' %>">
+          <div class="header_and_body">
+            <div class="id_card_header" style="background: <%= p.participant_type.try(:badge_color) %>">
 
-            <div class="amharic_name">
-              <%= @current_event.amharic_name %><br/>
-              ከ<%= @current_event.from_amharic_month_day << ' - ' << @current_event.to_amharic_month_day << ' ' << 'ቀን' << @current_event.amharic_year%> ዓ.ም
-              <%= @current_event.amharic_location %>
+              <div class="amharic_name">
+                <%= @current_event.amharic_name %><br/>
+                ከ<%= @current_event.from_amharic_month_day << ' - ' << @current_event.to_amharic_month_day << ' ' << 'ቀን' << @current_event.amharic_year%> ዓ.ም
+                <%= @current_event.amharic_location %>
+              </div>
+
+              <div class="english_name">
+                <%= @current_event.name %><br/>
+                <%= @current_event.start_date.strftime('%b %d') << ' - ' << @current_event.end_date.strftime('%b %d') << ', ' << @current_event.end_date.strftime('%Y')%>
+                <%= @current_event.location %>
+              </div>
+
+              <%= @current_event.amharic_motto %><br/>
+              <%= @current_event.motto %><br/>
             </div>
 
-            <div class="english_name">
-              <%= @current_event.name %><br/>
-              <%= @current_event.start_date.strftime('%b %d') << ' - ' << @current_event.end_date.strftime('%b %d') << ', ' << @current_event.end_date.strftime('%Y')%>
-              <%= @current_event.location %>
-            </div>
-
-            <%= @current_event.amharic_motto %><br/>
-            <%= @current_event.motto %><br/>
-          </div>
-
-          <div class="id_card_body">
+            <div class="id_card_body">
               <li>
                 <span class="label">Name:</span> &nbsp;&nbsp;<b><%= p.name %></b>
               </li>
@@ -78,7 +89,7 @@
                 <label>Position:</label> &nbsp;&nbsp;<b><%= p.responsibility %></b>
               </li>
               <li>
-                <label>Desc. Group:</label> &nbsp;&nbsp;<b><%= p.group %></b>
+                <label>Disc. Group:</label> &nbsp;&nbsp;<b><%= p.group %></b>
               </li>
               <li>
                 <label>Field Visit:</label> &nbsp;&nbsp;<b><%= p.field_visit %></b>
@@ -87,7 +98,10 @@
                 <label>Hotel:</label> &nbsp;&nbsp;<b><%= p.stay_at %></b>
               </li>
             <div class="circle-text"><%= p.serial_no %></div>
-              <div class="participant_type" style="border-bottom: 5px solid <%= p.participant_type.try(:badge_color) || 'brown' %>"><%= p.participant_type %></div>
+          </div>
+          </div>
+          <div class="footer">
+            <div class="participant_type" style="border-bottom: 5px solid <%= p.participant_type.try(:badge_color).blank? ? "brown" : p.participant_type.try(:badge_color) %>"><%= p.participant_type %></div>
           </div>
         </div>
       <% end %>
