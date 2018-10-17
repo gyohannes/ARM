@@ -34,7 +34,7 @@
   }
 
   .id_card_body{
-    min-height: 20mm;
+    min-height: 50mm;
     background-image: url('<%= image_path Rails.root.join(ActiveStorage::Blob.service.send(:path_for, Event.first.logo.key)) %>');
     list-style: none;
     padding: 2px;
