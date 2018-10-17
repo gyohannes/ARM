@@ -12,11 +12,11 @@
   }
 
   .header_and_body{
-    min-height: 100mm;
+    height: 92%;
   }
 
   .footer{
-    max-height: 10mm;
+    height: 8%;
     vertical-align: bottom;
   }
 
@@ -34,6 +34,7 @@
   }
 
   .id_card_body{
+    min-height: 20mm;
     background-image: url('<%= image_path Rails.root.join(ActiveStorage::Blob.service.send(:path_for, Event.first.logo.key)) %>');
     list-style: none;
     padding: 2px;
