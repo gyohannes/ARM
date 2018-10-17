@@ -1,8 +1,8 @@
 <style>
   .id_card{
-    font-size: 13px;
-    width: 73mm;
-    height: 110mm;
+    font-size: 12px;
+    width: 265px;
+    height: 380px;
     border: 1px solid silver;
     border-radius: 6px;
     float: left;
@@ -13,6 +13,7 @@
 
   .header_and_body{
     height: 92%;
+    overflow: hidden;
   }
 
   .footer{
@@ -21,6 +22,7 @@
   }
 
   .id_card_header{
+    font-size: 11px;
     margin-bottom: 8px;
     color: white;
     background: brown;
@@ -98,7 +100,7 @@
               <li>
                 <label>Hotel:</label> &nbsp;&nbsp;<b><%= p.stay_at %></b>
               </li>
-            <li class="circle-text"><%= p.serial_no %></li>
+            <div class="circle-text"><%= p.serial_no %></div>
           </div>
           </div>
           <div class="footer">
