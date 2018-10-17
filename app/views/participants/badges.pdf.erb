@@ -1,8 +1,8 @@
 <style>
   .id_card{
     font-size: 12px;
-    width: 255px;
-    height: 390px;
+    width: 69mm;
+    height: 106mm;
     border: 1px solid silver;
     border-radius: 6px;
     float: left;
@@ -11,42 +11,42 @@
     page-break-inside: avoid;
   }
 
-  .header_and_body{
-    height: 92%;
-    overflow: hidden;
-  }
-
-  .footer{
-    height: 8%;
-    vertical-align: bottom;
-  }
-
   .id_card_header{
-    font-size: 11px;
-    margin-bottom: 8px;
+    font-size: 12px;
+    margin-bottom: 5px;
     color: white;
     background: brown;
     text-align: center;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
+    overflow: hidden;
   }
 
   .amharic_name, .english_name{
     margin-bottom: 2px;
   }
 
-  .id_card_body{
+  .body_and_footer{
+    height: 61mm;
+    vertical-align: bottom;
+    overflow: hidden;
     background-image: url('<%= image_path Rails.root.join(ActiveStorage::Blob.service.send(:path_for, Event.first.logo.key)) %>');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .id_card_body{
+    height: 70%;
     list-style: none;
     padding: 2px;
     padding-left: 5px;
-    background-repeat: no-repeat;
-    background-position: center;
     overflow: hidden;
   }
-
+  .footer{
+    height: 30%;
+    vertical-align: bottom;
+  }
   .circle-text {
-    float: right;
+    margin-left: 85%;
     border: 1px solid silver;
     border-radius: 50%;
     font-size: large;
@@ -55,33 +55,32 @@
 
   .participant_type{
     text-align: center;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: bold;
     border-bottom: 5px solid brown;
   }
 </style>
       <% @participants.each do |p| %>
         <div class="id_card">
-          <div class="header_and_body">
-            <div class="id_card_header" style="background: <%= p.participant_type.try(:badge_color) %>">
+          <div class="id_card_header" style="background: <%= p.participant_type.try(:badge_color) %>">
 
-              <div class="amharic_name">
-                <%= @current_event.amharic_name %><br/>
-                ከ<%= @current_event.from_amharic_month_day << ' - ' << @current_event.to_amharic_month_day << ' ' << 'ቀን' << @current_event.amharic_year%> ዓ.ም
-                <%= @current_event.amharic_location %>
-              </div>
-
-              <div class="english_name">
-                <%= @current_event.name %><br/>
-                <%= @current_event.start_date.strftime('%b %d') << ' - ' << @current_event.end_date.strftime('%b %d') << ', ' << @current_event.end_date.strftime('%Y')%>
-                <%= @current_event.location %>
-              </div>
-
-              <%= @current_event.amharic_motto %><br/>
-              <%= @current_event.motto %><br/>
+            <div class="amharic_name">
+              <%= @current_event.amharic_name %><br/>
+              ከ<%= @current_event.from_amharic_month_day << ' - ' << @current_event.to_amharic_month_day << ' ' << 'ቀን' << @current_event.amharic_year%> ዓ.ም
+              <%= @current_event.amharic_location %>
             </div>
 
-            <div class="id_card_body">
+            <div class="english_name">
+              <%= @current_event.name %><br/>
+              <%= @current_event.start_date.strftime('%b %d') << ' - ' << @current_event.end_date.strftime('%b %d') << ', ' << @current_event.end_date.strftime('%Y')%>
+              <%= @current_event.location %>
+            </div>
+
+            <%= @current_event.amharic_motto %><br/>
+            <%= @current_event.motto %><br/>
+          </div>
+          <div class="body_and_footer">
+              <div class="id_card_body">
               <li>
                 <span class="label">Name:</span> &nbsp;&nbsp;<b><%= p.name %></b>
               </li>
@@ -100,11 +99,11 @@
               <li>
                 <label>Hotel:</label> &nbsp;&nbsp;<b><%= p.stay_at %></b>
               </li>
-            <div class="circle-text"><%= p.serial_no %></div>
           </div>
-          </div>
-          <div class="footer">
-            <div class="participant_type" style="border-bottom: 5px solid <%= p.participant_type.try(:badge_color).blank? ? "brown" : p.participant_type.try(:badge_color) %>"><%= p.participant_type %></div>
+              <div class="footer">
+                <div class="circle-text"><%= p.serial_no %></div>
+                <div class="participant_type" style="border-bottom: 5px solid <%= p.participant_type.try(:badge_color).blank? ? "brown" : p.participant_type.try(:badge_color) %>"><%= p.participant_type %></div>
+              </div>
           </div>
         </div>
       <% end %>

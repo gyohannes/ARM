@@ -35,8 +35,7 @@ class ParticipantsController < ApplicationController
       format.pdf do
         render pdf: "participants_badges",
                disposition: 'attachment',
-               encoding: 'utf8',
-               disable_smart_shrinking:  false
+               encoding: 'utf8'
         end
       end
   end
