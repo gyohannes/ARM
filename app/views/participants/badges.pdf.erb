@@ -2,7 +2,7 @@
   .id_card{
     font-size: 12px;
     width: 73mm;
-    height: 110mm;
+    height: 106mm;
     border: 1px solid silver;
     border-radius: 6px;
     float: left;
@@ -27,7 +27,7 @@
   }
 
   .body_and_footer{
-    height: 65mm;
+    height: 61mm;
     vertical-align: bottom;
     overflow: hidden;
     background-image: url('<%= image_path Rails.root.join(ActiveStorage::Blob.service.send(:path_for, Event.first.logo.key)) %>');
@@ -35,14 +35,14 @@
     background-position: center;
   }
   .id_card_body{
-    height: 72%;
+    height: 70%;
     list-style: none;
     padding: 2px;
     padding-left: 5px;
     overflow: hidden;
   }
   .footer{
-    height: 28%;
+    height: 30%;
     vertical-align: bottom;
   }
   .circle-text {
