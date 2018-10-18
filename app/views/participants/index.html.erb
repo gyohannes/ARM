@@ -11,6 +11,7 @@
         <th><%= check_box(nil, "check_all", {class: 'check_all',class: "filled-in chk-col-pink"}) %>
           <label for="check_all">All</label>
         </th>
+        <th>SNO</th>
         <th>Name</th>
         <th>Organization name</th>
         <th>Organization type</th>
@@ -34,6 +35,7 @@
             <%= check_box(nil, "participants", {multiple: true,id: participant.id,class: "filled-in chk-col-pink"}, participant.id) %>
             <label for="<%= participant.id %>"></label>
           </td>
+          <td><%= participant.serial_no %></td>
           <td><%= participant.name %></td>
           <td><%= participant.organization_name %></td>
           <td><%= participant.organization_type %></td>

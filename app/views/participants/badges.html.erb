@@ -1,8 +1,8 @@
 <style>
   .id_card{
-    font-size: 12px;
-    width: 73mm;
-    height: 106mm;
+    font-size: 16px;
+    width: 91mm;
+    height: 140mm;
     border: 1px solid silver;
     border-radius: 6px;
     float: left;
@@ -11,8 +11,11 @@
     page-break-inside: avoid;
   }
 
+  li{
+    maring-top: 10px;
+    margin-bottom: 10px;
+  }
   .id_card_header{
-    font-size: 12px;
     margin-bottom: 5px;
     color: white;
     background: brown;
@@ -23,11 +26,10 @@
   }
 
   .amharic_name, .english_name{
-    margin-bottom: 2px;
+    margin-bottom: 5px;
   }
-
   .body_and_footer{
-    height: 61mm;
+    height: 100mm;
     vertical-align: bottom;
     overflow: hidden;
     background-image: url('<%= image_path Rails.root.join(ActiveStorage::Blob.service.send(:path_for, Event.first.logo.key)) %>');
@@ -35,27 +37,27 @@
     background-position: center;
   }
   .id_card_body{
-    height: 70%;
+    height: 65%;
     list-style: none;
     padding: 2px;
     padding-left: 5px;
     overflow: hidden;
   }
+
   .footer{
-    height: 30%;
     vertical-align: bottom;
   }
   .circle-text {
-    margin-left: 85%;
+    margin-left: 87%;
     border: 1px solid silver;
     border-radius: 50%;
-    font-size: large;
+    font-size: x-large;
     padding: 2px;
   }
 
   .participant_type{
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     border-bottom: 5px solid brown;
   }
