@@ -1,8 +1,8 @@
 <style>
   .id_card{
     font-size: 12px;
-    width: 69mm;
-    height: 106mm;
+    width: 73mm;
+    height: 110mm;
     border: 1px solid silver;
     border-radius: 6px;
     float: left;
@@ -27,7 +27,7 @@
   }
 
   .body_and_footer{
-    height: 61mm;
+    height: 65mm;
     vertical-align: bottom;
     overflow: hidden;
     background-image: url('<%= image_path Rails.root.join(ActiveStorage::Blob.service.send(:path_for, Event.first.logo.key)) %>');
