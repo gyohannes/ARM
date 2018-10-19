@@ -1,1 +1,0 @@
-$(function(){$("input[name='applicant_service[status]']:radio").change(function(){"Yes"==$(this).val()?$("#services_display").show():$("#services_display").hide()})});
