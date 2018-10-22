@@ -47,7 +47,7 @@ class ParticipantsController < ApplicationController
 
   # GET /participants/1/edit
   def edit
-    if @participant.organization_type.tryg(:name) == 'FMOH'
+    if @participant.organization_type.try(:name) == 'FMOH'
       @directorates = Directorate.all
     end
   end
