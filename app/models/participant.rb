@@ -5,6 +5,8 @@ class Participant < ApplicationRecord
   belongs_to :group, optional: true
   belongs_to :participant_type, optional: true
 
+  after_create :set_serial_no
+
   def to_s
     name
   end
@@ -37,12 +39,20 @@ class Participant < ApplicationRecord
     return participants
   end
 
-  def serial_no
+  def serial_number
+    serial_number = (Participant.all.index(self) + 1 ).to_s
+    while serial_number.length < 3
+      serial_number =  '0' << serial_number
+    end
+    return serial_number
+  end
+
+  def set_serial_no
     serial_no = (Participant.all.index(self) + 1 ).to_s
     while serial_no.length < 3
       serial_no =  '0' << serial_no
     end
-    return serial_no
+    update(serial_no: serial_no)
   end
 
   def checkedin_status
