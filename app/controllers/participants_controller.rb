@@ -47,7 +47,7 @@ class ParticipantsController < ApplicationController
 
   # GET /participants/1/edit
   def edit
-    if @participant.organization_type.name == 'FMOH'
+    if @participant.organization_type.try(:name) == 'FMOH'
       @directorates = Directorate.all
     end
   end
@@ -73,7 +73,7 @@ class ParticipantsController < ApplicationController
   # PATCH/PUT /participants/1
   # PATCH/PUT /participants/1.json
   def update
-    if @participant.organization_type.name == 'FMOH'
+    if @participant.organization_type.tr(:name) == 'FMOH'
       @directorates = Directorate.all
     end
     respond_to do |format|
