@@ -5,6 +5,7 @@ class Participant < ApplicationRecord
   belongs_to :group, optional: true
   belongs_to :participant_type, optional: true
 
+  validates :name, :organization_name, :organization_type_id, :telephone_number, :participant_type_id, :stay_at, :group_id, presence: true
   after_create :set_serial_no
 
   def to_s
