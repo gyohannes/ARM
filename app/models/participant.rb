@@ -42,16 +42,16 @@ class Participant < ApplicationRecord
   end
 
   def serial_number
-    serial_number = (Participant.all.index(self) + 1 ).to_s
-    while serial_number.length < 3
+    serial_number = self.id.to_s
+    while serial_number.length < 4
       serial_number =  '0' << serial_number
     end
     return serial_number
   end
 
   def set_serial_no
-    serial_no = (Participant.all.index(self) + 1 ).to_s
-    while serial_no.length < 3
+    serial_no = self.id.to_s
+    while serial_no.length < 4
       serial_no =  '0' << serial_no
     end
     update(serial_no: serial_no)
