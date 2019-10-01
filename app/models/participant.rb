@@ -3,6 +3,7 @@ class Participant < ApplicationRecord
   belongs_to :organization_type,optional: true
   belongs_to :directorate, optional: true
   belongs_to :group, optional: true
+  belongs_to :field_visit, optional: true
   belongs_to :participant_type, optional: true
 
   validates :name, :organization_name, :organization_type_id, :telephone_number, :participant_type_id, :stay_at, :group_id, presence: true

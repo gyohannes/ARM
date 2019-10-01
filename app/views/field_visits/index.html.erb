@@ -1,0 +1,30 @@
+<div class="header">
+<h2>
+  Field Visits
+</h2>
+</div>
+<div class="body table-responsive">
+  <table class="table table-bordered table-striped table-hover dataTable js-exportable">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @field_visits.each do |field_visit| %>
+      <tr>
+        <td><%= field_visit.name %></td>
+        <td>
+          <%= link_to 'Edit', edit_field_visit_path(field_visit) %> |
+        <%= link_to 'Delete', field_visit, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+  <hr/>
+
+<%= link_to 'Add Field Visit', new_field_visit_path %>
+</div>
