@@ -2,353 +2,480 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dbdb759e-3b8e-4df5-b5e6-ed8a75fcbe34" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/menus/_officer.erb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/academic_years.css.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/applicants.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap_and_overrides.css.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/calendars.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/events.css.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/events.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/home.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/program_choices.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/program_quotas.css.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/programs.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/universities.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/university_choices.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/academic_years_controller.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/applicant_declarations_controller.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/applicant_exam_hubs_controller.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/applicant_services_controller.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/applicants_controller.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/application_instructions_controller.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/declarations_controller.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/exam_hubs_controller.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/exams_controller.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/match_results_controller.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/placements_controller.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/program_choices_controller.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/program_quotas_controller.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/programs_controller.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/regions_controller.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/settings_controller.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/timers_controller.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/universities_controller.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/university_choices_controller.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/helpers/academic_years_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/helpers/applicant_declarations_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/helpers/applicant_exam_hubs_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/helpers/applicant_services_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/helpers/applicants_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/helpers/application_instructions_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/helpers/declarations_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/helpers/exam_hubs_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/helpers/exams_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/helpers/match_results_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/helpers/placements_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/helpers/program_choices_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/helpers/program_quotas_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/helpers/programs_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/helpers/regions_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/helpers/settings_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/helpers/timers_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/helpers/universities_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/helpers/university_choices_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/academic_year.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/applicant.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/applicant_declaration.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/applicant_exam_hub.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/applicant_service.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/application_instruction.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/declaration.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/declaration_detail.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/exam.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/exam_hub.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/home.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/match_result.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/placement.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/program.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/program_choice.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/program_quota.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/region.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/service.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/setting.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/timer.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/university.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/university_choice.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/academic_years/_academic_year.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/academic_years/_form.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/academic_years/edit.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/academic_years/index.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/academic_years/index.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/academic_years/new.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/academic_years/show.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/academic_years/show.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicant_declarations/_applicant_declaration.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicant_declarations/_declaration_details_fields.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicant_declarations/_form.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicant_declarations/edit.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicant_declarations/index.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicant_declarations/index.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicant_declarations/new.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicant_declarations/show.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicant_declarations/show.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicant_exam_hubs/_applicant_exam_hub.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicant_exam_hubs/_form.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicant_exam_hubs/edit.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicant_exam_hubs/index.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicant_exam_hubs/index.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicant_exam_hubs/new.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicant_exam_hubs/show.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicant_exam_hubs/show.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicant_services/_applicant_service.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicant_services/_form.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicant_services/_service_fields.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicant_services/edit.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicant_services/index.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicant_services/index.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicant_services/new.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicant_services/show.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicant_services/show.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicants/_applicant.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicants/_applicant.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicants/_applicant.pdf.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicants/_form.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicants/_program_choices.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicants/_program_choices.pdf.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicants/_university_choices.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicants/_university_choices.pdf.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicants/details.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicants/details.pdf.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicants/edit.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicants/index.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicants/index.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicants/instructions.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicants/new.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicants/show.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/applicants/show.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/application_instructions/_application_instruction.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/application_instructions/_form.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/application_instructions/edit.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/application_instructions/index.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/application_instructions/index.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/application_instructions/new.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/application_instructions/show.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/application_instructions/show.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/declarations/_declaration.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/declarations/_form.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/declarations/edit.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/declarations/index.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/declarations/index.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/declarations/new.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/declarations/show.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/declarations/show.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/exam_hubs/_exam_hub.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/exam_hubs/_form.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/exam_hubs/edit.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/exam_hubs/index.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/exam_hubs/index.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/exam_hubs/new.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/exam_hubs/show.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/exam_hubs/show.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/exams/_exam.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/exams/_form.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/exams/edit.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/exams/import_exam.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/exams/import_interview.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/exams/index.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/exams/index.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/exams/new.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/exams/show.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/exams/show.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/match_results/_form.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/match_results/_match_result.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/match_results/edit.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/match_results/index.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/match_results/index.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/match_results/new.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/match_results/show.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/match_results/show.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/menus/_applicant.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/placements/_form.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/placements/_placement.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/placements/edit.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/placements/index.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/placements/index.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/placements/new.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/placements/show.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/placements/show.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/placements/statistics.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/program_choices/_form.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/program_choices/_program_choice.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/program_choices/edit.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/program_choices/index.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/program_choices/index.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/program_choices/new.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/program_choices/show.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/program_choices/show.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/program_quotas/_form.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/program_quotas/_program_quota.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/program_quotas/edit.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/program_quotas/index.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/program_quotas/index.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/program_quotas/new.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/program_quotas/show.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/program_quotas/show.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/programs/_form.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/programs/_program.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/programs/edit.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/programs/index.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/programs/index.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/programs/new.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/programs/show.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/programs/show.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/regions/_form.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/regions/_region.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/regions/edit.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/regions/index.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/regions/index.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/regions/new.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/regions/show.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/regions/show.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/settings/_form.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/settings/_setting.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/settings/edit.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/settings/index.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/settings/index.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/settings/new.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/settings/show.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/settings/show.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/timers/_form.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/timers/_timer.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/timers/edit.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/timers/index.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/timers/index.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/timers/new.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/timers/show.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/timers/show.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/universities/_form.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/universities/_university.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/universities/edit.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/universities/index.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/universities/index.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/universities/new.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/universities/show.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/universities/show.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/university_choices/_form.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/university_choices/_university_choice.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/university_choices/edit.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/university_choices/index.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/university_choices/index.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/university_choices/new.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/university_choices/show.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/university_choices/show.json.jbuilder" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/university_choices/statstics.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/1_create_academic_years.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20171213142402_create_regions.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20171213142403_create_applicants.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20171213142715_create_programs.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20171213142943_create_universities.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20171213143440_create_program_choices.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20171213144208_create_university_choices.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20171221091607_create_program_quotas.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20171221161044_create_events.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20171221172439_create_match_results.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20171221172538_add_status_to_applicant.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20180314124905_create_exam_hubs.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20180316072435_create_applicant_exam_hubs.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20180317091219_create_applicant_services.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20180317091524_create_services.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20180317155314_add_title_to_applicant.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20180321061827_create_declarations.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20180321062300_add_sponsor_to_applicant_service.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20180321133132_create_applicant_declarations.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20180321133631_create_declaration_details.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20180329060208_add_ceiling_to_exam_hub.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20180329062031_add_academic_year_to_applicants.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20180329065912_create_application_instructions.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20180427133423_create_timers.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20180712131005_create_exams.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20180712144028_create_settings.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20180720083200_create_placements.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/controllers/academic_years_controller_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/controllers/applicant_declarations_controller_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/controllers/applicant_exam_hubs_controller_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/controllers/applicant_services_controller_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/controllers/applicants_controller_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/controllers/application_instructions_controller_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/controllers/declarations_controller_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/controllers/exam_hubs_controller_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/controllers/match_results_controller_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/controllers/program_choices_controller_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/controllers/program_quotas_controller_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/controllers/programs_controller_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/controllers/regions_controller_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/controllers/universities_controller_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/controllers/university_choices_controller_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/academic_years.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/applicant_declarations.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/applicant_exam_hubs.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/applicant_services.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/applicants.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/application_instructions.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/declaration_details.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/declarations.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/exam_hubs.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/match_results.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/program_choices.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/program_quotas.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/programs.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/regions.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/universities.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/university_choices.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/models/academic_year_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/models/applicant_declaration_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/models/applicant_exam_hub_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/models/applicant_service_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/models/applicant_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/models/application_instruction_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/models/declaration_detail_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/models/declaration_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/models/exam_hub_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/models/match_result_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/models/program_choice_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/models/program_quota_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/models/program_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/models/region_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/models/university_choice_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/models/university_test.rb" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/app/assets/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/app/assets/fonts/glyphicons-halflings-regular.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/.keep" afterPath="$PROJECT_DIR$/app/assets/images/.keep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/doc-background.png" afterPath="$PROJECT_DIR$/app/assets/images/doc-background.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/ermp.png" afterPath="$PROJECT_DIR$/app/assets/images/ermp.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/favicon.ico" afterPath="$PROJECT_DIR$/app/assets/images/favicon.ico" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/fdre.png" afterPath="$PROJECT_DIR$/app/assets/images/fdre.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/logo.png" afterPath="$PROJECT_DIR$/app/assets/images/logo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/channels/.keep" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/channels/.keep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/Sorting icons.psd" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/Sorting icons.psd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/favicon.ico" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/favicon.ico" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/sort_asc.png" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/sort_asc.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/sort_asc_disabled.png" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/sort_asc_disabled.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/sort_both.png" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/sort_both.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/sort_desc.png" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/sort_desc.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/sort_desc_disabled.png" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/sort_desc_disabled.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/Sorting icons.psd" afterPath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/Sorting icons.psd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/favicon.ico" afterPath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/favicon.ico" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/sort_asc.png" afterPath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/sort_asc.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/sort_asc_disabled.png" afterPath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/sort_asc_disabled.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/sort_both.png" afterPath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/sort_both.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/sort_desc.png" afterPath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/sort_desc.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/sort_desc_disabled.png" afterPath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/sort_desc_disabled.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/concerns/.keep" afterPath="$PROJECT_DIR$/app/controllers/concerns/.keep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/concerns/.keep" afterPath="$PROJECT_DIR$/app/models/concerns/.keep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/assets/.keep" afterPath="$PROJECT_DIR$/lib/assets/.keep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/.keep" afterPath="$PROJECT_DIR$/lib/tasks/.keep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/.keep" afterPath="$PROJECT_DIR$/log/.keep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/apple-touch-icon-precomposed.png" afterPath="$PROJECT_DIR$/public/apple-touch-icon-precomposed.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/apple-touch-icon.png" afterPath="$PROJECT_DIR$/public/apple-touch-icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/Sorting icons-d3b4f6d2ee33519a88877cceac2ff21625d217c355c4882ef23abbbbef15e1a1.psd" afterPath="$PROJECT_DIR$/public/assets/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/Sorting icons-d3b4f6d2ee33519a88877cceac2ff21625d217c355c4882ef23abbbbef15e1a1.psd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/favicon-6e1bbb9a62636471771c683fc0589a487f74296503c9e4b6d2d92e7fda3faff6.ico" afterPath="$PROJECT_DIR$/public/assets/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/favicon-6e1bbb9a62636471771c683fc0589a487f74296503c9e4b6d2d92e7fda3faff6.ico" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/sort_asc-595704c3f3cf4cb65c7d9c8508a99e7480e150095473faed31a07c21b13389b8.png" afterPath="$PROJECT_DIR$/public/assets/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/sort_asc-595704c3f3cf4cb65c7d9c8508a99e7480e150095473faed31a07c21b13389b8.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/sort_asc_disabled-a65b8f4f84d6427a81c360282fc5394d51bf99dada5f159e6aa0fce3c396825c.png" afterPath="$PROJECT_DIR$/public/assets/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/sort_asc_disabled-a65b8f4f84d6427a81c360282fc5394d51bf99dada5f159e6aa0fce3c396825c.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/sort_both-3e016c23ae51417382b640ae2d19eb48047532c37ad53894bd185586559ccffb.png" afterPath="$PROJECT_DIR$/public/assets/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/sort_both-3e016c23ae51417382b640ae2d19eb48047532c37ad53894bd185586559ccffb.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/sort_desc-d08ed0e21f187dd309030d465224da8085119a15a17d616ba0e477bb50c6f10d.png" afterPath="$PROJECT_DIR$/public/assets/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/sort_desc-d08ed0e21f187dd309030d465224da8085119a15a17d616ba0e477bb50c6f10d.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/sort_desc_disabled-6c0f0c1b21ef6807057afc8ddc1a925d1dbd21cb11e9270ec84ff4ac40d9a3fa.png" afterPath="$PROJECT_DIR$/public/assets/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/sort_desc_disabled-6c0f0c1b21ef6807057afc8ddc1a925d1dbd21cb11e9270ec84ff4ac40d9a3fa.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/doc-background-746f1cbb8062a0422b3ef944ac2a720fc78c670dbf99096868f678cbe846c039.png" afterPath="$PROJECT_DIR$/public/assets/doc-background-746f1cbb8062a0422b3ef944ac2a720fc78c670dbf99096868f678cbe846c039.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/ermp-f4e0f8cf0ca8a3f9a6bbcdf2dd3cd6d1d0e0c02d9f5e2b1572c725d7b07f9657.png" afterPath="$PROJECT_DIR$/public/assets/ermp-f4e0f8cf0ca8a3f9a6bbcdf2dd3cd6d1d0e0c02d9f5e2b1572c725d7b07f9657.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/favicon-70ec54331b93741b1709a76ef15c428c74c283493a5d80798d0f89cd595a8bc2.ico" afterPath="$PROJECT_DIR$/public/assets/favicon-70ec54331b93741b1709a76ef15c428c74c283493a5d80798d0f89cd595a8bc2.ico" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/fdre-5c8ad2cd34337d806edfdaa78c975e63cbbf458b646713f42d102bfef43065f5.png" afterPath="$PROJECT_DIR$/public/assets/fdre-5c8ad2cd34337d806edfdaa78c975e63cbbf458b646713f42d102bfef43065f5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/glyphicons-halflings-regular-63faf0af44a428f182686f0d924bb30e369a9549630c7b98a969394f58431067.woff" afterPath="$PROJECT_DIR$/public/assets/glyphicons-halflings-regular-63faf0af44a428f182686f0d924bb30e369a9549630c7b98a969394f58431067.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/glyphicons-halflings-regular-e27b969ef04fed3b39000b7b977e602d6e6a2b1c8c0d618bebf6dd875243ea3c.ttf" afterPath="$PROJECT_DIR$/public/assets/glyphicons-halflings-regular-e27b969ef04fed3b39000b7b977e602d6e6a2b1c8c0d618bebf6dd875243ea3c.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/logo-8f9bf315d35ec1b782f521470fec6a17c5b8dd3beb221277e912fc52fd848a9e.png" afterPath="$PROJECT_DIR$/public/assets/logo-8f9bf315d35ec1b782f521470fec6a17c5b8dd3beb221277e912fc52fd848a9e.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicon.ico" afterPath="$PROJECT_DIR$/public/favicon.ico" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storage/E1/DZ/E1DZ8cmCtTruCGFcZaQmahx5" afterPath="$PROJECT_DIR$/storage/E1/DZ/E1DZ8cmCtTruCGFcZaQmahx5" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/.keep" afterPath="$PROJECT_DIR$/test/controllers/.keep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/.keep" afterPath="$PROJECT_DIR$/test/fixtures/.keep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/files/.keep" afterPath="$PROJECT_DIR$/test/fixtures/files/.keep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/helpers/.keep" afterPath="$PROJECT_DIR$/test/helpers/.keep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/integration/.keep" afterPath="$PROJECT_DIR$/test/integration/.keep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/mailers/.keep" afterPath="$PROJECT_DIR$/test/mailers/.keep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/.keep" afterPath="$PROJECT_DIR$/test/models/.keep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/system/.keep" afterPath="$PROJECT_DIR$/test/system/.keep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/.keep" afterPath="$PROJECT_DIR$/tmp/.keep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/.keep" afterPath="$PROJECT_DIR$/vendor/.keep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AMR.iml" afterPath="$PROJECT_DIR$/AMR.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakefile" afterPath="$PROJECT_DIR$/Rakefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/config/manifest.js" afterPath="$PROJECT_DIR$/app/assets/config/manifest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/fonts/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2" afterPath="$PROJECT_DIR$/app/assets/fonts/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/autosize/autosize.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/autosize/autosize.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/autosize/autosize.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/autosize/autosize.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/bootstrap-material-datetimepicker/bootstrap-material-datetimepicker.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/bootstrap-material-datetimepicker/bootstrap-material-datetimepicker.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/bootstrap-select/bootstrap-select.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/bootstrap-select/bootstrap-select.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/bootstrap/bootstrap.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/bootstrap/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/chartjs/Chart.bundle.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/chartjs/Chart.bundle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/excanvas.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/excanvas.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/excanvas.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/excanvas.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/jquery.colorhelpers.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/jquery.colorhelpers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/jquery.flot.canvas.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/jquery.flot.canvas.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/jquery.flot.categories.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/jquery.flot.categories.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/jquery.flot.crosshair.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/jquery.flot.crosshair.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/jquery.flot.errorbars.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/jquery.flot.errorbars.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/jquery.flot.fillbetween.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/jquery.flot.fillbetween.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/jquery.flot.image.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/jquery.flot.image.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/jquery.flot.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/jquery.flot.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/jquery.flot.navigate.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/jquery.flot.navigate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/jquery.flot.pie.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/jquery.flot.pie.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/jquery.flot.resize.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/jquery.flot.resize.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/jquery.flot.selection.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/jquery.flot.selection.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/jquery.flot.stack.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/jquery.flot.stack.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/jquery.flot.symbol.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/jquery.flot.symbol.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/jquery.flot.threshold.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/jquery.flot.threshold.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/jquery.flot.time.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/jquery.flot.time.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/jquery.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/flot-charts/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/form_index.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/form_index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/index.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-countto/jquery.countTo.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-countto/jquery.countTo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-datatable/extensions/export/buttons.flash.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-datatable/extensions/export/buttons.flash.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-datatable/extensions/export/buttons.html5.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-datatable/extensions/export/buttons.html5.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-datatable/extensions/export/buttons.print.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-datatable/extensions/export/buttons.print.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-datatable/extensions/export/dataTables.buttons.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-datatable/extensions/export/dataTables.buttons.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-datatable/extensions/export/jszip.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-datatable/extensions/export/jszip.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-datatable/extensions/export/pdfmake.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-datatable/extensions/export/pdfmake.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-datatable/extensions/export/vfs_fonts.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-datatable/extensions/export/vfs_fonts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-datatable/index.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-datatable/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-datatable/jquery.dataTables.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-datatable/jquery.dataTables.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-slimscroll/jquery.slimscroll.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-slimscroll/jquery.slimscroll.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-sparkline/jquery.sparkline.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-sparkline/jquery.sparkline.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-steps/jquery.steps.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-steps/jquery.steps.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-validation/jquery.validate.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery-validation/jquery.validate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery/jquery.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/jquery/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/admin.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/admin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/demo.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/demo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/cards/basic.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/cards/basic.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/cards/colored.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/cards/colored.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/charts/chartjs.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/charts/chartjs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/charts/flot.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/charts/flot.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/charts/jquery-knob.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/charts/jquery-knob.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/charts/morris.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/charts/morris.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/charts/sparkline.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/charts/sparkline.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/examples/forgot-password.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/examples/forgot-password.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/examples/sign-in.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/examples/sign-in.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/examples/sign-up.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/examples/sign-up.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/forms/advanced-form-elements.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/forms/advanced-form-elements.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/forms/basic-form-elements.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/forms/basic-form-elements.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/forms/editors.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/forms/editors.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/forms/form-validation.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/forms/form-validation.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/forms/form-wizard.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/forms/form-wizard.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/index.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/maps/google.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/maps/google.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/maps/jvectormap.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/maps/jvectormap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/medias/image-gallery.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/medias/image-gallery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/tables/editable-table.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/tables/editable-table.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/tables/jquery-datatable.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/tables/jquery-datatable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/ui/animations.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/ui/animations.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/ui/dialogs.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/ui/dialogs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/ui/modals.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/ui/modals.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/ui/notifications.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/ui/notifications.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/ui/range-sliders.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/ui/range-sliders.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/ui/sortable-nestable.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/ui/sortable-nestable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/ui/tooltips-popovers.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/ui/tooltips-popovers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/widgets/infobox/infobox-1.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/widgets/infobox/infobox-1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/widgets/infobox/infobox-2.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/widgets/infobox/infobox-2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/widgets/infobox/infobox-3.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/widgets/infobox/infobox-3.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/widgets/infobox/infobox-4.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/widgets/infobox/infobox-4.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/widgets/infobox/infobox-5.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/pages/widgets/infobox/infobox-5.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/momentjs/ender.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/momentjs/ender.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/momentjs/moment.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/momentjs/moment.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/momentjs/package.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/momentjs/package.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/morrisjs/morris.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/morrisjs/morris.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/node-waves/waves.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/node-waves/waves.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/raphael/raphael.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/raphael/raphael.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/sweetalert/sweetalert.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/sweetalert/sweetalert.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/academic_years.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/academic_years.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/applicant_declarations.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/applicant_declarations.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/applicant_exam_hubs.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/applicant_exam_hubs.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/applicant_services.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/applicant_services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/applicants.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/applicants.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application_instructions.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application_instructions.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/bootstrap.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/bootstrap.js.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/cable.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/cable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/declarations.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/declarations.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/directorates.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/directorates.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/events.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/events.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/exam_hubs.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/exam_hubs.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/exams.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/exams.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/field_visits.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/field_visits.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/groups.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/groups.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/home.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/home.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/match_results.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/match_results.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/organization_types.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/organization_types.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/participant_types.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/participant_types.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/participants.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/participants.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/placements.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/placements.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/program_choices.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/program_choices.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/program_quotas.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/program_quotas.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/programs.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/programs.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/regions.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/regions.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/settings.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/settings.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/timers.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/timers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/universities.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/universities.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/university_choices.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/university_choices.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/users.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/users.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/animate-css/animate.min.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/animate-css/animate.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/bootstrap-material-datetimepicker/bootstrap-material-datetimepicker.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/bootstrap-material-datetimepicker/bootstrap-material-datetimepicker.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/bootstrap-select/bootstrap-select.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/bootstrap-select/bootstrap-select.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/bootstrap/bootstrap.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/bootstrap/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/css/materialize.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/css/materialize.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/css/style.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/css/themes/all-themes.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/css/themes/all-themes.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/form_index.js" afterPath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/form_index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/index.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.min.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/morrisjs/morris.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/morrisjs/morris.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/node-waves/waves.min.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/node-waves/waves.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/sweetalert/sweetalert.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/sweetalert/sweetalert.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/waitme/img.svg" afterPath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/waitme/img.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/waitme/waitMe.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/AdminBSBMaterialDesign/waitme/waitMe.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/new_style.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/new_style.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/scaffolds.css.less" afterPath="$PROJECT_DIR$/app/assets/stylesheets/scaffolds.css.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/scaffolds.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/scaffolds.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/channels/application_cable/channel.rb" afterPath="$PROJECT_DIR$/app/channels/application_cable/channel.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/channels/application_cable/connection.rb" afterPath="$PROJECT_DIR$/app/channels/application_cable/connection.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/directorates_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/directorates_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/events_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/events_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/field_visits_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/field_visits_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/groups_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/groups_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/organization_types_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/organization_types_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/participant_types_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/participant_types_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/participants_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/participants_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users/confirmations_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users/confirmations_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users/omniauth_callbacks_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users/omniauth_callbacks_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users/passwords_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users/passwords_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users/registrations_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users/registrations_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users/sessions_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users/sessions_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users/unlocks_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users/unlocks_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/directorates_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/directorates_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/events_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/events_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/field_visits_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/field_visits_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/groups_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/groups_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/home_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/home_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/organization_types_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/organization_types_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/participant_types_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/participant_types_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/participants_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/participants_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/users_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/users_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/inputs/date_picker_input.rb" afterPath="$PROJECT_DIR$/app/inputs/date_picker_input.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/inputs/datetime_picker_input.rb" afterPath="$PROJECT_DIR$/app/inputs/datetime_picker_input.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/inputs/time_picker_input.rb" afterPath="$PROJECT_DIR$/app/inputs/time_picker_input.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/jobs/application_job.rb" afterPath="$PROJECT_DIR$/app/jobs/application_job.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/mailers/application_mailer.rb" afterPath="$PROJECT_DIR$/app/mailers/application_mailer.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/mailers/user_mailer.rb" afterPath="$PROJECT_DIR$/app/mailers/user_mailer.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/ability.rb" afterPath="$PROJECT_DIR$/app/models/ability.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/application_record.rb" afterPath="$PROJECT_DIR$/app/models/application_record.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/directorate.rb" afterPath="$PROJECT_DIR$/app/models/directorate.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/event.rb" afterPath="$PROJECT_DIR$/app/models/event.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/field_visit.rb" afterPath="$PROJECT_DIR$/app/models/field_visit.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/group.rb" afterPath="$PROJECT_DIR$/app/models/group.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/organization_type.rb" afterPath="$PROJECT_DIR$/app/models/organization_type.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/participant.rb" afterPath="$PROJECT_DIR$/app/models/participant.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/participant_type.rb" afterPath="$PROJECT_DIR$/app/models/participant_type.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/directorates/_directorate.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/directorates/_directorate.json.jbuilder" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/directorates/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/directorates/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/directorates/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/directorates/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/directorates/index.html.erb" afterPath="$PROJECT_DIR$/app/views/directorates/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/directorates/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/directorates/index.json.jbuilder" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/directorates/new.html.erb" afterPath="$PROJECT_DIR$/app/views/directorates/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/directorates/show.html.erb" afterPath="$PROJECT_DIR$/app/views/directorates/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/directorates/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/directorates/show.json.jbuilder" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/events/_event.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/events/_event.json.jbuilder" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/events/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/events/_form.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/events/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/events/edit.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/events/index.html.erb" afterPath="$PROJECT_DIR$/app/views/events/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/events/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/events/index.json.jbuilder" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/events/new.html.erb" afterPath="$PROJECT_DIR$/app/views/events/new.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/events/show.html.erb" afterPath="$PROJECT_DIR$/app/views/events/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/events/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/events/show.json.jbuilder" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/field_visits/_field_visit.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/field_visits/_field_visit.json.jbuilder" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/field_visits/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/field_visits/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/field_visits/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/field_visits/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/field_visits/index.html.erb" afterPath="$PROJECT_DIR$/app/views/field_visits/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/field_visits/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/field_visits/index.json.jbuilder" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/field_visits/new.html.erb" afterPath="$PROJECT_DIR$/app/views/field_visits/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/field_visits/show.html.erb" afterPath="$PROJECT_DIR$/app/views/field_visits/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/field_visits/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/field_visits/show.json.jbuilder" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/groups/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/groups/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/groups/_group.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/groups/_group.json.jbuilder" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/groups/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/groups/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/groups/index.html.erb" afterPath="$PROJECT_DIR$/app/views/groups/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/groups/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/groups/index.json.jbuilder" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/groups/new.html.erb" afterPath="$PROJECT_DIR$/app/views/groups/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/groups/show.html.erb" afterPath="$PROJECT_DIR$/app/views/groups/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/groups/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/groups/show.json.jbuilder" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_form_layout.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_form_layout.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/mailer.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/mailer.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/mailer.text.erb" afterPath="$PROJECT_DIR$/app/views/layouts/mailer.text.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/pdf.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/pdf.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/timer.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/timer.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/users.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/users.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/menus/_admin.html.erb" afterPath="$PROJECT_DIR$/app/views/menus/_admin.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/menus/_officer.erb" afterPath="$PROJECT_DIR$/app/views/menus/_officer.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/organization_types/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/organization_types/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/organization_types/_organization_type.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/organization_types/_organization_type.json.jbuilder" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/organization_types/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/organization_types/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/organization_types/index.html.erb" afterPath="$PROJECT_DIR$/app/views/organization_types/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/organization_types/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/organization_types/index.json.jbuilder" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/organization_types/new.html.erb" afterPath="$PROJECT_DIR$/app/views/organization_types/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/organization_types/show.html.erb" afterPath="$PROJECT_DIR$/app/views/organization_types/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/organization_types/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/organization_types/show.json.jbuilder" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/participant_types/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/participant_types/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/participant_types/_participant_type.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/participant_types/_participant_type.json.jbuilder" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/participant_types/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/participant_types/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/participant_types/index.html.erb" afterPath="$PROJECT_DIR$/app/views/participant_types/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/participant_types/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/participant_types/index.json.jbuilder" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/participant_types/new.html.erb" afterPath="$PROJECT_DIR$/app/views/participant_types/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/participant_types/show.html.erb" afterPath="$PROJECT_DIR$/app/views/participant_types/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/participant_types/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/participant_types/show.json.jbuilder" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/participants/_directorate.html.erb" afterPath="$PROJECT_DIR$/app/views/participants/_directorate.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/participants/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/participants/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/participants/_participant.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/participants/_participant.json.jbuilder" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/participants/badges.html.erb" afterPath="$PROJECT_DIR$/app/views/participants/badges.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/participants/badges.pdf.erb" afterPath="$PROJECT_DIR$/app/views/participants/badges.pdf.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/participants/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/participants/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/participants/index.html.erb" afterPath="$PROJECT_DIR$/app/views/participants/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/participants/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/participants/index.json.jbuilder" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/participants/new.html.erb" afterPath="$PROJECT_DIR$/app/views/participants/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/participants/show.html.erb" afterPath="$PROJECT_DIR$/app/views/participants/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/participants/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/participants/show.json.jbuilder" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shared/_error_messages.html.erb" afterPath="$PROJECT_DIR$/app/views/shared/_error_messages.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shared/_flash_messages.html.erb" afterPath="$PROJECT_DIR$/app/views/shared/_flash_messages.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/users/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/_user.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/users/_user.json.jbuilder" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/confirmations/new.html.erb" afterPath="$PROJECT_DIR$/app/views/users/confirmations/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/users/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/users/index.json.jbuilder" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/mailer/confirmation_instructions.html.erb" afterPath="$PROJECT_DIR$/app/views/users/mailer/confirmation_instructions.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/mailer/email_changed.html.erb" afterPath="$PROJECT_DIR$/app/views/users/mailer/email_changed.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/mailer/password_change.html.erb" afterPath="$PROJECT_DIR$/app/views/users/mailer/password_change.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/mailer/reset_password_instructions.html.erb" afterPath="$PROJECT_DIR$/app/views/users/mailer/reset_password_instructions.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/mailer/unlock_instructions.html.erb" afterPath="$PROJECT_DIR$/app/views/users/mailer/unlock_instructions.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/new.html.erb" afterPath="$PROJECT_DIR$/app/views/users/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/passwords/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/users/passwords/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/passwords/new.html.erb" afterPath="$PROJECT_DIR$/app/views/users/passwords/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/registrations/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/users/registrations/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/registrations/new.html.erb" afterPath="$PROJECT_DIR$/app/views/users/registrations/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/sessions/new.html.erb" afterPath="$PROJECT_DIR$/app/views/users/sessions/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/shared/_links.html.erb" afterPath="$PROJECT_DIR$/app/views/users/shared/_links.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/users/show.json.jbuilder" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/unlocks/new.html.erb" afterPath="$PROJECT_DIR$/app/views/users/unlocks/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.ru" afterPath="$PROJECT_DIR$/config.ru" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/boot.rb" afterPath="$PROJECT_DIR$/config/boot.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/cable.yml" afterPath="$PROJECT_DIR$/config/cable.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.yml" afterPath="$PROJECT_DIR$/config/database.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environment.rb" afterPath="$PROJECT_DIR$/config/environment.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/development.rb" afterPath="$PROJECT_DIR$/config/environments/development.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/test.rb" afterPath="$PROJECT_DIR$/config/environments/test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/application_controller_renderer.rb" afterPath="$PROJECT_DIR$/config/initializers/application_controller_renderer.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/assets.rb" afterPath="$PROJECT_DIR$/config/initializers/assets.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/backtrace_silencers.rb" afterPath="$PROJECT_DIR$/config/initializers/backtrace_silencers.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/cookies_serializer.rb" afterPath="$PROJECT_DIR$/config/initializers/cookies_serializer.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/devise.rb" afterPath="$PROJECT_DIR$/config/initializers/devise.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/filter_parameter_logging.rb" afterPath="$PROJECT_DIR$/config/initializers/filter_parameter_logging.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/inflections.rb" afterPath="$PROJECT_DIR$/config/initializers/inflections.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/mime_types.rb" afterPath="$PROJECT_DIR$/config/initializers/mime_types.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/ranged_datetime_wrapper.rb" afterPath="$PROJECT_DIR$/config/initializers/ranged_datetime_wrapper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/setup_mail.rb" afterPath="$PROJECT_DIR$/config/initializers/setup_mail.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/simple_form.rb" afterPath="$PROJECT_DIR$/config/initializers/simple_form.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/simple_form_bootstrap.rb" afterPath="$PROJECT_DIR$/config/initializers/simple_form_bootstrap.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/wicked_pdf.rb" afterPath="$PROJECT_DIR$/config/initializers/wicked_pdf.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/wrap_parameters.rb" afterPath="$PROJECT_DIR$/config/initializers/wrap_parameters.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/devise.en.yml" afterPath="$PROJECT_DIR$/config/locales/devise.en.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/en.bootstrap.yml" afterPath="$PROJECT_DIR$/config/locales/en.bootstrap.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/en.yml" afterPath="$PROJECT_DIR$/config/locales/en.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/simple_form.en.yml" afterPath="$PROJECT_DIR$/config/locales/simple_form.en.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/puma.rb" afterPath="$PROJECT_DIR$/config/puma.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/secrets.yml" afterPath="$PROJECT_DIR$/config/secrets.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/spring.rb" afterPath="$PROJECT_DIR$/config/spring.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/storage.yml" afterPath="$PROJECT_DIR$/config/storage.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20171205130228_devise_create_users.rb" afterPath="$PROJECT_DIR$/db/migrate/20171205130228_devise_create_users.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20171221143913_add_admin_to_users.rb" afterPath="$PROJECT_DIR$/db/migrate/20171221143913_add_admin_to_users.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20180822093645_create_events.rb" afterPath="$PROJECT_DIR$/db/migrate/20180822093645_create_events.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20180822125133_create_organization_types.rb" afterPath="$PROJECT_DIR$/db/migrate/20180822125133_create_organization_types.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20180822125357_create_participant_types.rb" afterPath="$PROJECT_DIR$/db/migrate/20180822125357_create_participant_types.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20180822125420_create_groups.rb" afterPath="$PROJECT_DIR$/db/migrate/20180822125420_create_groups.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20180822130912_create_directorates.rb" afterPath="$PROJECT_DIR$/db/migrate/20180822130912_create_directorates.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20180822142257_create_active_storage_tables.active_storage.rb" afterPath="$PROJECT_DIR$/db/migrate/20180822142257_create_active_storage_tables.active_storage.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20180824064645_create_participants.rb" afterPath="$PROJECT_DIR$/db/migrate/20180824064645_create_participants.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20180925131723_add_color_to_participant_type.rb" afterPath="$PROJECT_DIR$/db/migrate/20180925131723_add_color_to_participant_type.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20181022160244_add_serial_no_to_participant.rb" afterPath="$PROJECT_DIR$/db/migrate/20181022160244_add_serial_no_to_participant.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20191001091259_create_field_visits.rb" afterPath="$PROJECT_DIR$/db/migrate/20191001091259_create_field_visits.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20191001091344_add_field_visit_to_participant.rb" afterPath="$PROJECT_DIR$/db/migrate/20191001091344_add_field_visit_to_participant.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seeds.rb" afterPath="$PROJECT_DIR$/db/seeds.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/templates/erb/scaffold/_form.html.erb" afterPath="$PROJECT_DIR$/lib/templates/erb/scaffold/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/matching.iml" afterPath="$PROJECT_DIR$/matching.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/404.html" afterPath="$PROJECT_DIR$/public/404.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/422.html" afterPath="$PROJECT_DIR$/public/422.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/500.html" afterPath="$PROJECT_DIR$/public/500.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/.sprockets-manifest-cfb5849878b28b67645fbd29da6c8e45.json" afterPath="$PROJECT_DIR$/public/assets/.sprockets-manifest-cfb5849878b28b67645fbd29da6c8e45.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY-c637a00c0f6fccae993bf0f5f0ec2c8208595f027bb98c413f09ec57525e5dcc.woff2" afterPath="$PROJECT_DIR$/public/assets/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY-c637a00c0f6fccae993bf0f5f0ec2c8208595f027bb98c413f09ec57525e5dcc.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/AdminBSBMaterialDesign/form_index-9131f2d1b09a12c1260b897fa453c89e6a2a4c0aba1adac3acbba15990007f45.js" afterPath="$PROJECT_DIR$/public/assets/AdminBSBMaterialDesign/form_index-9131f2d1b09a12c1260b897fa453c89e6a2a4c0aba1adac3acbba15990007f45.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/AdminBSBMaterialDesign/form_index-9131f2d1b09a12c1260b897fa453c89e6a2a4c0aba1adac3acbba15990007f45.js.gz" afterPath="$PROJECT_DIR$/public/assets/AdminBSBMaterialDesign/form_index-9131f2d1b09a12c1260b897fa453c89e6a2a4c0aba1adac3acbba15990007f45.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/favicon-6e1bbb9a62636471771c683fc0589a487f74296503c9e4b6d2d92e7fda3faff6.ico.gz" afterPath="$PROJECT_DIR$/public/assets/AdminBSBMaterialDesign/jquery-datatable/skin/bootstrap/images/favicon-6e1bbb9a62636471771c683fc0589a487f74296503c9e4b6d2d92e7fda3faff6.ico.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/AdminBSBMaterialDesign/waitme/img-828cf1a411506d2fbb56cf5187255c2078a9584c1040c2c5a7b53c3000756a62.svg" afterPath="$PROJECT_DIR$/public/assets/AdminBSBMaterialDesign/waitme/img-828cf1a411506d2fbb56cf5187255c2078a9584c1040c2c5a7b53c3000756a62.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/AdminBSBMaterialDesign/waitme/img-828cf1a411506d2fbb56cf5187255c2078a9584c1040c2c5a7b53c3000756a62.svg.gz" afterPath="$PROJECT_DIR$/public/assets/AdminBSBMaterialDesign/waitme/img-828cf1a411506d2fbb56cf5187255c2078a9584c1040c2c5a7b53c3000756a62.svg.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/applicant_services-348786ea7ce4b0c32b03da2bde213e7944435397cc1d54c0795dc0a1f0dc9c95.js" afterPath="$PROJECT_DIR$/public/assets/applicant_services-348786ea7ce4b0c32b03da2bde213e7944435397cc1d54c0795dc0a1f0dc9c95.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/applicant_services-348786ea7ce4b0c32b03da2bde213e7944435397cc1d54c0795dc0a1f0dc9c95.js.gz" afterPath="$PROJECT_DIR$/public/assets/applicant_services-348786ea7ce4b0c32b03da2bde213e7944435397cc1d54c0795dc0a1f0dc9c95.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-792c72b9355f4900004d79fcd330262b80dd854ad63f1ce10c6857585a06536c.js" afterPath="$PROJECT_DIR$/public/assets/application-792c72b9355f4900004d79fcd330262b80dd854ad63f1ce10c6857585a06536c.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-792c72b9355f4900004d79fcd330262b80dd854ad63f1ce10c6857585a06536c.js.gz" afterPath="$PROJECT_DIR$/public/assets/application-792c72b9355f4900004d79fcd330262b80dd854ad63f1ce10c6857585a06536c.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-cd6339dce96361836d4e94d8a45d70a6abc3ba465ddb9607707ce846962b39ab.css" afterPath="$PROJECT_DIR$/public/assets/application-cd6339dce96361836d4e94d8a45d70a6abc3ba465ddb9607707ce846962b39ab.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-cd6339dce96361836d4e94d8a45d70a6abc3ba465ddb9607707ce846962b39ab.css.gz" afterPath="$PROJECT_DIR$/public/assets/application-cd6339dce96361836d4e94d8a45d70a6abc3ba465ddb9607707ce846962b39ab.css.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bootstrap-wysihtml5/index-4f9e53b68289ddea1cab2671358a79c0ed74701fa931888f19b3d6c02410c209.js" afterPath="$PROJECT_DIR$/public/assets/bootstrap-wysihtml5/index-4f9e53b68289ddea1cab2671358a79c0ed74701fa931888f19b3d6c02410c209.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bootstrap-wysihtml5/index-4f9e53b68289ddea1cab2671358a79c0ed74701fa931888f19b3d6c02410c209.js.gz" afterPath="$PROJECT_DIR$/public/assets/bootstrap-wysihtml5/index-4f9e53b68289ddea1cab2671358a79c0ed74701fa931888f19b3d6c02410c209.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bootstrap-wysihtml5/index-f963ff0b946529c873726933020c5454c81b81651f36df08cc4e4c1f79858c8c.css" afterPath="$PROJECT_DIR$/public/assets/bootstrap-wysihtml5/index-f963ff0b946529c873726933020c5454c81b81651f36df08cc4e4c1f79858c8c.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bootstrap-wysihtml5/index-f963ff0b946529c873726933020c5454c81b81651f36df08cc4e4c1f79858c8c.css.gz" afterPath="$PROJECT_DIR$/public/assets/bootstrap-wysihtml5/index-f963ff0b946529c873726933020c5454c81b81651f36df08cc4e4c1f79858c8c.css.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/favicon-70ec54331b93741b1709a76ef15c428c74c283493a5d80798d0f89cd595a8bc2.ico.gz" afterPath="$PROJECT_DIR$/public/assets/favicon-70ec54331b93741b1709a76ef15c428c74c283493a5d80798d0f89cd595a8bc2.ico.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/glyphicons-halflings-regular-e27b969ef04fed3b39000b7b977e602d6e6a2b1c8c0d618bebf6dd875243ea3c.ttf.gz" afterPath="$PROJECT_DIR$/public/assets/glyphicons-halflings-regular-e27b969ef04fed3b39000b7b977e602d6e6a2b1c8c0d618bebf6dd875243ea3c.ttf.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/nested_form.js" afterPath="$PROJECT_DIR$/public/javascripts/nested_form.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/robots.txt" afterPath="$PROJECT_DIR$/public/robots.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/application_system_test_case.rb" afterPath="$PROJECT_DIR$/test/application_system_test_case.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/directorates_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/directorates_controller_test.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/events_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/events_controller_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/groups_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/groups_controller_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/home_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/home_controller_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/organization_types_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/organization_types_controller_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/participant_types_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/participant_types_controller_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/participants_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/participants_controller_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/users_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/users_controller_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/directorates.yml" afterPath="$PROJECT_DIR$/test/fixtures/directorates.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/events.yml" afterPath="$PROJECT_DIR$/test/fixtures/events.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/groups.yml" afterPath="$PROJECT_DIR$/test/fixtures/groups.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/homes.yml" afterPath="$PROJECT_DIR$/test/fixtures/homes.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/organization_types.yml" afterPath="$PROJECT_DIR$/test/fixtures/organization_types.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/participant_types.yml" afterPath="$PROJECT_DIR$/test/fixtures/participant_types.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/participants.yml" afterPath="$PROJECT_DIR$/test/fixtures/participants.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/services.yml" afterPath="$PROJECT_DIR$/test/fixtures/services.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/users.yml" afterPath="$PROJECT_DIR$/test/fixtures/users.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/mailers/previews/user_mailer_preview.rb" afterPath="$PROJECT_DIR$/test/mailers/previews/user_mailer_preview.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/mailers/user_mailer_test.rb" afterPath="$PROJECT_DIR$/test/mailers/user_mailer_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/directorate_test.rb" afterPath="$PROJECT_DIR$/test/models/directorate_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/event_test.rb" afterPath="$PROJECT_DIR$/test/models/event_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/group_test.rb" afterPath="$PROJECT_DIR$/test/models/group_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/home_test.rb" afterPath="$PROJECT_DIR$/test/models/home_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/organization_type_test.rb" afterPath="$PROJECT_DIR$/test/models/organization_type_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/participant_test.rb" afterPath="$PROJECT_DIR$/test/models/participant_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/participant_type_test.rb" afterPath="$PROJECT_DIR$/test/models/participant_type_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/service_test.rb" afterPath="$PROJECT_DIR$/test/models/service_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/user_test.rb" afterPath="$PROJECT_DIR$/test/models/user_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/system/academic_years_test.rb" afterPath="$PROJECT_DIR$/test/system/academic_years_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/system/applicant_declarations_test.rb" afterPath="$PROJECT_DIR$/test/system/applicant_declarations_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/system/applicant_exam_hubs_test.rb" afterPath="$PROJECT_DIR$/test/system/applicant_exam_hubs_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/system/applicant_services_test.rb" afterPath="$PROJECT_DIR$/test/system/applicant_services_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/system/applicants_test.rb" afterPath="$PROJECT_DIR$/test/system/applicants_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/system/application_instructions_test.rb" afterPath="$PROJECT_DIR$/test/system/application_instructions_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/system/declarations_test.rb" afterPath="$PROJECT_DIR$/test/system/declarations_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/system/directorates_test.rb" afterPath="$PROJECT_DIR$/test/system/directorates_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/system/events_test.rb" afterPath="$PROJECT_DIR$/test/system/events_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/system/exam_hubs_test.rb" afterPath="$PROJECT_DIR$/test/system/exam_hubs_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/system/exams_test.rb" afterPath="$PROJECT_DIR$/test/system/exams_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/system/groups_test.rb" afterPath="$PROJECT_DIR$/test/system/groups_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/system/match_results_test.rb" afterPath="$PROJECT_DIR$/test/system/match_results_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/system/organization_types_test.rb" afterPath="$PROJECT_DIR$/test/system/organization_types_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/system/participant_types_test.rb" afterPath="$PROJECT_DIR$/test/system/participant_types_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/system/participants_test.rb" afterPath="$PROJECT_DIR$/test/system/participants_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/system/placements_test.rb" afterPath="$PROJECT_DIR$/test/system/placements_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/system/program_choices_test.rb" afterPath="$PROJECT_DIR$/test/system/program_choices_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/system/program_quotas_test.rb" afterPath="$PROJECT_DIR$/test/system/program_quotas_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/system/programs_test.rb" afterPath="$PROJECT_DIR$/test/system/programs_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/system/regions_test.rb" afterPath="$PROJECT_DIR$/test/system/regions_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/system/settings_test.rb" afterPath="$PROJECT_DIR$/test/system/settings_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/system/timers_test.rb" afterPath="$PROJECT_DIR$/test/system/timers_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/system/universities_test.rb" afterPath="$PROJECT_DIR$/test/system/universities_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/system/university_choices_test.rb" afterPath="$PROJECT_DIR$/test/system/university_choices_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/system/users_test.rb" afterPath="$PROJECT_DIR$/test/system/users_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_helper.rb" afterPath="$PROJECT_DIR$/test/test_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/javascripts/bootstrap-datetimepicker.js" afterPath="$PROJECT_DIR$/vendor/assets/javascripts/bootstrap-datetimepicker.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/javascripts/pickers.js" afterPath="$PROJECT_DIR$/vendor/assets/javascripts/pickers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/stylesheets/bootstrap-datetimepicker.css" afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/bootstrap-datetimepicker.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/stylesheets/bootstrap-datetimepicker.min.css" afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/bootstrap-datetimepicker.min.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -365,102 +492,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/participants/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_officer.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/menus/_officer.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="22" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="participants.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/participants.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="39" lean-forward="false" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="participants_controller.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/participants_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="43" lean-forward="false" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routes.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="badges.pdf.erb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/participants/badges.pdf.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="18" lean-forward="true" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_directorate.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/participants/_directorate.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="users.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/users.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="666">
-              <caret line="37" column="59" lean-forward="true" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="91" column="46" lean-forward="false" selection-start-line="91" selection-start-column="46" selection-end-line="91" selection-end-column="46" />
-              <folding />
+            <state relative-caret-position="144">
+              <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -484,6 +523,7 @@
       <find>horizontal_file</find>
       <find>horizontal_boolean</find>
       <find>ann</find>
+      <find>csv</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -497,16 +537,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/groups/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/directorates/edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/directorates/new.html.erb" />
-        <option value="$PROJECT_DIR$/config/storage.yml" />
-        <option value="$PROJECT_DIR$/config/environments/development.rb" />
-        <option value="$PROJECT_DIR$/config/initializers/simple_form_bootstrap.rb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/app/views/participants/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/participants/edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/menus/_admin.html.erb" />
         <option value="$PROJECT_DIR$/app/models/directorate.rb" />
         <option value="$PROJECT_DIR$/app/models/group.rb" />
         <option value="$PROJECT_DIR$/app/models/organization_type.rb" />
@@ -516,7 +547,6 @@
         <option value="$PROJECT_DIR$/db/migrate/20180822093645_create_events.rb" />
         <option value="$PROJECT_DIR$/app/views/events/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/events/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/participant.rb" />
         <option value="$PROJECT_DIR$/config/application.rb" />
         <option value="$PROJECT_DIR$/app/models/event.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/users.html.erb" />
@@ -535,19 +565,29 @@
         <option value="$PROJECT_DIR$/app/views/organization_types/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/groups/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/directorates/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/participants/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/menus/_applicant.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/menus/_officer.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/participants.coffee" />
-        <option value="$PROJECT_DIR$/app/views/participants/_form.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/participants.js" />
         <option value="$PROJECT_DIR$/app/views/participants/_directorate.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/participants_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/directorates/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/participants/badges.pdf.erb" />
+        <option value="$PROJECT_DIR$/app/views/participants/index.html.erb" />
+        <option value="$PROJECT_DIR$/db/migrate/20191001091344_add_field_visit_to_participant.rb" />
+        <option value="$PROJECT_DIR$/app/views/field_visits/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/field_visits/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/field_visits/edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/field_visits_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/menus/_admin.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/field_visit.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/participants_controller.rb" />
+        <option value="$PROJECT_DIR$/config/secrets.yml" />
+        <option value="$PROJECT_DIR$/config/initializers/devise.rb" />
+        <option value="$PROJECT_DIR$/app/views/participants/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/participant.rb" />
       </list>
     </option>
   </component>
@@ -558,10 +598,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="64" />
-    <option name="y" value="-11" />
-    <option name="width" value="1303" />
-    <option name="height" value="780" />
+    <option name="x" value="67" />
+    <option name="y" value="27" />
+    <option name="width" value="1853" />
+    <option name="height" value="1053" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -578,31 +618,28 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="RailsProjectView" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="AMR" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AMR" type="462c0819:PsiDirectoryNode" />
+              <item name="ARM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ARM" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="AMR" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AMR" type="462c0819:PsiDirectoryNode" />
+              <item name="ARM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ARM" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="AMR" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AMR" type="462c0819:PsiDirectoryNode" />
+              <item name="ARM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ARM" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="AMR" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AMR" type="462c0819:PsiDirectoryNode" />
+              <item name="ARM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ARM" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="participants" type="462c0819:PsiDirectoryNode" />
@@ -612,6 +649,9 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -740,14 +780,25 @@
       <workItem from="1535009016342" duration="7187000" />
       <workItem from="1535089757433" duration="32896000" />
       <workItem from="1535439785029" duration="16878000" />
+      <workItem from="1569317511841" duration="4364000" />
+      <workItem from="1569436872906" duration="126000" />
+      <workItem from="1569829848559" duration="6185000" />
+      <workItem from="1569920853866" duration="6537000" />
+      <workItem from="1571129442235" duration="2521000" />
+      <workItem from="1574332355954" duration="1109000" />
+      <workItem from="1574410207717" duration="2594000" />
+      <workItem from="1576480318486" duration="2197000" />
+      <workItem from="1576494301162" duration="1370000" />
+      <workItem from="1586446854001" duration="1168000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63271000" />
+    <option name="totallyTimeSpent" value="91442000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1299" height="743" extended-state="6" />
+    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -758,12 +809,12 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34260288" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25379092" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27780852" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Navigate" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24980047" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -775,6 +826,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -794,147 +846,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/initializers/simple_form_bootstrap.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3708">
-          <caret line="206" column="49" lean-forward="false" selection-start-line="206" selection-start-column="49" selection-end-line="206" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="32" lean-forward="false" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="90" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="7" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/participants/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="81" lean-forward="false" selection-start-line="0" selection-start-column="81" selection-end-line="0" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/participants/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="92" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/events/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="86" lean-forward="false" selection-start-line="0" selection-start-column="86" selection-end-line="0" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/directorates/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="81" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/participant_type.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="2" lean-forward="false" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/organization_type.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/group.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/directorate.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="8" lean-forward="false" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/sessions/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="21" column="55" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="21" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/events/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="23" column="8" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20180822093645_create_events.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/application.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/event.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14">
-          <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="35" lean-forward="false" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -942,7 +857,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="413">
           <caret line="91" column="5" lean-forward="false" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -950,7 +864,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -958,7 +871,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -966,7 +878,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -974,7 +885,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -982,7 +892,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -990,7 +899,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -998,15 +906,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/groups/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="21" column="57" lean-forward="false" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1014,7 +913,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1022,7 +920,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="21" column="79" lean-forward="false" selection-start-line="21" selection-start-column="79" selection-end-line="21" selection-end-column="79" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1030,7 +927,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1038,7 +934,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1046,7 +941,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1054,7 +948,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1062,7 +955,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
           <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1070,23 +962,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="21" column="69" lean-forward="false" selection-start-line="21" selection-start-column="69" selection-end-line="21" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/participant.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/participants/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="48" column="46" lean-forward="false" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1094,31 +969,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="79" column="2" lean-forward="true" selection-start-line="79" selection-start-column="2" selection-end-line="79" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/menus/_admin.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="62" column="25" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="70" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/users.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="666">
-          <caret line="37" column="59" lean-forward="true" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="59" />
-          <folding />
+          <caret line="37" column="59" lean-forward="false" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
+        <state relative-caret-position="1638">
           <caret line="91" column="46" lean-forward="false" selection-start-line="91" selection-start-column="46" selection-end-line="91" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1126,47 +990,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="22" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/participants/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="18" lean-forward="true" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/participants.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="39" lean-forward="false" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-          <folding />
+          <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/participants/_directorate.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
-          <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-          <folding />
+          <caret line="4" column="9" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -1174,15 +1011,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/participants_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="43" lean-forward="false" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1190,7 +1018,203 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/users/sessions/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="10" lean-forward="false" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20191001091344_add_field_visit_to_participant.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="44" lean-forward="true" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/groups/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="88" lean-forward="true" selection-start-line="0" selection-start-column="1" selection-end-line="6" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/field_visits/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" column="7" lean-forward="false" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/groups/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/field_visits/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="92" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/field_visits/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="81" lean-forward="false" selection-start-line="0" selection-start-column="81" selection-end-line="0" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/field_visits_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="44" column="51" lean-forward="false" selection-start-line="44" selection-start-column="51" selection-end-line="44" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/menus/_admin.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="972">
+          <caret line="54" column="47" lean-forward="false" selection-start-line="54" selection-start-column="47" selection-end-line="54" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/field_visit.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/secrets.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="32" column="24" lean-forward="false" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/devise.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="43" lean-forward="false" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="41" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="28" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/form_index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/participant_types/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="36" lean-forward="false" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/AdminBSBMaterialDesign/js/demo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/event.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="24" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/participant.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="39" lean-forward="false" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/participants.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="36" lean-forward="false" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/participants/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="862">
+          <caret line="68" column="24" lean-forward="false" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/application.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="15" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/participants_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/participants/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

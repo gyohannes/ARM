@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_24_064645) do
+ActiveRecord::Schema.define(version: 2019_10_01_091344) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -55,6 +55,12 @@ ActiveRecord::Schema.define(version: 2018_08_24_064645) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "field_visits", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "groups", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -74,6 +80,7 @@ ActiveRecord::Schema.define(version: 2018_08_24_064645) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "badge_color"
   end
 
   create_table "participants", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -94,8 +101,11 @@ ActiveRecord::Schema.define(version: 2018_08_24_064645) do
     t.boolean "checked_in"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "serial_no"
+    t.bigint "field_visit_id"
     t.index ["directorate_id"], name: "index_participants_on_directorate_id"
     t.index ["event_id"], name: "index_participants_on_event_id"
+    t.index ["field_visit_id"], name: "index_participants_on_field_visit_id"
     t.index ["group_id"], name: "index_participants_on_group_id"
     t.index ["organization_type_id"], name: "index_participants_on_organization_type_id"
     t.index ["participant_type_id"], name: "index_participants_on_participant_type_id"
