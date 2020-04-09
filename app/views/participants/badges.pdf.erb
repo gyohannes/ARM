@@ -17,6 +17,7 @@
   }
 
   .id_card_header{
+    height: 40px;
     font-size: 12px;
     margin-bottom: 5px;
     color: white;
@@ -25,6 +26,23 @@
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     overflow: hidden;
+  }
+
+  .logo{
+    width: 60%;
+  }
+
+  .photo{
+    width: 40%;
+  }
+
+  .id_card_body label{
+    width: 25%;
+  }
+
+  .main_text{
+    font-size: large;
+    font-weight: bold;
   }
 
   .amharic_name, .english_name{
@@ -66,48 +84,31 @@
 </style>
 <% @participants.each do |p| %>
     <div class="id_card">
-      <div class="id_card_header" style="background: <%= p.participant_type.try(:badge_color) %>">
+      <div class="id_card_header">
 
-        <div class="amharic_name">
-          <%= @current_event.amharic_name %><br/>
-          ከ<%= @current_event.from_amharic_month_day << ' - ' << @current_event.to_amharic_month_day << ' ' << 'ቀን' << @current_event.amharic_year%> ዓ.ም
-          <%= @current_event.amharic_location %>
+        <div class="logo">
+          <%= image_tag @current_event.logo %>
         </div>
 
-        <div class="english_name">
-          <%= @current_event.name %><br/>
-          <%= @current_event.start_date.strftime('%b %d') << ' - ' << @current_event.end_date.strftime('%b %d') << ', ' << @current_event.end_date.strftime('%Y')%>
-          <%= @current_event.location %>
+        <div class="photo">
+          <%= image_tag p.photo %><br/>
         </div>
 
-        <%= @current_event.amharic_motto %><br/>
-        <%= @current_event.motto %><br/>
       </div>
-      <div class="body_and_footer">
+
         <div class="id_card_body">
           <li>
-            <span class="label">Name:</span> &nbsp;&nbsp;<b><%= p.name %></b>
+            <label>Name:</label><b><%= p.name %></b>
           </li>
           <li>
-            <span class="label">Orgn:</span> &nbsp;&nbsp;<b><%= p.organization_name %></b>
+            <label>Phone No:</label><b><%= p.name %></b>
           </li>
           <li>
-            <label>Position:</label> &nbsp;&nbsp;<b><%= p.responsibility %></b>
+            <label class="label">Org:</label><b><%= p.organization_type %></b>
           </li>
-          <li>
-            <label>Disc. Group:</label> &nbsp;&nbsp;<b><%= p.group %></b>
-          </li>
-          <li>
-            <label>Field Visit:</label> &nbsp;&nbsp;<b><%= p.field_visit %></b>
-          </li>
-          <li>
-            <label>Hotel:</label> &nbsp;&nbsp;<b><%= p.stay_at %></b>
-          </li>
+          <div class="main_text">
+            <%= @current_event.moto %>
+          </div>
         </div>
-        <div class="footer">
-          <div class="circle-text"><%= p.serial_no %></div>
-          <div class="participant_type" style="border-bottom: 5px solid <%= p.participant_type.try(:badge_color).blank? ? "brown" : p.participant_type.try(:badge_color) %>"><%= p.participant_type %></div>
-        </div>
-      </div>
     </div>
 <% end %>

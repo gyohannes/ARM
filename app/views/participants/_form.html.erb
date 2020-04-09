@@ -3,25 +3,10 @@
     <%= f.association :event, as: :hidden, input_html: { value: @current_event.try(:id) } %>
   <div class="form-inputs">
     <div class="row">
-      <div class="col-sm-6">
-        <%= f.input :name, label: 'Name(title)' %>
-        <%= f.input :organization_name %>
-        <%= f.association :organization_type %>
-        <div id="directorates_display">
-          <%= render partial: 'directorate' %>
-        </div>
-        <%= f.input :responsibility, label: 'Position' %>
-        <%= f.input :place_of_work %>
+        <%= f.input :name, label: 'Full Name' %>
+        <%= f.association :organization_type, label: 'Organization' %>
         <%= f.input :telephone_number %>
-      </div>
-      <div class="col-sm-6" style="border-left: 1px solid silver">
-        <%= f.input :email %>
-        <%= f.association :participant_type %>
-        <%= f.input :stay_at %>
-        <%= f.association :group %>
-        <%= f.association :field_visit %>
-
-        <%= f.input :checked_in, label_html: {class: 'transparent_label'}, input_html: { class: "filled-in chk-col-pink" }  %>
+        <%= f.input :photo, as: :file %>
       </div>
     </div>
 
