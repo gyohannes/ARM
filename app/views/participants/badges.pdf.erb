@@ -1,114 +1,104 @@
 <style>
   .id_card{
-    font-size: 14px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     width: 72mm;
     height: 110mm;
-    border: 1px solid silver;
+    border: 5px solid skyblue;
     border-radius: 6px;
     float: left;
     margin: 5px;
-    padding: 2px;
+    padding: 5px;
     page-break-inside: avoid;
   }
 
-  li{
-    margin-bottom: 5px;
-  }
-
   .id_card_header{
-    height: 40px;
-    font-size: 12px;
+    width: 100%;
+    text-align: center;
+    height: 35mm;
     margin-bottom: 5px;
     color: white;
-    background: brown;
-    text-align: center;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     overflow: hidden;
   }
 
   .logo{
+    width: 100%;
+  }
+
+  .id_card_body{
+    height: 55mm;
+    padding: 2px;
+    width: 100%;
+    float: left;
+    font-size: 16px;
+  }
+
+  .details{
     width: 60%;
+    float: left;
   }
 
   .photo{
     width: 40%;
+    float: left;
+    text-align: right;
+    overflow: hidden;
+  }
+  .id_card_body li{
+    list-style: disc;
+    margin-bottom: 10px;
+    float: left;
+    width: 100%;
   }
 
   .id_card_body label{
-    width: 25%;
+    float: left;
+    width: 100%;
+    font-weight: bold;
+  }
+
+  .value{
+    width: 100%;
+    margin-left: 10%;
+    float: left;
+    border-bottom: 1px solid silver;
   }
 
   .main_text{
+    width: 100%;
+    float: left;
+    margin-top: 5px;
     font-size: large;
     font-weight: bold;
-  }
-
-  .amharic_name, .english_name{
-    margin-bottom: 2px;
-  }
-
-  .body_and_footer{
-    height: 70mm;
-    vertical-align: bottom;
-    overflow: hidden;
-    background-image: url('<%= image_path Rails.root.join(ActiveStorage::Blob.service.send(:path_for, Event.first.logo.key)) %>');
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  .id_card_body{
-    height: 75%;
-    list-style: none;
-    padding: 2px;
-    padding-left: 5px;
-    overflow: hidden;
-  }
-  .footer{
-    vertical-align: bottom;
-  }
-  .circle-text {
-    margin-left: 84%;
-    border: 1px solid silver;
-    border-radius: 50%;
-    font-size: large;
-    padding: 2px;
-  }
-
-  .participant_type{
     text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    border-bottom: 5px solid brown;
   }
 </style>
+
 <% @participants.each do |p| %>
     <div class="id_card">
       <div class="id_card_header">
 
-        <div class="logo">
-          <%= image_tag @current_event.logo %>
-        </div>
-
-        <div class="photo">
-          <%= image_tag p.photo %><br/>
-        </div>
-
-      </div>
-
+        <span class="logo">
+          <%= wicked_pdf_image_tag 'logo-transparent.png', height: '100%' %>
+        </span>
+      </div><hr/>
         <div class="id_card_body">
+          <span class="details">
+          <li><label>Name:</label> <span class="value"><%= p.name %></span></li>
           <li>
-            <label>Name:</label><b><%= p.name %></b>
+            <label>Phone Number:</label> <span class="value"><%= p.telephone_number %></span>
           </li>
           <li>
-            <label>Phone No:</label><b><%= p.name %></b>
+            <label>Organization:</label> <span class="value"><%= p.organization_type %></span>
           </li>
-          <li>
-            <label class="label">Org:</label><b><%= p.organization_type %></b>
-          </li>
-          <div class="main_text">
-            <%= @current_event.moto %>
-          </div>
+          </span>
+          <span class="photo">
+            <%= wicked_pdf_image_tag(p.photo, width: '100%') %>
+        </span>
         </div>
+          <div class="main_text">
+            <%= @current_event.motto %>
+          </div>
     </div>
 <% end %>
