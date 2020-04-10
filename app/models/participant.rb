@@ -8,7 +8,7 @@ class Participant < ApplicationRecord
 
   has_one_attached :photo
 
-  validates :amharic_name, :telephone_number, presence: true
+  validates :amharic_name, presence: true
   #after_create :set_serial_no
 
   def to_s
