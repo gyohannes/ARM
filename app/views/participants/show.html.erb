@@ -5,80 +5,16 @@
 </div>
 <div class="body">
   <%= image_tag @participant.photo, width: '200px' rescue nil %>
-<p>
-  <strong>Event:</strong>
-  <%= @participant.event %>
-</p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @participant.name %>
+  <strong>Amharic Name:</strong>
+  <%= @participant.amharic_name %>
 </p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @participant.title %>
-</p>
-
-<p>
-  <strong>Telephone number:</strong>
-  <%= @participant.telephone_number %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @participant.email %>
-</p>
-
-<p>
-  <strong>Organization name:</strong>
-  <%= @participant.organization_name %>
-</p>
-
-<p>
-  <strong>Organization type:</strong>
-  <%= @participant.organization_type %>
-</p>
-
-<p>
-  <strong>Directorate:</strong>
-  <%= @participant.directorate %>
-</p>
-
-<p>
-  <strong>Responsibility:</strong>
-  <%= @participant.responsibility %>
-</p>
-
-<p>
-  <strong>Place of work:</strong>
-  <%= @participant.place_of_work %>
-</p>
-
-<p>
-  <strong>Group:</strong>
-  <%= @participant.group %>
-</p>
-
-<p>
-  <strong>Field visit:</strong>
-  <%= @participant.field_visit %>
-</p>
-
-<p>
-  <strong>Stay at:</strong>
-  <%= @participant.stay_at %>
-</p>
-
-<p>
-  <strong>Participant type:</strong>
-  <%= @participant.participant_type %>
-</p>
-
-<p>
-  <strong>Checked in:</strong>
-  <%= @participant.checkedin_status %>
-</p>
+  <p>
+    <strong>English Name:</strong>
+    <%= @participant.name %>
+  </p>
 <hr/>
 <%= link_to 'Edit', edit_participant_path(@participant) %> |
 <%= link_to 'Back', participants_path %>

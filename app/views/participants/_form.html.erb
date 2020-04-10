@@ -3,9 +3,8 @@
     <%= f.association :event, as: :hidden, input_html: { value: @current_event.try(:id) } %>
   <div class="form-inputs">
     <div class="row">
-        <%= f.input :name, label: 'Full Name' %>
-        <%= f.association :organization_type, label: 'Organization' %>
-        <%= f.input :telephone_number %>
+        <%= f.input :amharic_name, label: 'Amharic Name' %>
+      <%= f.input :name, label: 'English Name' %>
         <%= f.input :photo, as: :file %>
       </div>
     </div>
@@ -13,6 +12,7 @@
   </div>
   <hr/>
   <div class="form-actions">
-    <%= f.button :submit %>
+    <center><%= f.button :submit, 'Save', class: 'btn btn-primary'  %></center>
   </div>
 <% end %>
+<br/>

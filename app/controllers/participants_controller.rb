@@ -61,7 +61,7 @@ class ParticipantsController < ApplicationController
     end
     respond_to do |format|
       if @participant.save
-        format.html { redirect_to @participant, notice: 'Participant was successfully created.' }
+        format.html { redirect_to participants_path, notice: 'Participant was successfully created.' }
         format.json { render :show, status: :created, location: @participant }
       else
         format.html { render :new }
@@ -78,7 +78,7 @@ class ParticipantsController < ApplicationController
     end
     respond_to do |format|
       if @participant.update(participant_params)
-        format.html { redirect_to @participant, notice: 'Participant was successfully updated.' }
+        format.html { redirect_to participants_path, notice: 'Participant was successfully updated.' }
         format.json { render :show, status: :ok, location: @participant }
       else
         format.html { render :edit }
@@ -105,6 +105,6 @@ class ParticipantsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def participant_params
-      params.require(:participant).permit(:event_id, :name, :telephone_number, :organization_type_id, :photo)
+      params.require(:participant).permit(:event_id, :amharic_name, :name, :telephone_number, :organization_type_id, :photo)
     end
 end

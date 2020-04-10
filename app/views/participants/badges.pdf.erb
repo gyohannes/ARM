@@ -40,9 +40,8 @@
   }
 
   .photo{
-    width: 48%;
+    width: 50%;
     float: left;
-    padding-left: 2%;
     text-align: right;
     overflow: hidden;
   }
@@ -68,11 +67,18 @@
     border-bottom: 1px solid silver;
   }
 
-  .main_text{
+  .amharic{
     width: 100%;
     float: left;
-    margin-top: 5px;
     font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .english{
+    width: 100%;
+    float: left;
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
   }
@@ -88,10 +94,8 @@
       </div><hr/>
         <div class="id_card_body">
           <span class="details">
-          <li><label>ስም:</label> <span class="value"><%= p.name %></span></li>
-          <li>
-            <label>ስልክ ቁጥር:</label> <span class="value"><%= p.telephone_number %></span>
-          </li>
+            <li><label>ሥም:</label> <span class="value"><%= p.amharic_name %></span></li>
+            <li><label>Name:</label> <span class="value"><%= p.name %></span></li>
           </span>
           <span class="photo">
             <% if p.photo.attached? %>
@@ -101,8 +105,11 @@
                 <% end %>
         </span>
         </div>
-          <div class="main_text">
-            <%= @current_event.motto %>
+          <div class="main_text amharic">
+            <%= @current_event.amharic_motto %>
           </div>
+      <div class="main_text english">
+        <%= @current_event.motto %>
+      </div>
     </div>
 <% end %>

@@ -11,9 +11,8 @@
         <th><%= check_box(nil, "check_all", {class: 'check_all',class: "filled-in chk-col-pink"}) %>
           <label for="check_all">All</label>
         </th>
-        <th>Name</th>
-        <th>Organization</th>
-        <th>Phone Number</th>
+        <th>Amharic Name</th>
+        <th>English Name</th>
         <th></th>
       </tr>
     </thead>
@@ -24,13 +23,11 @@
             <%= check_box(nil, "participants", {multiple: true,id: participant.id,class: "filled-in chk-col-pink"}, participant.id) %>
             <label for="<%= participant.id %>"></label>
           </td>
+          <td><%= participant.amharic_name %></td>
           <td><%= participant.name %></td>
-          <td><%= participant.organization_type %></td>
-          <td><%= participant.telephone_number %></td>
           <td>
-            <%= link_to 'Details', participant %>
-            <%= link_to 'Edit', edit_participant_path(participant) %>
-          <%= link_to 'Delete', participant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <%= link_to 'Edit', edit_participant_path(participant), class: 'btn btn-primary' %>
+          <%= link_to 'Delete', participant, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
         </tr>
       <% end %>
       </tbody>
@@ -42,13 +39,7 @@
   <br/><hr/>
   <div class="row">
     <div class="col-sm-6">
-      <%= link_to 'Add Participant', new_participant_path, target: '_blank', class: 'btn btn-primary' %>
-    </div>
-    <div class="col-sm-6">
-      <%= form_tag import_participants_participants_path,:multipart=>true do %>
-          <label>Select CSV File</label> <%= file_field_tag(:participants_csv_file) %><br/>
-          <%= submit_tag 'Import',class: 'btn' %>
-      <% end %>
+      <%= link_to 'Add Participant', new_participant_path, class: 'btn btn-primary' %>
     </div>
   </div>
 
