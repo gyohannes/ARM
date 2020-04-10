@@ -14,7 +14,7 @@
   .id_card_header{
     width: 100%;
     text-align: center;
-    height: 35mm;
+    height: 30mm;
     margin-bottom: 5px;
     color: white;
     border-top-left-radius: 6px;
@@ -35,13 +35,14 @@
   }
 
   .details{
-    width: 60%;
+    width: 50%;
     float: left;
   }
 
   .photo{
-    width: 40%;
+    width: 48%;
     float: left;
+    padding-left: 2%;
     text-align: right;
     overflow: hidden;
   }
@@ -59,8 +60,9 @@
   }
 
   .value{
+    font-size: 14px;
     width: 100%;
-    margin-left: 10%;
+    margin-right: 5px;
     float: left;
     border-bottom: 1px solid silver;
   }
@@ -80,7 +82,7 @@
       <div class="id_card_header">
 
         <span class="logo">
-          <%= wicked_pdf_image_tag 'logo-transparent.png', height: '100%' %>
+          <%= image_tag @current_event.logo, height: '100%' rescue nil %>
         </span>
       </div><hr/>
         <div class="id_card_body">
@@ -94,7 +96,11 @@
           </li>
           </span>
           <span class="photo">
-            <%= wicked_pdf_image_tag(p.photo, width: '100%') %>
+            <% if p.photo.attached? %>
+            <%= image_tag p.photo, width: '100%' %>
+                <% else %>
+            <%= wicked_pdf_image_tag 'missing.png', width: '100%' %>
+                <% end %>
         </span>
         </div>
           <div class="main_text">

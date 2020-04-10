@@ -6,6 +6,7 @@ git_source(:github) do |repo_name|
 end
 gem 'fastercsv'
 gem 'devise'
+gem 'pg'
 gem 'cancancan', '~> 2.0'
 gem 'simple_form', '~> 4.0', '>= 4.0.1'
 gem "nested_form"

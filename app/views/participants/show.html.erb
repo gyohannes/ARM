@@ -4,6 +4,7 @@
   </h2>
 </div>
 <div class="body">
+  <%= image_tag @participant.photo, width: '200px' rescue nil %>
 <p>
   <strong>Event:</strong>
   <%= @participant.event %>
