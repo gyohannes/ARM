@@ -6,6 +6,7 @@ git_source(:github) do |repo_name|
 end
 gem 'fastercsv'
 gem 'devise'
+gem 'pg'
 gem 'cancancan', '~> 2.0'
 gem 'simple_form', '~> 4.0', '>= 4.0.1'
 gem "nested_form"
@@ -17,7 +18,7 @@ gem 'bootstrap-growl-rails'
 gem 'ethiopic_date', '0.0.18'
 gem 'image_processing', '~> 1.2'
 gem 'jquery-minicolors-rails'
-
+gem 'active_model_serializers'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 # Use mysql as the database for Active Record
