@@ -1,78 +1,58 @@
-<% if user_signed_in? and current_user.admin? %>
-<div class="menu">
-    <ul class="list">
-        <li class="header">MAIN MENU</li>
-        <li class="active">
-        <%= link_to root_path do %>
-            <i class="material-icons">home</i>
-            <span>Home</span>
-        <% end %>
-        </li>
+<% if current_user and current_user.admin? %>
+    <li class="nav-item active">
+      <%= link_to root_path, class: 'nav-link' do %>
+          <i class="fas fa-fw fa-home"></i>
+          <span>Home</span>
+      <% end %>
+    </li>
 
-        <li>
-        <%= link_to users_path do %>
-            <i class="material-icons">person</i>
-            <span>Users</span>
-        <% end %>
-        </li>
+    <li class="nav-item active">
+      <%= link_to users_path, class: 'nav-link' do %>
+          <i class="fas fa-fw fa-users"></i>
+          <span>Users</span>
+      <% end %>
+    </li>
 
-      <li>
-        <a href="javascript:void(0);" class="menu-toggle waves-effect waves-block">
-          <i class="material-icons">settings</i>
-          <span>Settings</span>
-        </a>
-        <ul class="ml-menu" style="display: none;">
-          <li>
-            <%= link_to events_path do %>
-                <i class="material-icons">event_note</i>
-                <span>Events</span>
-            <% end %>
-          </li>
+    <li class="nav-item active">
+      <%= link_to events_path, class: 'nav-link' do %>
+          <i class="fas fa-fw fa-calendar"></i>
+          <span>ARM Details</span>
+      <% end %>
+    </li>
 
-          <li>
-            <%= link_to organization_types_path do %>
-                <i class="material-icons">category</i>
-                <span>Organization Types</span>
-            <% end %>
-          </li>
 
-          <li>
-            <%= link_to directorates_path do %>
-                <i class="material-icons">group</i>
-                <span>FMOH Directorates</span>
-            <% end %>
-          </li>
+    <li class="nav-item active">
+      <%= link_to organization_types_path, class: 'nav-link' do %>
+          <i class="fas fa-fw fa-layer-group"></i>
+          <span>Regions</span>
+      <% end %>
+    </li>
 
-          <li>
-            <%= link_to groups_path do %>
-                <i class="material-icons">group</i>
-                <span>Groups</span>
-            <% end %>
-          </li>
+    <li class="nav-item active">
+      <%= link_to groups_path, class: 'nav-link' do %>
+          <i class="fas fa-fw fa-object-group"></i>
+          <span>Groups</span>
+      <% end %>
+    </li>
 
-          <li>
-            <%= link_to field_visits_path do %>
-                <i class="material-icons">place</i>
-                <span>Field Visits</span>
-            <% end %>
-          </li>
+    <li class="nav-item active">
+      <%= link_to field_visits_path, class: 'nav-link' do %>
+          <i class="fas fa-fw fa-location-arrow"></i>
+          <span>Field Visits</span>
+      <% end %>
+    </li>
 
-          <li>
-            <%= link_to participant_types_path do %>
-                <i class="material-icons">group</i>
-                <span>Participant Types</span>
-            <% end %>
-          </li>
-        </ul>
-      </li>
+    <li class="nav-item active">
+      <%= link_to participant_types_path, class: 'nav-link' do %>
+          <i class="fas fa-fw fa-sort"></i>
+          <span>Participant Types</span>
+      <% end %>
+    </li>
 
-      <li>
-        <%= link_to participants_path do %>
-            <i class="material-icons">group</i>
-            <span>Participants</span>
-        <% end %>
-      </li>
-
-    </ul>
-</div>
+    <li class="nav-item active">
+      <%= link_to participants_path, class: 'nav-link' do %>
+          <i class="fas fa-fw fa-plus-circle"></i>
+          <span>Participants</span>
+      <% end %>
+    </li>
 <% end %>

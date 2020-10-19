@@ -1,40 +1,46 @@
-<div class="header">
-  <h2>
-    Events
-  </h2>
-</div>
-<div class="body table-responsive">
-  <table class="table table-bordered table-striped table-hover dataTable js-exportable">
-  <thead>
-    <tr>
-      <th>Year</th>
-      <th>Name</th>
-      <th>Start Date</th>
-      <th>End Date</th>
-      <th>Location</th>
-      <th>Status</th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @events.each do |event| %>
+<%= content_for :header do %>
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+      <h1 class="h3 mb-0 text-gray-800"><%= header rescue nil %></h1>
+    </div>
+<% end %>
+<div class="card shadow mb-4">
+  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+    <h6 class="m-0 font-weight-bold text-primary">Events</h6>
+  </div>
+  <!-- Card Body -->
+  <div class="card-body">
+    <table class="table table-bordered table-striped table-hover dataTable js-exportable">
+      <thead>
       <tr>
-        <td><%= event.year %></td>
-        <td><%= event.name %></td>
-        <td><%= event.start_date %></td>
-        <td><%= event.end_date %></td>
-        <td><%= event.location %></td>
-        <td><%= event.current_status %></td>
-        <td>
-          <%= link_to 'Details', event %> |
-          <%= link_to 'Edit', edit_event_path(event) %> |
-          <%= link_to 'Delete', event, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </td>
+        <th>Year</th>
+        <th>Name</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Location</th>
+        <th>Status</th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-<hr/>
-<%= link_to 'New Event', new_event_path %>
+      </thead>
+
+      <tbody>
+      <% @events.each do |event| %>
+          <tr>
+            <td><%= event.year %></td>
+            <td><%= event.name %></td>
+            <td><%= event.start_date %></td>
+            <td><%= event.end_date %></td>
+            <td><%= event.location %></td>
+            <td><%= event.current_status %></td>
+            <td>
+              <%= link_to 'Details', event %> |
+              <%= link_to 'Edit', edit_event_path(event) %> |
+              <%= link_to 'Delete', event, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+    <hr/>
+    <%= link_to 'New Event', new_event_path, class: 'btn btn-primary' %>
+  </div>
 </div>

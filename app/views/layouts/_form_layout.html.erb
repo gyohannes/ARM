@@ -1,6 +1,12 @@
-<div class="header">
-  <h2><%= title %></h2>
-</div>
-<div class="body">
-  <%= yield %>
+<%= content_for :header do %>
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+      <h1 class="h3 mb-0 text-gray-800"><%= title rescue nil %></h1>
+      <hr/>
+    </div>
+<% end %>
+<div class="card shadow mb-4">
+  <!-- Card Body -->
+  <div class="card-body">
+    <%= yield %>
+  </div>
 </div>

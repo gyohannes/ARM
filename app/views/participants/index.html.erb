@@ -1,78 +1,81 @@
-<div class="header">
-  <h2>
-    Participants
-  </h2>
-</div>
-<div class="body table-responsive">
-  <%= form_tag badges_participants_path(format: :pdf), method: :get do %>
-    <table class="table table-bordered table-striped table-hover dataTable js-exportable">
-    <thead>
-      <tr>
-        <th><%= check_box(nil, "check_all", {class: 'check_all',class: "filled-in chk-col-pink"}) %>
-          <label for="check_all">All</label>
-        </th>
-        <th>SNO</th>
-        <th>Name</th>
-        <th>Organization name</th>
-        <th>Organization type</th>
-        <th>Directorate</th>
-        <th>Responsibility</th>
-        <th>Place of work</th>
-        <th>Telephone number</th>
-        <th>Email</th>
-        <th>Participant type</th>
-        <th>Stay at</th>
-        <th>Group</th>
-        <th>Field visit</th>
-        <th>Checked in</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @participants.each do |participant| %>
-        <tr>
-          <td>
-            <%= check_box(nil, "participants", {multiple: true,id: participant.id,class: "filled-in chk-col-pink"}, participant.id) %>
-            <label for="<%= participant.id %>"></label>
-          </td>
-          <td><%= participant.serial_no %></td>
-          <td><%= participant.name %></td>
-          <td><%= participant.organization_name %></td>
-          <td><%= participant.organization_type %></td>
-          <td><%= participant.directorate %></td>
-          <td><%= participant.responsibility %></td>
-          <td><%= participant.place_of_work %></td>
-          <td><%= participant.telephone_number %></td>
-          <td><%= participant.email %></td>
-          <td><%= participant.participant_type %></td>
-          <td><%= participant.stay_at %></td>
-          <td><%= participant.group %></td>
-          <td><%= participant.field_visit %></td>
-          <td><%= participant.checkedin_status %></td>
-          <td>
-            <%= link_to 'Details', participant %>
-            <%= link_to 'Edit', edit_participant_path(participant) %>
-          <%= link_to 'Delete', participant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-      </tbody>
-    </table>
-      <center>
-        <%= submit_tag 'Generate Badges',data: { disable_with: false }, class: 'btn btn-success' %>
-      </center>
-  <% end %>
-  <br/><hr/>
-  <div class="row">
-    <div class="col-sm-6">
-      <%= link_to 'Add Participant', new_participant_path, target: '_blank', class: 'btn btn-primary' %>
+<%= content_for :header do %>
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+      <h1 class="h3 mb-0 text-gray-800"><%= header rescue nil %></h1>
     </div>
-    <div class="col-sm-6">
-      <%= form_tag import_participants_participants_path,:multipart=>true do %>
-          <label>Select CSV File</label> <%= file_field_tag(:participants_csv_file) %><br/>
-          <%= submit_tag 'Import',class: 'btn' %>
+<% end %>
+<div class="card shadow mb-4">
+  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+    <h6 class="m-0 font-weight-bold text-primary">Participants</h6>
+  </div>
+  <!-- Card Body -->
+  <div class="card-body">
+    <div class="body table-responsive">
+      <%= form_tag badges_participants_path(format: :pdf), method: :get do %>
+          <table class="table table-bordered table-striped table-hover dataTable js-exportable">
+            <thead>
+            <tr>
+              <th><%= check_box(nil, "check_all", {class: 'check_all',class: "filled-in chk-col-pink"}) %>
+                <label for="check_all">All</label>
+              </th>
+              <th>SNO</th>
+              <th>Name</th>
+              <th>Region</th>
+              <th>Organization</th>
+              <th>Position</th>
+              <th>Address</th>
+              <th>Cell Phone</th>
+              <th>Email</th>
+              <th>Participant type</th>
+              <th>Stay at</th>
+              <th>Group</th>
+              <th>Field visit</th>
+              <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <% @participants.each do |participant| %>
+                <tr>
+                  <td>
+                    <%= check_box(nil, "participants", {multiple: true,id: participant.id,class: "filled-in chk-col-pink"}, participant.id) %>
+                    <label for="<%= participant.id %>"></label>
+                  </td>
+                  <td><%= participant.serial_no %></td>
+                  <td><%= participant.name %></td>
+                  <td><%= participant.organization_type %></td>
+                  <td><%= participant.organization_name %></td>
+                  <td><%= participant.responsibility %></td>
+                  <td><%= participant.place_of_work %></td>
+                  <td><%= participant.telephone_number %></td>
+                  <td><%= participant.email %></td>
+                  <td><%= participant.participant_type %></td>
+                  <td><%= participant.stay_at %></td>
+                  <td><%= participant.group %></td>
+                  <td><%= participant.field_visit %></td>
+                  <td>
+                    <%= link_to 'Edit', edit_participant_path(participant), class: 'btn btn-primary' %>
+                    <%= link_to 'Delete', participant, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
+                </tr>
+            <% end %>
+            </tbody>
+          </table>
+          <center>
+            <%= submit_tag 'Generate Badges',data: { disable_with: false }, class: 'btn btn-success' %>
+          </center>
       <% end %>
+      <br/><hr/>
+      <div class="row">
+        <div class="col-sm-6">
+          <%= link_to 'Add Participant', new_participant_path, target: '_blank', class: 'btn btn-primary' %>
+        </div>
+        <div class="col-sm-6">
+          <%= form_tag import_participants_participants_path,:multipart=>true do %>
+              <label>Select CSV File</label> <%= file_field_tag(:participants_csv_file) %><br/>
+              <%= submit_tag 'Import',class: 'btn' %>
+          <% end %>
+        </div>
+      </div>
+
+
     </div>
   </div>
-
-
 </div>
