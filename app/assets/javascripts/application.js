@@ -1,7 +1,7 @@
 //= require jquery/jquery.min
+//= require rails-ujs
 //= require jquery.minicolors
 //= require jquery.minicolors.simple_form
-//= require rails-ujs
 //= require jquery_nested_form
 //= require participants
 //= require bootstrap-wysihtml5
