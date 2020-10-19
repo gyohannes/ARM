@@ -8,14 +8,9 @@ class Participant < ApplicationRecord
 
   validates :name, :place_of_work, :responsibility, :telephone_number, presence: true
 
-<<<<<<< HEAD
   has_one_attached :photo
 
-  validates :amharic_name, presence: true
-  #after_create :set_serial_no
-=======
   after_create :set_serial_no
->>>>>>> a99ff424b04d0cdca04606d9004f3f9f62c378c6
 
   def to_s
     name

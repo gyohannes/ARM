@@ -1,14 +1,6 @@
 <%= simple_form_for(@participant, wrapper_mappings: { boolean: :horizontal_boolean }) do |f| %>
   <%= f.error_notification %>
     <%= f.association :event, as: :hidden, input_html: { value: @current_event.try(:id) } %>
-<<<<<<< HEAD
-  <div class="form-inputs">
-    <div class="row">
-        <%= f.input :amharic_name, label: 'Amharic Name' %>
-      <%= f.input :name, label: 'English Name' %>
-        <%= f.input :photo, as: :file %>
-      </div>
-=======
   <div class="row">
     <div class="col-sm-6">
     <%= f.input :name, label: 'Name(title)' %>
@@ -24,15 +16,10 @@
     <%= f.input :stay_at %>
     <%= f.association :group %>
     <%= f.association :field_visit %>
->>>>>>> a99ff424b04d0cdca04606d9004f3f9f62c378c6
     </div>
   </div>
   <div class="form-actions">
-<<<<<<< HEAD
-    <center><%= f.button :submit, 'Save', class: 'btn btn-primary'  %></center>
-=======
     <%= f.button :submit, 'Submit', class: 'btn btn-primary' %>
->>>>>>> a99ff424b04d0cdca04606d9004f3f9f62c378c6
   </div>
 <% end %>
 <br/>
