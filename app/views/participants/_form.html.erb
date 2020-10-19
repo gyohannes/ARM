@@ -1,6 +1,6 @@
 <%= simple_form_for(@participant, wrapper_mappings: { boolean: :horizontal_boolean }) do |f| %>
   <%= f.error_notification %>
-    <%= f.association :event, as: :hidden, input_html: { value: @current_event.try(:id) } %>
+    <%= f.association :event, as: :hidden %>
   <div class="row">
     <div class="col-sm-6">
     <%= f.input :name, label: 'Name(title)' %>

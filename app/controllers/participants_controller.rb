@@ -43,6 +43,7 @@ class ParticipantsController < ApplicationController
   # GET /participants/new
   def new
     @participant = Participant.new
+    @participant.event = Event.current
   end
 
   # GET /participants/1/edit
@@ -106,6 +107,6 @@ class ParticipantsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def participant_params
       params.require(:participant).permit(:event_id, :name, :responsibility, :place_of_work, :participant_type_id,
-                                          :group_id, :field_visist_id, :telephone_number,:email, :stay_at, :organization_type_id, :photo)
+                                          :group_id, :field_visit_id, :telephone_number,:email, :stay_at, :organization_type_id, :photo)
     end
 end
