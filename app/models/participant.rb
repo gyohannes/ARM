@@ -2,14 +2,20 @@ class Participant < ApplicationRecord
   belongs_to :event
   belongs_to :organization_type,optional: true
   belongs_to :directorate, optional: true
-  belongs_to :group, optional: true
-  belongs_to :field_visit, optional: true
-  belongs_to :participant_type, optional: true
+  belongs_to :group
+  belongs_to :field_visit
+  belongs_to :participant_type
 
+  validates :name, :place_of_work, :responsibility, :telephone_number, presence: true
+
+<<<<<<< HEAD
   has_one_attached :photo
 
   validates :amharic_name, presence: true
   #after_create :set_serial_no
+=======
+  after_create :set_serial_no
+>>>>>>> a99ff424b04d0cdca04606d9004f3f9f62c378c6
 
   def to_s
     name

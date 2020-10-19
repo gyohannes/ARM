@@ -1,31 +1,37 @@
-<div class="header">
-  <h2>
-    Directorates
-  </h2>
-</div>
-<div class="body table-responsive">
-  <table class="table table-bordered table-striped table-hover dataTable js-exportable">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @directorates.each do |directorate| %>
+<%= content_for :header do %>
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+      <h1 class="h3 mb-0 text-gray-800"><%= header rescue nil %></h1>
+    </div>
+<% end %>
+<div class="card shadow mb-4">
+  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+    <h6 class="m-0 font-weight-bold text-primary">FMOH Directorates</h6>
+  </div>
+  <!-- Card Body -->
+  <div class="card-body">
+    <table class="table table-bordered table-striped table-hover dataTable js-exportable">
+      <thead>
       <tr>
-        <td><%= directorate.name %></td>
-        <td><%= directorate.description %></td>
-        <td>
-          <%= link_to 'Edit', edit_directorate_path(directorate) %> |
-          <%= link_to 'Delete', directorate, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </td>
+        <th>Name</th>
+        <th>Description</th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-<hr/>
-<%= link_to 'New Directorate', new_directorate_path %>
+      </thead>
+
+      <tbody>
+      <% @directorates.each do |directorate| %>
+          <tr>
+            <td><%= directorate.name %></td>
+            <td><%= directorate.description %></td>
+            <td>
+              <%= link_to 'Edit', edit_directorate_path(directorate) %> |
+              <%= link_to 'Delete', directorate, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+    <hr/>
+    <%= link_to 'New Directorate', new_directorate_path, class: 'btn btn-primary' %>
+  </div>
 </div>

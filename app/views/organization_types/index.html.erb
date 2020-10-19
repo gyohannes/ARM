@@ -1,31 +1,35 @@
-<div class="header">
-  <h2>
-    Organization Types
-  </h2>
-</div>
-<div class="body table-responsive">
-  <table class="table table-bordered table-striped table-hover dataTable js-exportable">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @organization_types.each do |organization_type| %>
+<%= content_for :header do %>
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+      <h1 class="h3 mb-0 text-gray-800"><%= header rescue nil %></h1>
+    </div>
+<% end %>
+<div class="card shadow mb-4">
+  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+    <h6 class="m-0 font-weight-bold text-primary">Regions</h6>
+  </div>
+  <!-- Card Body -->
+  <div class="card-body">
+    <table class="table table-bordered table-striped table-hover dataTable js-exportable">
+      <thead>
       <tr>
-        <td><%= organization_type.name %></td>
-        <td><%= organization_type.description %></td>
-        <td>
-          <%= link_to 'Edit', edit_organization_type_path(organization_type) %>
-          <%= link_to 'Delete', organization_type, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </td>
+        <th>Name</th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-  <hr/>
-<%= link_to 'New Organization Type', new_organization_type_path %>
+      </thead>
+
+      <tbody>
+      <% @organization_types.each do |organization_type| %>
+          <tr>
+            <td><%= organization_type.name %></td>
+            <td>
+              <%= link_to 'Edit', edit_organization_type_path(organization_type) %>
+              <%= link_to 'Delete', organization_type, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+    <hr/>
+    <%= link_to 'Add Region', new_organization_type_path, class: 'btn btn-primary' %>
+  </div>
 </div>

@@ -1,31 +1,37 @@
-<div class="header">
-  <h2>
-    Groups
-  </h2>
-</div>
-<div class="body table-responsive">
-  <table class="table table-bordered table-striped table-hover dataTable js-exportable">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @groups.each do |group| %>
+<%= content_for :header do %>
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+      <h1 class="h3 mb-0 text-gray-800"><%= header rescue nil %></h1>
+    </div>
+<% end %>
+<div class="card shadow mb-4">
+  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+    <h6 class="m-0 font-weight-bold text-primary">Groups</h6>
+  </div>
+  <!-- Card Body -->
+  <div class="card-body">
+    <table class="table table-bordered table-striped table-hover dataTable js-exportable">
+      <thead>
       <tr>
-        <td><%= group.name %></td>
-        <td><%= group.description %></td>
-        <td>
-          <%= link_to 'Edit', edit_group_path(group) %> |
-          <%= link_to 'Delete', group, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </td>
+        <th>Name</th>
+        <th>Description</th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-  <hr/>
-<%= link_to 'New Group', new_group_path %>
+      </thead>
+
+      <tbody>
+      <% @groups.each do |group| %>
+          <tr>
+            <td><%= group.name %></td>
+            <td><%= group.description %></td>
+            <td>
+              <%= link_to 'Edit', edit_group_path(group) %> |
+              <%= link_to 'Delete', group, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+    <hr/>
+    <%= link_to 'New Group', new_group_path, class: 'btn btn-primary' %>
+  </div>
 </div>

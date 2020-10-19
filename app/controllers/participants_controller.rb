@@ -1,5 +1,5 @@
 class ParticipantsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:new]
   before_action :set_participant, only: [:show, :edit, :update, :destroy]
 
   # GET /participants

@@ -1,33 +1,37 @@
-<% if user_signed_in? and current_user.admin? %>
-    <div class="header">
-        <h2>
-            Users
-        </h2>
+<%= content_for :header do %>
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+      <h1 class="h3 mb-0 text-gray-800"><%= header rescue nil %></h1>
     </div>
-    <div class="body table-responsive">
+<% end %>
+<div class="card shadow mb-4">
+  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+    <h6 class="m-0 font-weight-bold text-primary">Users</h6>
+  </div>
+  <!-- Card Body -->
+  <div class="card-body">
     <table class="table table-bordered table-striped table-hover dataTable js-exportable">
-  <thead>
-    <tr>
-      <th>Email</th>
-      <th>Admin</th>
-      <th>Confirmation</th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @users.each do |user| %>
+      <thead>
       <tr>
-        <td><%= user.email %></td>
-        <td><%= user.admin_status %></td>
-        <td><%= link_to 'Confirm', confirm_user_path(user), class: 'btn btn-primary' unless user.confirmed? %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <th>Email</th>
+        <th>Admin</th>
+        <th>Confirmation</th>
+        <th></th>
       </tr>
+      </thead>
+
+      <tbody>
+      <% @users.each do |user| %>
+          <tr>
+            <td><%= user.email %></td>
+            <td><%= user.admin_status %></td>
+            <td><%= link_to 'Confirm', confirm_user_path(user), class: 'btn btn-primary' unless user.confirmed? %></td>
+            <td><%= link_to 'Edit', edit_user_path(user) %></td>
+          </tr>
       <% end %>
       </tbody>
     </table>
     <br>
-    
+
     <%= link_to 'New User', new_user_path, class: 'btn btn-primary' %>
-    <% end %>
+  </div>
 </div>
