@@ -7,6 +7,10 @@ $(function () {
         responsive: true
     });
 
+    $('.date_picker').calendarsPicker({
+        dateFormat: 'dd/mm/yyyy',
+    });
+
     //Exportable table
     $('.js-exportable').DataTable({
         retrieve: true,

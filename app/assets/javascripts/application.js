@@ -1,5 +1,6 @@
 //= require jquery/jquery.min
 //= require rails-ujs
+//= require calendar/index
 //= require jquery.minicolors
 //= require jquery.minicolors.simple_form
 //= require jquery_nested_form

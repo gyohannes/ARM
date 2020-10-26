@@ -1,115 +1,119 @@
 <style>
   .id_card{
+    font-size: 14px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     width: 72mm;
     height: 110mm;
-    border: 5px solid skyblue;
+    border: 1px solid silver;
     border-radius: 6px;
     float: left;
     margin: 5px;
-    padding: 5px;
+    padding: 2px;
     page-break-inside: avoid;
   }
 
+  li{
+    margin-bottom: 5px;
+  }
+
   .id_card_header{
-    width: 100%;
-    text-align: center;
-    height: 30mm;
+    font-size: 12px;
     margin-bottom: 5px;
     color: white;
+    background: brown;
+    text-align: center;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     overflow: hidden;
   }
 
-  .logo{
-    width: 100%;
+  .amharic_name, .english_name{
+    margin-bottom: 2px;
   }
 
+  .body_and_footer{
+    height: 70mm;
+    vertical-align: bottom;
+    overflow: hidden;
+    background-image: url('<%= image_path Rails.root.join(ActiveStorage::Blob.service.send(:path_for, Event.first.logo.key)) %>');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
   .id_card_body{
-    height: 55mm;
+    height: 75%;
+    list-style: none;
     padding: 2px;
-    width: 100%;
-    float: left;
-    font-size: 16px;
-  }
-
-  .details{
-    width: 50%;
-    float: left;
-  }
-
-  .photo{
-    width: 50%;
-    float: left;
-    text-align: right;
+    padding-left: 5px;
     overflow: hidden;
   }
-  .id_card_body li{
-    list-style: disc;
-    margin-bottom: 15px;
-    float: left;
+  .detail{
     width: 100%;
   }
-
-  .id_card_body label{
-    float: left;
-    font-weight: normal;
-    width: 100%;
-    margin-bottom: 10px;
+  .detail > label{
+    width: 50%;
+  }
+  .footer{
+    vertical-align: bottom;
+  }
+  .circle-text {
+    margin-left: 84%;
+    border: 1px solid silver;
+    border-radius: 50%;
+    font-size: large;
+    padding: 2px;
   }
 
-  .value{
-    font-weight: bold;
-    width: 100%;
-    margin-right: 5px;
-    float: left;
-    border-bottom: 1px solid silver;
-  }
-
-  .amharic{
-    width: 100%;
-    float: left;
-    font-size: 28px;
-    font-weight: bold;
+  .participant_type{
     text-align: center;
-  }
-
-  .english{
-    width: 100%;
-    float: left;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
-    text-align: center;
+    border-bottom: 5px solid brown;
   }
 </style>
-
 <% @participants.each do |p| %>
     <div class="id_card">
-      <div class="id_card_header">
+      <div class="id_card_header" style="background: <%= p.participant_type.try(:badge_color) %>">
 
-        <span class="logo">
-          <%= image_tag @current_event.logo, height: '100%' rescue nil %>
-        </span>
-      </div><hr/>
-        <div class="id_card_body">
-          <span class="details">
-            <li><label>ሥም:</label> <span class="value"><%= p.amharic_name %></span></li>
-            <li><label>Name:</label> <span class="value"><%= p.name %></span></li>
-          </span>
-          <span class="photo">
-            <% if p.photo.attached? %>
-            <%= image_tag p.photo, width: '100%' %>
-                <% else %>
-            <%= wicked_pdf_image_tag 'missing.png', width: '100%' %>
-                <% end %>
-        </span>
+        <div class="amharic_name">
+          <%= @current_event.amharic_name %><br/>
+          ከ<%= @current_event.from_amharic_month_day << ' - ' << @current_event.to_amharic_month_day << ' ' << 'ቀን' << @current_event.amharic_year%> ዓ.ም
+          <%= @current_event.amharic_location %>
         </div>
-          <div class="main_text amharic">
-            <%= @current_event.amharic_motto %>
-          </div>
-      <div class="main_text english">
-        <%= @current_event.motto %>
+
+        <div class="english_name">
+          <%= @current_event.name %><br/>
+          <%= @current_event.start_date.strftime('%b %d') << ' - ' << @current_event.end_date.strftime('%b %d') << ', ' << @current_event.end_date.strftime('%Y')%>
+          <%= @current_event.location %>
+        </div>
+
+        <%= @current_event.amharic_motto %><br/>
+        <%= @current_event.motto %><br/>
+      </div>
+      <div class="body_and_footer">
+        <div class="id_card_body">
+          <li>
+            <span class="detail"><label>Name:</label> <span><%= p.name %></span></span>
+          </li>
+          <li>
+            <label>Orgn:</label> &nbsp;&nbsp;<b><%= p.organization %></b>
+          </li>
+          <li>
+            <label>Position:</label> &nbsp;&nbsp;<b><%= p.position %></b>
+          </li>
+          <li>
+            <label>Disc. Group:</label> &nbsp;&nbsp;<b><%= p.group %></b>
+          </li>
+          <li>
+            <label>Field Visit:</label> &nbsp;&nbsp;<b><%= p.field_visit %></b>
+          </li>
+          <li>
+            <label>Hotel:</label> &nbsp;&nbsp;<b><%= p.stay_at %></b>
+          </li>
+        </div>
+        <div class="footer">
+          <div class="circle-text"><%= p.serial_number %></div>
+          <div class="participant_type" style="border-bottom: 5px solid <%= p.participant_type.try(:badge_color).blank? ? "brown" : p.participant_type.try(:badge_color) %>"><%= p.participant_type %></div>
+        </div>
       </div>
     </div>
 <% end %>
