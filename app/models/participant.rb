@@ -1,16 +1,17 @@
 class Participant < ApplicationRecord
   belongs_to :event
-  belongs_to :organization_type,optional: true
-  belongs_to :directorate, optional: true
-  belongs_to :group
-  belongs_to :field_visit
+  belongs_to :organization_type
+  belongs_to :group, optional: true
+  belongs_to :field_visit, optional: true
   belongs_to :participant_type
+  belongs_to :region
 
-  validates :name, :place_of_work, :responsibility, :telephone_number, presence: true
+  validates :name, :organization_name, :address, :telephone_number, presence: true
+  validates :serial_no, uniqueness: { case_sensitive: false }
 
   has_one_attached :photo
 
-  after_create :set_serial_no
+  before_create :set_serial_number
 
   def to_s
     name
@@ -30,20 +31,12 @@ class Participant < ApplicationRecord
     return participants
   end
 
-  def serial_number
-    serial_number = self.id.to_s
+  def set_serial_number
+    serial_number = (Participant.count + 1).to_s
     while serial_number.length < 4
       serial_number =  '0' << serial_number
     end
-    return serial_number
-  end
-
-  def set_serial_no
-    serial_no = self.id.to_s
-    while serial_no.length < 4
-      serial_no =  '0' << serial_no
-    end
-    update(serial_no: serial_no)
+    self[:serial_number] = serial_number
   end
 
   def checkedin_status

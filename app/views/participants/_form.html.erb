@@ -3,19 +3,20 @@
     <%= f.association :event, as: :hidden %>
   <div class="row">
     <div class="col-sm-6">
-    <%= f.input :name, label: 'Name(title)' %>
-    <%= f.association :organization_type, label: 'Region' %>
-    <%= f.input :organization_name, label: 'Organization' %>
-    <%= f.input :responsibility, label: 'Position' %>
-    <%= f.input :place_of_work, label: 'Address' %>
-    <%= f.input :telephone_number, label: 'Cell Phone' %>
+      <%= f.input :name, label: 'Name(title)' %>
+      <%= f.association :region %>
+      <%= f.association :organization_type %>
+      <%= f.input :organization_name, label: 'Organization' %>
+      <%= f.input :position %>
+      <%= f.input :address %>
     </div>
     <div class="col-sm-6 left_form">
-    <%= f.input :email %>
-    <%= f.association :participant_type %>
-    <%= f.input :stay_at %>
-    <%= f.association :group %>
-    <%= f.association :field_visit %>
+      <%= f.input :telephone_number %>
+      <%= f.input :email %>
+      <%= f.association :participant_type %>
+      <%= f.input :stay_at %>
+      <%= f.association :group %>
+      <%= f.association :field_visit %>
     </div>
   </div>
   <div class="form-actions">

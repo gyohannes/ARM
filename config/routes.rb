@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :regions
   resources :field_visits
   resources :participants do
     collection do
