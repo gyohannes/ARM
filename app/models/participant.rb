@@ -6,8 +6,8 @@ class Participant < ApplicationRecord
   belongs_to :participant_type
   belongs_to :region
 
-  validates :name, :organization_name, :address, :telephone_number, presence: true
-  validates :serial_no, uniqueness: { case_sensitive: false }
+  validates :name, :organization, :address, :telephone_number, presence: true
+  validates :serial_number, uniqueness: { case_sensitive: false }
 
   has_one_attached :photo
 
@@ -32,11 +32,11 @@ class Participant < ApplicationRecord
   end
 
   def set_serial_number
-    serial_number = (Participant.count + 1).to_s
-    while serial_number.length < 4
-      serial_number =  '0' << serial_number
+    serial_no = (Participant.count + 1).to_s
+    while serial_no.length < 4
+      serial_no =  '0' << serial_no
     end
-    self[:serial_number] = serial_number
+    self[:serial_number] = serial_no
   end
 
   def checkedin_status
