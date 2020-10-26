@@ -12,19 +12,18 @@
     page-break-inside: avoid;
   }
 
-  li{
-    margin-bottom: 5px;
-  }
-
   .id_card_header{
+    height: 35mm;
+    width: 72mm;
     font-size: 12px;
-    margin-bottom: 5px;
     color: white;
     background: brown;
     text-align: center;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     overflow: hidden;
+    display: table-cell;
+    vertical-align: middle;
   }
 
   .amharic_name, .english_name{
@@ -32,32 +31,57 @@
   }
 
   .body_and_footer{
+    margin-top: 10px;
     height: 70mm;
     vertical-align: bottom;
     overflow: hidden;
     background-image: url('<%= image_path Rails.root.join(ActiveStorage::Blob.service.send(:path_for, Event.first.logo.key)) %>');
     background-repeat: no-repeat;
     background-position: center;
+    display: flex;
   }
   .id_card_body{
-    height: 75%;
+    height: 80%;
     list-style: none;
-    padding: 2px;
-    padding-left: 5px;
+    padding: 5px;
     overflow: hidden;
-  }
-  .detail{
     width: 100%;
+    float: left;
+    margin-bottom: 10px;
   }
-  .detail > label{
-    width: 50%;
+  .details{
+    width: 100%;
+    float: left;
+  }
+
+  .details li{
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .id_card_body label{
+    float: left;
+    font-weight: normal;
+    width: 40%;
+    }
+
+  .value{
+    font-weight: bold;
+    width: 60%;
+    float: left;
+    border-bottom: 1px solid silver;
   }
   .footer{
-    vertical-align: bottom;
+    height: 20%;
+    align-self: flex-end;
   }
+
+
   .circle-text {
-    margin-left: 84%;
-    border: 1px solid silver;
+    float: right;
+    border: 1px solid skyblue;
+    margin-bottom: 20px;
     border-radius: 50%;
     font-size: large;
     padding: 2px;
@@ -91,27 +115,26 @@
       </div>
       <div class="body_and_footer">
         <div class="id_card_body">
-          <li>
-            <span class="detail"><label>Name:</label> <span><%= p.name %></span></span>
-          </li>
-          <li>
-            <label>Orgn:</label> &nbsp;&nbsp;<b><%= p.organization %></b>
-          </li>
-          <li>
-            <label>Position:</label> &nbsp;&nbsp;<b><%= p.position %></b>
-          </li>
-          <li>
-            <label>Disc. Group:</label> &nbsp;&nbsp;<b><%= p.group %></b>
-          </li>
-          <li>
-            <label>Field Visit:</label> &nbsp;&nbsp;<b><%= p.field_visit %></b>
-          </li>
-          <li>
-            <label>Hotel:</label> &nbsp;&nbsp;<b><%= p.stay_at %></b>
-          </li>
+          <span class="details">
+            <li><label>Name</label> <span class="value"><%= p.name %></span></li>
+            <li><label>Organization</label> <span class="value"><%= p.organization %></span></li>
+            <% unless p.position.blank? %>
+              <li><label>Position</label> <span class="value"><%= p.position %></span></li>
+            <% end %>
+            <% unless p.position.blank? %>
+              <li><label>Group</label> <span class="value"><%= p.group %></span></li>
+            <% end %>
+            <% unless p.field_visit.blank? %>
+              <li><label>Field Visit</label> <span class="value"><%= p.field_visit %></span></li>
+            <% end %>
+            <% unless p.stay_at.blank? %>
+              <li><label>Stay at</label> <span class="value"><%= p.stay_at %></span></li>
+            <% end %>
+        </span>
         </div>
         <div class="footer">
           <div class="circle-text"><%= p.serial_number %></div>
+          <br/>
           <div class="participant_type" style="border-bottom: 5px solid <%= p.participant_type.try(:badge_color).blank? ? "brown" : p.participant_type.try(:badge_color) %>"><%= p.participant_type %></div>
         </div>
       </div>
