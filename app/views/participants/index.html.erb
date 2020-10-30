@@ -11,7 +11,7 @@
   <div class="card-body">
     <div class="body table-responsive">
       <%= form_tag badges_participants_path(format: :pdf), method: :get do %>
-          <table class="table table-bordered table-striped table-hover dataTable js-exportable">
+          <table class="table table-bordered table-striped table-hover dataTable">
             <thead>
             <tr>
               <th><%= check_box(nil, "check_all", {class: 'check_all',class: "filled-in chk-col-pink"}) %>
