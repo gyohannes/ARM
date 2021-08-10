@@ -1,5 +1,5 @@
 class ParticipantsController < ApplicationController
-  before_action :authenticate_user!, except: [:new]
+  before_action :authenticate_user!, except: [:new, :create]
   before_action :set_participant, only: [:show, :edit, :update, :destroy]
 
   # GET /participants
@@ -62,7 +62,7 @@ class ParticipantsController < ApplicationController
     end
     respond_to do |format|
       if @participant.save
-        format.html { redirect_to participants_path, notice: 'Participant was successfully created.' }
+        format.html { redirect_to participants_path, notice: 'Congratulations! You are registered successfully.' }
         format.json { render :show, status: :created, location: @participant }
       else
         format.html { render :new }
@@ -108,6 +108,6 @@ class ParticipantsController < ApplicationController
     def participant_params
       params.require(:participant).permit(:event_id, :name, :position, :address, :participant_type_id, :region_id,
                                           :organization_type_id, :organization, :group_id, :field_visit_id,
-                                          :telephone_number,:email, :stay_at, :photo)
+                                          :telephone_number,:email, :email_confirmation, :stay_at, :photo)
     end
 end

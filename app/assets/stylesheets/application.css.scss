@@ -10,7 +10,9 @@
  *= require bootstrap-wysihtml5
  */
 
-.sidebar{
-  background-image: image-url("logo.png");
-  background-size: cover;
+.static-top{
+  background-image: image-url("exh.png");
+  background-repeat: repeat-x;
+  background-position: bottom;
+  color: #1c294e;
 }

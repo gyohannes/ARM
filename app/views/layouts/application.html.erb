@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <title>FMOH - Annual Review Meeting</title>
+  <title>FMOH - Digital Health Conference Exhibition</title>
   <!-- Favicon-->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 
@@ -24,7 +24,7 @@
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
 
-      <div class="sidebar-brand-text mx-3">FMOH - ARM</div>
+      <div class="sidebar-brand-text mx-3">FMOH</div>
     </a>
 
     <!-- Divider -->
@@ -52,7 +52,7 @@
           <i class="fa fa-bars"></i>
         </button>
         <h1>
-          <%= image_tag 'new_logo.png', width: '200px' %> Anual Review Meeting
+          <%= image_tag 'new_logo.png', width: '200px' %> Digital Health Conference Exhibition
         </h1>
         <a></a>
         <!-- Topbar Navbar -->
@@ -62,6 +62,9 @@
 
           <!-- Nav Item - User Information -->
           <% unless current_user %>
+              <%= link_to new_participant_path do %>
+                  <i class="fas fa-sign-in-alt"> Register</i>
+              <% end %>
               <div class="topbar-divider d-none d-sm-block"></div>
               <%= link_to new_user_session_path do %>
                   <i class="fas fa-sign-in-alt"> Login</i>

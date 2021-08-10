@@ -8,11 +8,12 @@
       <%= f.association :organization_type %>
       <%= f.input :organization %>
       <%= f.input :position %>
-      <%= f.input :address %>
+      <%= f.input :address, label: 'City' %>
+      <%= f.input :telephone_number %>
     </div>
     <div class="col-sm-6 left_form">
-      <%= f.input :telephone_number %>
       <%= f.input :email %>
+      <%= f.input :email_confirmation, label: 'Confirm Email' %>
       <%= f.association :participant_type %>
       <%= f.input :stay_at %>
       <%= f.association :group %>

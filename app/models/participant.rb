@@ -6,8 +6,10 @@ class Participant < ApplicationRecord
   belongs_to :participant_type
   belongs_to :region
 
-  validates :name, :organization, :address, :telephone_number, presence: true
+  validates :name, :organization, :email, :email_confirmation, :address, :telephone_number, presence: true
   validates :serial_number, uniqueness: { case_sensitive: false }
+  validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
+  validates :email, confirmation: true
 
   has_one_attached :photo
 
