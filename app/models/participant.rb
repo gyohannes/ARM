@@ -7,7 +7,7 @@ class Participant < ApplicationRecord
   belongs_to :region
   belongs_to :user, optional: true
   validates :name, :organization, :email, :email_confirmation, :address, :telephone_number, presence: true
-  validates :serial_number, uniqueness: { case_sensitive: false }
+  #validates :serial_number, uniqueness: { case_sensitive: false }
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
   validates :email, confirmation: true
 
@@ -17,6 +17,14 @@ class Participant < ApplicationRecord
 
   def to_s
     name
+  end
+
+  def correct_serial_number
+    ps = Participant.where(serial_number: serial_number)
+    if ps.count > 1
+      set_serial_number
+      self.save(validate: false)
+    end
   end
 
   def self.import_participants(file)
@@ -46,7 +54,7 @@ class Participant < ApplicationRecord
   end
 
   def set_serial_number
-    serial_no = (Participant.count + 1).to_s
+    serial_no = (Participant.count == 0 ? 1 : Participant.count + 1).to_s
     while serial_no.length < 3
       serial_no =  '0' << serial_no
     end
