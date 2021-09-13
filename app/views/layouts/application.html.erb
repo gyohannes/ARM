@@ -98,8 +98,7 @@
 
       <!-- Begin Page Content -->
       <div class="container-fluid">
-
-        <!-- Page Heading -->
+        <%= render partial: 'shared/flash_messages' %>
 
         <%= yield :header %>
 
@@ -107,7 +106,6 @@
 
           <!-- Area Chart -->
           <div class="col-xl-12 col-lg-12">
-            <%= render partial: 'shared/flash_messages' %>
             <%= yield %>
           </div>
         </div>
