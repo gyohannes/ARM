@@ -13,18 +13,10 @@ class Participant < ApplicationRecord
 
   has_one_attached :photo
 
-  before_create :set_serial_number
+  #before_create :set_serial_number
 
   def to_s
     name
-  end
-
-  def correct_serial_number
-    ps = Participant.where(serial_number: serial_number)
-    if ps.count > 1
-      set_serial_number
-      self.save(validate: false)
-    end
   end
 
   def self.import_participants(file)

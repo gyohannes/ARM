@@ -44,6 +44,7 @@ class ParticipantsController < ApplicationController
   def new
     @participant = Participant.new
     @participant.event = Event.current
+    @participant.set_serial_number
   end
 
   # GET /participants/1/edit
@@ -106,7 +107,7 @@ class ParticipantsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def participant_params
-      params.require(:participant).permit(:event_id, :name, :position, :address, :participant_type_id, :region_id,
+      params.require(:participant).permit(:event_id, :serial_number, :name, :position, :address, :participant_type_id, :region_id,
                                           :organization_type_id, :organization, :group_id, :field_visit_id,
                                           :telephone_number,:email, :email_confirmation, :stay_at, :photo)
     end
