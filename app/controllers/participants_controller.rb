@@ -62,7 +62,7 @@ class ParticipantsController < ApplicationController
     end
     respond_to do |format|
       if @participant.save
-        format.html { redirect_to participants_path, notice: 'Congratulations! You are registered successfully.' }
+        format.html { redirect_to new_participant_path, notice: 'Participant registered successfully.' }
         format.json { render :show, status: :created, location: @participant }
       else
         format.html { render :new }

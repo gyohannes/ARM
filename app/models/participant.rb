@@ -5,7 +5,7 @@ class Participant < ApplicationRecord
   belongs_to :field_visit, optional: true
   belongs_to :participant_type
   belongs_to :region
-
+  belongs_to :user, optional: true
   validates :name, :organization, :email, :email_confirmation, :address, :telephone_number, presence: true
   validates :serial_number, uniqueness: { case_sensitive: false }
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
