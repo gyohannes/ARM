@@ -13,7 +13,11 @@ class Participant < ApplicationRecord
 
   has_one_attached :photo
 
-  #before_create :set_serial_number
+  before_create :set_serial_number, if: :no_serial
+
+  def no_serial
+    set_serial_number.blank?
+  end
 
   def to_s
     name

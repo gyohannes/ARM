@@ -3,7 +3,9 @@
     <%= f.association :event, as: :hidden %>
   <div class="row">
     <div class="col-sm-6">
-      <%= f.input :serial_number %>
+      <% if current_user %>
+        <%= f.input :serial_number %>
+      <% end %>
       <%= f.input :name, label: 'Name(title)' %>
       <%= f.association :region %>
       <%= f.association :organization_type %>

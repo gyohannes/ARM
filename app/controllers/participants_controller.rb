@@ -61,9 +61,10 @@ class ParticipantsController < ApplicationController
     if @participant.organization_type and @participant.organization_type.name == 'FMOH'
       @directorates = Directorate.all
     end
+    message = current_user ? 'Participant registered successfully.' : 'Congratulations! You are registered successfully.'
     respond_to do |format|
       if @participant.save
-        format.html { redirect_to new_participant_path, notice: 'Participant registered successfully.' }
+        format.html { redirect_to new_participant_path, notice: message }
         format.json { render :show, status: :created, location: @participant }
       else
         format.html { render :new }
