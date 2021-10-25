@@ -7,8 +7,8 @@ class Participant < ApplicationRecord
   belongs_to :participant_type
   belongs_to :region
 
-  validates :name, :organization, :address, :telephone_number, presence: true
-  validates :serial_number, uniqueness: { case_sensitive: false }
+  validates :name, :organization, :telephone_number, presence: true
+  #validates :serial_number, uniqueness: { case_sensitive: false }
 
   has_one_attached :photo
 
@@ -38,6 +38,7 @@ class Participant < ApplicationRecord
                  telephone_number: telephone_number, email: email, participant_type_id: participant_type.try(:id),
                  stay_at: stay_at, group_id: group.try(:id), field_visit_id: field_visit.try(:id)}
       particpant = Participant.create(attrbts)
+      logger.info("========================#{particpant.errors.inspect}")
       participants << particpant unless particpant.blank?
     end
     return participants
