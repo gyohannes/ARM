@@ -44,6 +44,7 @@ class ParticipantsController < ApplicationController
   def new
     @participant = Participant.new
     @participant.event = Event.current
+    @participant.set_serial_number
   end
 
   # GET /participants/1/edit

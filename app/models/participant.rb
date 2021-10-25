@@ -12,7 +12,11 @@ class Participant < ApplicationRecord
 
   has_one_attached :photo
 
-  before_create :set_serial_number
+  before_create :set_serial_number, if: :no_serial
+
+  def no_serial
+    set_serial_number.blank?
+  end
 
   def to_s
     name
@@ -38,14 +42,13 @@ class Participant < ApplicationRecord
                  telephone_number: telephone_number, email: email, participant_type_id: participant_type.try(:id),
                  stay_at: stay_at, group_id: group.try(:id), field_visit_id: field_visit.try(:id)}
       particpant = Participant.create(attrbts)
-      logger.info("========================#{particpant.errors.inspect}")
       participants << particpant unless particpant.blank?
     end
     return participants
   end
 
   def set_serial_number
-    serial_no = (Participant.count + 1).to_s
+    serial_no = (Participant.count == 0 ? 1 : Participant.count + 1).to_s
     while serial_no.length < 3
       serial_no =  '0' << serial_no
     end
