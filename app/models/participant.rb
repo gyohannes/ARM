@@ -34,7 +34,7 @@ class Participant < ApplicationRecord
       group = row[9].blank? ? nil : Group.find_or_create_by(name: row[9])
       field_visit = row[10].blank? ? nil : FieldVisit.find_or_create_by(name: row[10])
       attrbts = {event_id: event.try(:id), name: name, region_id: region.try(:id), organization: organization,
-                 position: position, directorate: directorate.try(:id),
+                 position: position, directorate_id: directorate.try(:id),
                  telephone_number: telephone_number, email: email, participant_type_id: participant_type.try(:id),
                  stay_at: stay_at, group_id: group.try(:id), field_visit_id: field_visit.try(:id)}
       particpant = Participant.create(attrbts)
