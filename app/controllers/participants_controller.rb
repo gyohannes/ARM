@@ -34,7 +34,8 @@ class ParticipantsController < ApplicationController
       format.html
       format.pdf do
         render pdf: "participants_badges",
-               disposition: 'attachment',
+               disposition: 'inline',
+               orientation: 'landscape',
                encoding: 'utf8'
         end
       end
@@ -107,7 +108,7 @@ class ParticipantsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def participant_params
-      params.require(:participant).permit(:event_id, :name, :position, :address, :participant_type_id, :region_id,
+      params.require(:participant).permit(:event_id, :serial_number, :name, :position, :address, :participant_type_id, :region_id,
                                           :organization_type_id, :directorate_id, :organization, :group_id, :field_visit_id,
                                           :telephone_number,:email, :stay_at, :photo)
     end

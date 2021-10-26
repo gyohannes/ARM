@@ -1,53 +1,73 @@
 <style>
   .id_card{
-    font-size: 14px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    width: 72mm;
-    height: 110mm;
-    border: 1px solid silver;
+    width: 106mm;
+    height: 82mm;
+    border: 1px solid skyblue;
     border-radius: 6px;
     float: left;
-    margin: 5px;
-    padding: 2px;
+    padding: 5px;
     page-break-inside: avoid;
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+
+  .header{
+    width: 100%;
+    float: left;
+    height: 30mm;
+    overflow: hidden;
+    margin-bottom: 5px;
+    vertical-align: middle;
+    border-bottom: 1px solid silver;
+    font-size: 12px;
+  }
+
+  .moh_logo{
+    width: 20%;
+    float: right;
+    padding: 2px;
   }
 
   .id_card_header{
-    height: 35mm;
-    width: 72mm;
-    font-size: 12px;
-    color: white;
-    background: brown;
-    text-align: center;
+    width: 78%;
+    float: left;
+    font-size: 13px;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
+    color: white;
+    background: brown;
+    vertical-align: middle;
+    text-align: center;
     overflow: hidden;
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: center;
   }
 
   .amharic_name, .english_name{
-    margin-bottom: 2px;
+    margin-bottom: 0;
   }
 
   .body_and_footer{
-    margin-top: 10px;
-    height: 70mm;
-    vertical-align: bottom;
-    overflow: hidden;
     background-image: url('<%= image_path Rails.root.join(ActiveStorage::Blob.service.send(:path_for, Event.first.logo.key)) %>');
     background-repeat: no-repeat;
     background-position: center;
+    float: left;
+    width: 100%;
+    height: 52mm;
+    vertical-align: bottom;
+    overflow: hidden;
     display: flex;
   }
   .id_card_body{
-    height: 80%;
+    font-size: 14px;
+    height: 70%;
     list-style: none;
-    padding: 5px;
+    padding: 1px;
     overflow: hidden;
     width: 100%;
     float: left;
-    margin-bottom: 10px;
+    margin-bottom: 1px;
   }
   .details{
     width: 100%;
@@ -63,7 +83,7 @@
   .id_card_body label{
     float: left;
     font-weight: normal;
-    width: 40%;
+    width: 30%;
     }
 
   .value{
@@ -73,18 +93,20 @@
     border-bottom: 1px solid silver;
   }
   .footer{
-    height: 20%;
+    height: 30%;
     align-self: flex-end;
+    width: 70%;
+    float: right;
   }
 
 
   .circle-text {
     float: right;
-    border: 1px solid skyblue;
+    border: 2px solid silver;
     margin-bottom: 20px;
     border-radius: 50%;
     font-size: large;
-    padding: 2px;
+    padding: 5px;
   }
 
   .participant_type{
@@ -96,22 +118,25 @@
 </style>
 <% @participants.each do |p| %>
     <div class="id_card">
-      <div class="id_card_header" style="background: <%= p.participant_type.try(:badge_color) %>">
+      <div class="header">
+        <div class="id_card_header" style="background: <%= p.participant_type.try(:badge_color) %>">
 
-        <div class="amharic_name">
-          <%= @current_event.amharic_name %><br/>
-          ከ<%= @current_event.from_amharic_month_day << ' - ' << @current_event.to_amharic_month_day << ' ' << 'ቀን' << @current_event.amharic_year%> ዓ.ም
-          <%= @current_event.amharic_location %>
+          <div class="amharic_name">
+            <%= @current_event.amharic_name %><br/>
+            ከ<%= @current_event.from_amharic_month_day << ' - ' << @current_event.to_amharic_month_day << ' ' << 'ቀን' << @current_event.amharic_year%> ዓ.ም
+            <%= @current_event.amharic_location %>
+          </div>
+
+          <div class="english_name">
+            <%= @current_event.name %><br/>
+            <%= @current_event.start_date.strftime('%b %d') << ' - ' << @current_event.end_date.strftime('%b %d') << ', ' << @current_event.end_date.strftime('%Y')%>
+            <%= @current_event.location %>
+          </div>
+
+          <%= @current_event.amharic_motto %><br/>
+          <%= @current_event.motto %><br/>
         </div>
-
-        <div class="english_name">
-          <%= @current_event.name %><br/>
-          <%= @current_event.start_date.strftime('%b %d') << ' - ' << @current_event.end_date.strftime('%b %d') << ', ' << @current_event.end_date.strftime('%Y')%>
-          <%= @current_event.location %>
-        </div>
-
-        <%= @current_event.amharic_motto %><br/>
-        <%= @current_event.motto %><br/>
+        <div class="moh_logo"><%= wicked_pdf_image_tag('moh_logo.png', width: '100%') %></div>
       </div>
       <div class="body_and_footer">
         <div class="id_card_body">
