@@ -144,7 +144,9 @@
         <div class="id_card_body">
           <span class="details">
             <li><label>Name</label> <span class="value"><%= p.name %></span></li>
-            <li><label>Organization</label> <span class="value"><%= p.organization %></span></li>
+            <% unless p.organization.blank? %>
+              <li><label>Organization</label> <span class="value"><%= p.organization %></span></li>
+            <% end %>
             <% unless p.field_visit.blank? %>
               <li><label>Field Visit</label> <span class="value"><%= p.field_visit %></span></li>
             <% end %>

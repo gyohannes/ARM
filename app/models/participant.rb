@@ -5,14 +5,14 @@ class Participant < ApplicationRecord
   belongs_to :group, optional: true
   belongs_to :field_visit, optional: true
   belongs_to :participant_type
-  belongs_to :region
+  belongs_to :region, optional: true
 
-  validates :name, :organization, :telephone_number, presence: true
+  validates :name, presence: true
   #validates :serial_number, uniqueness: { case_sensitive: false }
 
   has_one_attached :photo
 
-  #before_create :set_serial_number, if: :no_serial
+  before_create :set_serial_number, if: :no_serial
 
   def no_serial
     set_serial_number.blank?
