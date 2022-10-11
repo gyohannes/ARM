@@ -1,8 +1,8 @@
 <style>
   .id_card{
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    width: 115mm;
-    height: 78mm;
+    width: 78mm;
+    height: 115mm;
     border: 1px solid skyblue;
     border-radius: 6px;
     float: left;
@@ -15,7 +15,7 @@
   .header{
     width: 100%;
     float: left;
-    height: 28mm;
+    height: 30mm;
     overflow: hidden;
     margin-bottom: 5px;
     vertical-align: middle;
@@ -24,13 +24,14 @@
   }
 
   .moh_logo{
-    width: 20%;
+    width: 0%;
     float: right;
-    padding: 2px;
+    vertical-align: middle;
+    padding: 1px;
   }
 
   .id_card_header{
-    width: 78%;
+    width: 100%;
     float: left;
     font-size: 14px;
     border-top-left-radius: 6px;
@@ -54,18 +55,18 @@
     background-position: center;
     float: left;
     width: 100%;
-    height: 50mm;
+    height: 85mm;
     vertical-align: bottom;
     overflow: hidden;
     display: flex;
   }
   .id_card_body{
     font-size: 14px;
-    height: 100%;
+    height: 70%;
     list-style: none;
     padding: 1px;
     overflow: hidden;
-    width: 75%;
+    width: 100%;
     float: left;
     margin-bottom: 1px;
   }
@@ -77,41 +78,45 @@
   .details li{
     float: left;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 
   .id_card_body label{
     float: left;
     font-weight: normal;
-    width: 30%;
+    width: 35%;
     }
 
   .value{
     font-weight: bold;
-    width: 60%;
+    width: 65%;
     float: left;
     border-bottom: 1px solid silver;
   }
   .footer{
-    padding-top: 10%;
-    height: 100%;
+    padding-top: 5px;
+    height: 30%;
     align-self: flex-end;
-    width: 24%;
+    width: 100%;
     float: right;
     vertical-align: bottom;
   }
 
 
   .circle-text {
+    width: 25%;
+    float: right;
     border: 2px solid silver;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border-radius: 50%;
     font-size: large;
     padding: 5px;
   }
 
   .participant_type{
+    width: 100%;
+    float: left;
     text-align: center;
     font-size: 16px;
     font-weight: bold;
@@ -155,7 +160,7 @@
             <% end %>
             <% unless p.group.blank? %>
               <li><label>Group</label> <span class="value"><%= p.group %></span></li>
-            <% end %>
+	    <% end %>
             <% unless p.stay_at.blank? %>
               <li><label>Hotel</label> <span class="value"><%= p.stay_at %></span></li>
             <% end %>

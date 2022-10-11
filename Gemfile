@@ -27,7 +27,7 @@ gem 'puma', '~> 3.7'
 gem 'therubyracer'  # If using Ruby
 gem 'jquery-rails'  # If using Bootstrap's JS plugins.
 gem 'less-rails-bootstrap'
-gem 'momentjs-rails', '~> 2.9',  :github => 'derekprior/momentjs-rails'
+gem 'momentjs-rails', '~> 2.9'
 gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
 gem 'fullcalendar-rails'
 gem 'sassc-rails'
