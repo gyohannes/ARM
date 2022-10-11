@@ -147,6 +147,9 @@
             <% unless p.organization.blank? %>
               <li><label>Organization</label> <span class="value"><%= p.organization %></span></li>
             <% end %>
+            <% unless p.position.blank? %>
+              <li><label>Position</label> <span class="value"><%= p.position %></span></li>
+            <% end %>
             <% unless p.field_visit.blank? %>
               <li><label>Field Visit</label> <span class="value"><%= p.field_visit %></span></li>
             <% end %>
