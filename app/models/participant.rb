@@ -48,8 +48,8 @@ class Participant < ApplicationRecord
   end
 
   def set_serial_number
-    number_of_participants = Event.current.participants.count
-    serial_no = (number_of_participants == 0 ? 1 : number_of_participants + 1).to_s
+    participants_count = Event.current.participants.count
+    serial_no = (participants_count == 0 ? 1 : participants_count + 1).to_s
     while serial_no.length < 3
       serial_no =  '0' << serial_no
     end
