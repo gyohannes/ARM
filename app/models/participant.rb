@@ -41,8 +41,13 @@ class Participant < ApplicationRecord
                  position: position, directorate_id: directorate.try(:id),
                  telephone_number: telephone_number, email: email, participant_type_id: participant_type.try(:id),
                  stay_at: stay_at, group_id: group.try(:id), field_visit_id: field_visit.try(:id)}
-      particpant = Participant.create(attrbts)
-      participants << particpant unless particpant.blank?
+                 existing = Participant.find_by(name: name, telephone_number: telephone_number)
+      unless p.blank?
+        participant = p.update_attributes(attrbts)
+      else
+        participant = Participant.create(attrbts)
+      end 
+      participants << participant unless participant.blank?
     end
     return participants
   end

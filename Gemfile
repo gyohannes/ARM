@@ -19,12 +19,12 @@ gem 'ethiopic_date', '0.0.18'
 gem 'image_processing', '~> 1.2'
 gem 'jquery-minicolors-rails'
 gem 'active_model_serializers'
+gem 'less-rails', '~> 2.7', '>= 2.7.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
-gem 'therubyracer'  # If using Ruby
 gem 'jquery-rails'  # If using Bootstrap's JS plugins.
 gem 'less-rails-bootstrap'
 gem 'momentjs-rails', '~> 2.9'
