@@ -15,7 +15,7 @@ gem 'wkhtmltopdf_binary', '~> 0.12.3.1'
 gem 'bootstrap-wysihtml5-rails'
 gem 'bootstrap-growl-rails'
 gem 'ethiopic_date', '0.0.18'
-gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.12'
 gem 'jquery-minicolors-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
