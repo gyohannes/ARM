@@ -1,9 +1,5 @@
 <style>
   .id_card{
-    background-image: url('<%= image_path Rails.root.join(ActiveStorage::Blob.service.send(:path_for, Event.first.logo.key)) %>');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: fill; 
     # background: rgb(2,176,231);
     # background: -webkit-linear-gradient(top left, rgba(2,176,231,1) 0%, rgba(8,39,141,1) 0%, rgba(2,0,36,1) 0%, rgba(7,40,142,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 12%, rgba(5,80,165,1) 16%, rgba(3,130,196,1) 35%, rgba(3,145,211,1) 46%, rgba(5,92,172,1) 59%, rgba(1,169,221,1) 65%, rgba(4,98,176,1) 100%, rgba(1,186,235,1) 100%);
     color: black;
@@ -20,7 +16,8 @@
   }
 
   .header{
-    height: 57mm;
+    background-color: brown;
+    height: 50mm;
     overflow: hidden;
     vertical-align: middle;
     text-align: center;
@@ -35,7 +32,6 @@
 
   .moto{
     font-size: 13px;
-    margin-bottom: 5px;
     font-weight: bold;
   }
 
@@ -44,12 +40,17 @@
     font-size: 10px;
     font-style: italic;
     border-bottom: 1px solid silver;
+    margin-bottom: 10px;
   }
 
   .body_and_footer{
+    background-image: url('<%= image_path Rails.root.join(ActiveStorage::Blob.service.send(:path_for, Event.first.logo.key)) %>');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%; 
     float: left;
     width: 100%;
-    height: 55mm;
+    height: 65mm;
     overflow: hidden;
     padding-top: 10px;
   }
@@ -82,7 +83,6 @@
     float: right;
     border-bottom: 1px solid silver;
     font-size: 24px;
-    # padding: 5px;
   }
 
   .participant_type{
@@ -112,11 +112,11 @@
       <%= @current_event.amharic_motto %><br/>
       <%= @current_event.motto %><br/>
     </div>
-    <div class='date'><i class="fas fa-calendar"></i> <%= @current_event.from_amharic_month_day << ' - ' << @current_event.to_amharic_day  << @current_event.amharic_year%> ዓ.ም | 
-    <%= @current_event.start_date.strftime('%b %e') << ' - ' << @current_event.end_date.strftime('%e') << ', ' << @current_event.end_date.strftime('%Y')%>
-    </div>
 </div>
 <div class="body_and_footer">
+<div class='date'><i class="fas fa-calendar"></i> <%= @current_event.from_amharic_month_day << ' - ' << @current_event.to_amharic_day  << @current_event.amharic_year%> ዓ.ም | 
+    <%= @current_event.start_date.strftime('%b %e') << ' - ' << @current_event.end_date.strftime('%e') << ', ' << @current_event.end_date.strftime('%Y')%>
+    </div>
 <div class="id_card_body">
   <span class="details">
     <li><span class="name"><%= p.name %></span></li>
