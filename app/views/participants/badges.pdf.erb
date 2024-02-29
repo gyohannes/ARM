@@ -16,7 +16,6 @@
   }
 
   .header{
-    background-color: brown;
     height: 50mm;
     overflow: hidden;
     vertical-align: middle;
@@ -66,7 +65,7 @@
   }
 
   .name{
-    width: 60%;
+    width: 65%;
     margin-bottom: 10px;
     font-size: 24px;
     display: inline-block;
@@ -96,7 +95,7 @@
 </style>
 <% @participants.each do |p| %>
     <div class="id_card">
-    <div class="header">
+    <div class="header" style="background: <%= p.participant_type.try(:badge_color) %>">
     <div class='logo'>
     <%= wicked_pdf_image_tag "moh_small.png", width: '75px', height: '60px' %>
     </div>
