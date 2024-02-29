@@ -32,6 +32,12 @@ class Event < ApplicationRecord
       return amharic_date.split(',')[0]
     end
   end
+  def to_amharic_day
+    unless end_date.blank?
+      amharic_date = fromGregorianToEthiopic(end_date.year,end_date.month,end_date.day)
+      return amharic_date.split('-')[2]
+    end
+  end
 
   def to_s
     name

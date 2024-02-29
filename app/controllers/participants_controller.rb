@@ -34,7 +34,7 @@ class ParticipantsController < ApplicationController
       format.html
       format.pdf do
         render pdf: "participants_badges",
-               disposition: 'disposition',
+               disposition: 'inline',
                orientation: 'portrait',
                encoding: 'utf8'
         end
