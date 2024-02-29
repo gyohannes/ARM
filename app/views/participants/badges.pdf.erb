@@ -1,62 +1,57 @@
 <style>
   .id_card{
-    background: rgb(2,176,231);
-    background: -webkit-linear-gradient(top left, rgba(2,176,231,1) 0%, rgba(8,39,141,1) 0%, rgba(2,0,36,1) 0%, rgba(7,40,142,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 12%, rgba(5,80,165,1) 16%, rgba(3,130,196,1) 35%, rgba(3,145,211,1) 46%, rgba(5,92,172,1) 59%, rgba(1,169,221,1) 65%, rgba(4,98,176,1) 100%, rgba(1,186,235,1) 100%);
-    color: white;
+    background-image: url('<%= image_path Rails.root.join(ActiveStorage::Blob.service.send(:path_for, Event.first.logo.key)) %>');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: fill; 
+    # background: rgb(2,176,231);
+    # background: -webkit-linear-gradient(top left, rgba(2,176,231,1) 0%, rgba(8,39,141,1) 0%, rgba(2,0,36,1) 0%, rgba(7,40,142,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 12%, rgba(5,80,165,1) 16%, rgba(3,130,196,1) 35%, rgba(3,145,211,1) 46%, rgba(5,92,172,1) 59%, rgba(1,169,221,1) 65%, rgba(4,98,176,1) 100%, rgba(1,186,235,1) 100%);
+    color: black;
     width: 78mm;
     height: 115mm;
     font-family: 'Palatino', serif;
     border: 2px solid purple;
     border-radius: 6px;
     float: left;
-    padding: 5px;
+    padding: 2px;
     page-break-inside: avoid;
     margin-right: 5px;
     margin-bottom: 5px;
   }
 
   .header{
-    height: 50mm;
+    height: 57mm;
     overflow: hidden;
     vertical-align: middle;
-    border-bottom: 1px solid silver;
     text-align: center;
-    margin-bottom: 10px;
-  }
-  .logo{
-    float: left;
-  }
-  .title{
-    text-align: center;
-    margin-bottom: 10px;
   }
 
-  .amharic_name{
-    font-size: 18px;
-  }
-  .english_name{
-    font-size: 15px;
+  .title{
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
   }
 
   .moto{
-    font-size: 14px;
+    font-size: 13px;
     margin-bottom: 5px;
+    font-weight: bold;
   }
 
   .date{
     float: right;
     font-size: 10px;
     font-style: italic;
+    border-bottom: 1px solid silver;
   }
 
   .body_and_footer{
-    # background-image: url('<%= image_path Rails.root.join(ActiveStorage::Blob.service.send(:path_for, Event.first.logo.key)) %>');
-    # background-repeat: no-repeat;
-    # background-position: center;
     float: left;
     width: 100%;
-    height: 65mm;
+    height: 55mm;
     overflow: hidden;
+    padding-top: 10px;
   }
   
   .id_card_body{
@@ -64,7 +59,7 @@
     font-weight: bold;
     list-style: none;
     padding: 1px;
-    height: 45mm;
+    height: 43mm;
     overflow: hidden;
     width: 100%;
   }
@@ -79,21 +74,19 @@
 
   footer{
     padding-top: 0px;
-    height: 10mm;
+    height: 7mm;
     align-self: flex-end;
     width: 100%;
   }
-
-
   .circle-text {
     float: right;
     border-bottom: 1px solid silver;
     font-size: 24px;
-    padding: 5px;
+    # padding: 5px;
   }
 
   .participant_type{
-    width: 100%;
+    width: 80%;
     float: left;
     text-align: center;
     font-size: 24px;
@@ -105,7 +98,7 @@
     <div class="id_card">
     <div class="header">
     <div class='logo'>
-    <%= wicked_pdf_image_tag "moh_small.png", width: '85px', height: '83px' %>
+    <%= wicked_pdf_image_tag "moh_small.png", width: '75px', height: '60px' %>
     </div>
     <div class='title'>
     <div class="amharic_name">
@@ -136,9 +129,10 @@
   </span>
 </div>
 <div class="footer">
-  <div class="circle-text"><%= p.serial_number %></div>
+  <span class='participant_type'><%= p.participant_type %></span>
+  <span class="circle-text"><%= p.serial_number %></span>
   <br/>
-  <div class="participant_type"><%= p.participant_type %></div>
+  <div class='partners'><%= wicked_pdf_image_tag "partners2.png", width: '100%' %></div>
 </div>
 </div>
     </div>
