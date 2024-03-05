@@ -35,8 +35,13 @@ class ParticipantsController < ApplicationController
       format.pdf do
         render pdf: "participants_badges",
                disposition: 'inline',
-               orientation: 'portrait',
-               encoding: 'utf8'
+               orientation: 'landscape',
+               encoding: 'utf8',
+               margin:  {   top:               '0.5mm',                     # default 10 (mm)
+                            bottom:            '0',
+                            left:              '20.5mm',
+                            right:             '0' 
+                        }
         end
       end
   end

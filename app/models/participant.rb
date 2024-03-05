@@ -7,7 +7,7 @@ class Participant < ApplicationRecord
   belongs_to :participant_type
   belongs_to :region, optional: true
 
-  validates :name, presence: true
+  # validates :name, presence: true
   #validates :serial_number, uniqueness: { case_sensitive: false }
 
   has_one_attached :photo

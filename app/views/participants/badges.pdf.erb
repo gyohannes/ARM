@@ -2,9 +2,9 @@
   .id_card{
     # background: rgb(2,176,231);
     # background: -webkit-linear-gradient(top left, rgba(2,176,231,1) 0%, rgba(8,39,141,1) 0%, rgba(2,0,36,1) 0%, rgba(7,40,142,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 12%, rgba(5,80,165,1) 16%, rgba(3,130,196,1) 35%, rgba(3,145,211,1) 46%, rgba(5,92,172,1) 59%, rgba(1,169,221,1) 65%, rgba(4,98,176,1) 100%, rgba(1,186,235,1) 100%);
-    color: black;
-    width: 78mm;
-    height: 115mm;
+    color: white;
+    width: 115mm;
+    height: 78mm;
     font-family: 'Palatino', serif;
     border: 2px solid purple;
     border-radius: 6px;
@@ -16,21 +16,14 @@
   }
 
   .header{
-    height: 50mm;
+    height: 45%;
     overflow: hidden;
-    vertical-align: middle;
     text-align: center;
   }
 
   .title{
     text-align: center;
-    margin-bottom: 5px;
-    font-size: 16px;
-    font-weight: bold;
-  }
-
-  .moto{
-    font-size: 13px;
+    font-size: 20px;
     font-weight: bold;
   }
 
@@ -43,38 +36,39 @@
   }
 
   .body_and_footer{
+    color: black;
     background-image: url('<%= image_path Rails.root.join(ActiveStorage::Blob.service.send(:path_for, Event.first.logo.key)) %>');
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%; 
     float: left;
     width: 100%;
-    height: 65mm;
     overflow: hidden;
-    padding-top: 10px;
+    padding-top: 2px;
   }
   
   .id_card_body{
     text-align: center;
-    font-weight: bold;
     list-style: none;
     padding: 1px;
-    height: 43mm;
+    height: 29%;
     overflow: hidden;
     width: 100%;
   }
 
   .name{
-    width: 65%;
-    margin-bottom: 10px;
-    font-size: 24px;
-    display: inline-block;
-    vertical-align: middle;
+    font-weight: bold;
+    # margin-bottom: 2px;
+    font-size: 18px;
+  }
+
+  hr{
+    width: 80%;
+    margin-top: 40px;
   }
 
   footer{
     padding-top: 0px;
-    height: 7mm;
     align-self: flex-end;
     width: 100%;
   }
@@ -91,9 +85,38 @@
     font-size: 24px;
     font-weight: bold;
   }
+
+.back_page{
+  color: black;
+  width: 115mm;
+  height: 78mm;
+  font-family: 'Palatino', serif;
+  border-radius: 6px;
+  float: left;
+  padding-top: 2px;
+  page-break-inside: avoid;
+  margin-right: 5px;
+  margin-bottom: 5px;
 }
+
+.moto{
+    color: black;
+    padding-top: 18%;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+.page-break { 
+  display:block; 
+  clear:both; 
+  page-break-after:always; 
+}
+
 </style>
-<% @participants.each do |p| %>
+<% @participants.each_slice(4) do |participants| %>
+<% participants.each do |p| %>
     <div class="id_card">
     <div class="header" style="background: <%= p.participant_type.try(:badge_color) %>">
     <div class='logo'>
@@ -108,7 +131,7 @@
     </div>
     </div>
     <div class='moto'>
-      <%= @current_event.amharic_motto %><br/>
+      <%= @current_event.amharic_motto %><br/><br/><br/>
       <%= @current_event.motto %><br/>
     </div>
 </div>
@@ -118,7 +141,11 @@
     </div>
 <div class="id_card_body">
   <span class="details">
+  <% if p.name.blank? %>
+    <hr/>
+    <% else %>
     <li><span class="name"><%= p.name %></span></li>
+    <% end %>
     <% unless p.position.blank? %>
       <li><span class="value"><%= p.position %></span></li>
     <% end %>
@@ -135,4 +162,5 @@
 </div>
 </div>
     </div>
+<% end %>
 <% end %>
